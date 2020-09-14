@@ -1,4 +1,4 @@
-@prefix iasis: <http://project-iasis.eu/vocab/> .
+@prefix clarify: <http://clarify2020.eu/vocab/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,102 +6,102 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prv: <http://purl.org/net/provenance/ns#> .
 
-##########################################################################################
-################################## Classes ###############################################
-##########################################################################################
+#################################################################################################################################################
+############################################################### Classes #########################################################################
+#################################################################################################################################################
 
-iasis:Concept	rdf:type	owl:Class;
+clarify:Concept	rdf:type	owl:Class;
 				rdfs:label	"Concept";
 				rdfs:comment "Constituents of thoughts or real world entities.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Annotation	rdf:type	owl:Class;
+clarify:Annotation	rdf:type	owl:Class;
 					rdfs:label	"Annotation";
 					rdfs:comment "Annotation of a concept including label, id and source of concept.";
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Relation	rdf:type	owl:Class;
+clarify:Relation	rdf:type	owl:Class;
 					rdfs:label	"Relation";
 					rdfs:comment "Relations between concepts.";
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-#######################################################
-######################## Drugs ########################
-#######################################################
 
-iasis:Drug	rdf:type	owl:Class;
+######################## Drugs ########################
+
+
+clarify:Drug	rdf:type	owl:Class;
 			rdfs:label	"Drug";
-			rdfs:subClassOf	iasis:Concept;
+			rdfs:subClassOf	clarify:Concept;
 			rdfs:comment "A substance used as a medication or in the preparation of medication.";
 			dcterms:modified "2020-09-14"^^xsd:date;
 			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:LungCancerDrug	rdf:type	owl:Class;
+clarify:LungCancerDrug	rdf:type	owl:Class;
 			rdfs:label	"LungCancerDrug";
-			rdfs:subClassOf	iasis:Drug;
+			rdfs:subClassOf	clarify:Drug;
 			rdfs:comment "A Drug used in the Lung Cancer treatment.";
 			dcterms:modified "2020-09-14"^^xsd:date;
 			prv:File "LCdrugs.ttl";
 			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Biomarker	 rdf:type	owl:Class;
+clarify:Biomarker	 rdf:type	owl:Class;
 					rdfs:label	"Biomarker";
-					rdfs:subClassOf	iasis:Concept;
+					rdfs:subClassOf	clarify:Concept;
 					rdfs:comment "A biomarker, or biological marker is a measurable indicator of some biological state or condition.";
 					dcterms:modified "2020-09-14"^^xsd:date;
 					prv:File "biomarker.ttl";
 					prv:File "biomarkerIndication.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Phenotype	rdf:type	owl:Class;
+clarify:Phenotype	rdf:type	owl:Class;
 					rdfs:label	"Phenotype";
-					rdfs:subClassOf	iasis:Concept;
+					rdfs:subClassOf	clarify:Concept;
 					rdfs:comment "The set of observable characteristics of an individual resulting from the interaction of its genotype with the environment. This class include side effects that result from different drugs.";
 					dcterms:modified "2020-09-14"^^xsd:date;
 					prv:File "toxicity.ttl";
 					prv:File "drugSideEffectInteraction.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Target	rdf:type	owl:Class;
+clarify:Target	rdf:type	owl:Class;
 				rdfs:label	"Target";
-				rdfs:subClassOf	iasis:Concept;
+				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "A drug target is a molecule in the body, usually a protein, that is intrinsically associated with a particular disease process and that could be addressed by a drug to produce a desired therapeutic effect.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "target.ttl";
 				prv:File "drugTargetInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Protein	rdf:type	owl:Class;
+clarify:Protein	rdf:type	owl:Class;
 				rdfs:label	"Protein";
-				rdfs:subClassOf	iasis:Concept;
+				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "Large and complex molecules that play many critical roles in the body. They are required for the structure, function and regulation of the body's tissues and organs.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugTargetInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Enzyme	rdf:type	owl:Class;
+clarify:Enzyme	rdf:type	owl:Class;
 				rdfs:label	"Enzyme";
-				rdfs:subClassOf	iasis:Concept;
+				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "Macromolecular biological catalyst that accelerate chemical reactions. Most enzymes are proteins.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "enzyme.ttl";
 				prv:File "drugEnzymeInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:Disorder	rdf:type	owl:Class;
+clarify:Disorder	rdf:type	owl:Class;
 				rdfs:label	"Disorder";
-				rdfs:subClassOf	iasis:Concept;
+				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "A particular abnormal condition that negatively affects the structure or function of all or part of an organism, and that is not due to any immediate external injury.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "indication_CUI";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:DrugDrugInteraction	rdf:type	owl:Class;
+clarify:DrugDrugInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugDrugInteraction";
-				rdfs:subClassOf	iasis:Relation;
+				rdfs:subClassOf	clarify:Relation;
 				rdfs:comment "The relation between two drugs that interact.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "CRD.ttl";
@@ -110,56 +110,56 @@ iasis:DrugDrugInteraction	rdf:type	owl:Class;
 				prv:File "drugDrugInteraction_symmetric.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:DrugDisorderInteraction	rdf:type	owl:Class;
+clarify:DrugDisorderInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugDisorderInteraction";
-				rdfs:subClassOf	iasis:Interaction;
+				rdfs:subClassOf	clarify:Interaction;
 				rdfs:comment "A drug-induced disorder.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugDisorder.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/maria-isabel-castellanos/>.
 
-iasis:DrugEnzymeInteraction	rdf:type	owl:Class;
+clarify:DrugEnzymeInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugEnzymeInteraction";
-				rdfs:subClassOf	iasis:Interaction;
+				rdfs:subClassOf	clarify:Interaction;
 				rdfs:comment "Interactions similar to drug receptor interactions where drugs resemble the natural substrates and bind enzymes.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugEnzymeInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:DrugSideEffectInteraction	rdf:type	owl:Class;
+clarify:DrugSideEffectInteraction	rdf:type	owl:Class;
 						rdfs:label	"DrugSideEffectInteraction";
-						rdfs:subClassOf	iasis:Relation;
+						rdfs:subClassOf	clarify:Relation;
 						rdfs:comment "Effects of drugs, whether therapeutic or adverse, that are secondary to the one intended.";
 						dcterms:modified "2020-09-14"^^xsd:date;
 						prv:File "drugSideEffectInteraction.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:DrugTargetInteraction	rdf:type	owl:Class;
+clarify:DrugTargetInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugTargetInteraction";
-				rdfs:subClassOf	iasis:Interaction;
+				rdfs:subClassOf	clarify:Interaction;
 				rdfs:comment "Interactions between chemical compounds and the protein targets in the human body.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugTargetInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:SymmetricDrugDrugInteraction	rdf:type	owl:Class;
+clarify:SymmetricDrugDrugInteraction	rdf:type	owl:Class;
 				rdfs:label	"SymmetricDrugDrugInteraction";
-				rdfs:subClassOf	iasis:DrugDrugInteraction;
+				rdfs:subClassOf	clarify:DrugDrugInteraction;
 				rdfs:comment "The interactions between two drugs that do not change the effectiveness of the drugs.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugDrugInteraction_symmetric.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:AdverseEvent	rdf:type	owl:Class;
+clarify:AdverseEvent	rdf:type	owl:Class;
 				rdfs:label	"AdverseEvent";
-				rdfs:subClassOf	iasis:Concept;
+				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "The concept that explains the consequence of the drug drug interaction in their effectiveness.";
 				dcterms:modified "2020-09-14"^^xsd:date;
 				prv:File "drugDrugInteraction_non-symmetric.ttl";
 				prv:File "drugDrugInteraction_symmetric.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:TumorStage	rdf:type	owl:Class;
+clarify:TumorStage	rdf:type	owl:Class;
 					rdfs:label	"TumorStage";
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dcterms:modified "2020-09-14"^^xsd:date;
@@ -167,10 +167,340 @@ iasis:TumorStage	rdf:type	owl:Class;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 
-##################################################################################################
-################################### Properties ###################################################
-##################################################################################################
+#################################################################################################################################################
+######################################################## Properties - attributes ################################################################
+#################################################################################################################################################
 
+clarify:annID	rdf:type	owl:DatatypeProperty;
+			rdfs:label	"annID";
+			rdfs:domain clarify:Annotation;
+			rdfs:range	rdfs:Literal;
+			rdfs:comment	"Identification of instances of Annotation class";	
+			dcterms:modified "2020-09-14"^^xsd:date;
+			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:annLabel	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"annLabel";
+				rdfs:domain	clarify:Annotation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Label of instances of Annotation class";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:provenance	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"provenance";
+					rdfs:domain     clarify:Concept;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment	"The name of the source from which the concept is extracted or derived";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+######################## Drugs ########################
+
+clarify:drugLabel	rdf:type owl:DatatypeProperty;
+					rdfs:label "DrugLabel";
+					rdfs:domain clarify:Drug;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Drug label.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drug_DBpedia.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:drugBankID	rdf:type	owl:DatatypeProperty;
+					rdfs:label "DrugBankID";
+					rdfs:domain clarify:Drug;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Drug Bank ID.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drug_DBpedia.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:biomarkerLabel	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"biomarkerLabel";
+				rdfs:domain	clarify:Biomarker;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"The name of biomarker.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				prv:File "Biomarker.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:targetID	rdf:type	owl:DatatypeProperty;
+					rdfs:label "targetID";
+					rdfs:domain clarify:Target;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Target ID.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drugTargetInteraction.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:targetLabel	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"targetLabel";
+				rdfs:domain	clarify:Target;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Target Label";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				prv:File "drugTargetInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:proteinID	rdf:type owl:DatatypeProperty;
+					rdfs:label	"proteinID";
+					rdfs:domain clarify:Protein;
+					rdfs:range rdfs:Literal;
+					rdfs:comment	"Uniprot Accession key for protein.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drugTargetInteraction.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:proteinName	rdf:type owl:DatatypeProperty;
+					rdfs:label	"proteinName";
+					rdfs:domain clarify:Protein;
+					rdfs:range rdfs:Literal;
+					rdfs:comment	"Name of protein.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drugTargetInteraction.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:enzymeID	rdf:type owl:DatatypeProperty;
+					rdfs:label "EnzymeID";
+					rdfs:domain clarify:Enzyme;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Enzyme ID.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "enzyme.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:enzymeLabel	rdf:type owl:DatatypeProperty;
+					rdfs:label "EnzymeLabel";
+					rdfs:domain clarify:Enzyme;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Enzyme Label.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "enzyme.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:disorderLabel	rdf:type	owl:DatatypeProperty;
+					rdfs:label "DisorderLabel";
+					rdfs:domain clarify:Disorder;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Disorder Label.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "indication_CUI.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:targetID	rdf:type	owl:DatatypeProperty;
+					rdfs:label "targetID";
+					rdfs:domain clarify:Target;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Target ID.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "target.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+					
+clarify:targetLabel	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"targetLabel";
+				rdfs:domain	clarify:Target;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Target Label";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				prv:File "target.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:phenotypeLabel	rdf:type owl:DatatypeProperty;
+					rdfs:label "PhenotypeLabel";
+					rdfs:domain clarify:Phenotype;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Phenotype Label.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "toxicity.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:toxicityType	rdf:type owl:DatatypeProperty;
+					rdfs:label "toxicityType";
+					rdfs:domain clarify:Phenotype;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Toxicity Label.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "toxicity.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:externalLink	rdf:type owl:DatatypeProperty;
+					rdfs:label "externalLink";
+					rdfs:domain clarify:Concept;
+				  	rdfs:range xsd:anyURI;
+					rdfs:comment "Link to external resources.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drug_DBpedia.ttl";
+					prv:File "enzyme.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:uniprotID	rdf:type	owl:DatatypeProperty;
+					rdfs:label "uniprotID";
+					rdfs:domain clarify:Concept;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "External relationship to accession ID in uniprot.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "enzyme.ttl";
+					prv:File "target.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:dse_AvgFrequency	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"dse_AvgFrequency";
+						rdfs:domain	clarify:DrugSideEffectInteraction;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"Represents the average frequecy of particular drug having specific side effect.";
+						dcterms:modified "2020-09-14"^^xsd:date;
+						prv:File "drugSideEffectInteraction.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:impact	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"impact";
+						rdfs:domain	clarify:AdverseEvent;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"Represents the type impact of the adverse event i.e. increase/decrease";
+						dcterms:modified "2020-09-14"^^xsd:date;
+						prv:File "drugDrugInteraction_non-symmetric.ttl";
+						prv:File "drugDrugInteraction_symmetric.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+#################################################################################################################################################
+#################################################### Properties - relationships #################################################################
+#################################################################################################################################################
+
+
+clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
+								rdfs:label	"hasCUIAnnotation";
+								rdfs:domain clarify:Concept;
+				  				rdfs:range clarify:Annotation;
+								rdfs:comment	"CUI annotation of the concept.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+######################## Drugs ########################
+
+clarify:biomarker_has_indication	rdf:type	owl:ObjectProperty;
+								rdfs:label	"biomarker_has_indication";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"A biomarker has indication Drug";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "biomarkerIndication.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:interactor1	rdf:type owl:ObjectProperty;
+					rdfs:label "interactor1";
+					rdfs:domain clarify:Interaction;
+				  	rdfs:range clarify:Drug;
+					rdfs:comment "Interactor 1";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drugDisorder.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:interactor2	rdf:type owl:ObjectProperty;
+					rdfs:label "interactor2";
+					rdfs:domain clarify:Interaction;
+				  	rdfs:range clarify:Concept;
+					rdfs:comment "Interactor 2";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					prv:File "drugDisorder.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:drug_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
+							rdfs:label	"drug_isRelatedTo_dse";
+							rdfs:domain	clarify:Drug;
+							rdfs:range	clarify:DrugSideEffect;
+							rdfs:comment	"relationship between drug and drug-sideEffect relation.";
+							dcterms:modified "2020-09-14"^^xsd:date;
+							prv:File "drugSideEffectInteraction.ttl";
+							prv:File "drugToxicityInteraction.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:sideEffect_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
+									rdfs:label	"sideEffect_isRelatedTo_dse";
+									rdfs:domain	clarify:Phenotype;
+									rdfs:range	clarify:DrugSideEffect;
+									rdfs:comment	"relationship between sideEffect and drug-sideEffect relation.";
+									dcterms:modified "2020-09-14"^^xsd:date;
+									prv:File "drugSideEffectInteraction.ttl";
+									prv:File "drugToxicityInteraction.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:enzyme_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
+									rdfs:label	"enzyme_isRelatedTo_gene";
+									rdfs:domain	clarify:Enzyme;
+									rdfs:range	clarify:Gene;
+									rdfs:comment	"The relationship between the enzyme and the gene from which it is produced.";
+									dcterms:modified "2020-09-14"^^xsd:date;
+									prv:File "enzyme.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:affects	rdf:type	owl:ObjectProperty;
+								rdfs:label	"affects";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The conncetion between drug that affects by the other one through their interaction and the interaction node.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "CRD.ttl";
+								prv:File "NCRD.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:isAffected	rdf:type	owl:ObjectProperty;
+								rdfs:label	"isAffected";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The conncetion between drug that is affected by the other one through their interaction and the interaction node.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "CRD.ttl";
+								prv:File "NCRD.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:precipitant_drug	rdf:type	owl:ObjectProperty;
+								rdfs:label	"precipitant_drug";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding precipitant drug.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "drugDrugInteraction_non-symmetric.ttl";
+								prv:File "drugDrugInteraction_symmetric.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:object_drug	rdf:type	owl:ObjectProperty;
+								rdfs:label	"object_drug";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding object drug.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "drugDrugInteraction_non-symmetric.ttl";
+								prv:File "drugDrugInteraction_symmetric.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:effect	rdf:type	owl:ObjectProperty;
+								rdfs:label	"effect";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:AdverseEvent;
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding adverse event.";
+								dcterms:modified "2020-09-14"^^xsd:date;
+								prv:File "drugDrugInteraction_non-symmetric.ttl";
+								prv:File "drugDrugInteraction_symmetric.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:target_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
+									rdfs:label	"target_isRelatedTo_gene";
+									rdfs:domain	clarify:Target;
+									rdfs:range	clarify:Gene;
+									rdfs:comment	"The relationship between the target and the gene from which it is produced.";
+									dcterms:modified "2020-09-14"^^xsd:date;
+									prv:File "target.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:tumorStage_has_indication	rdf:type	owl:ObjectProperty;
+									rdfs:label	"tumorStage_has_indication";
+									rdfs:domain	clarify:TumorStage;
+									rdfs:range	clarify:Drug;
+									rdfs:comment	"Tumor stage has indication drug";
+									dcterms:modified "2020-09-14"^^xsd:date;
+									prv:File "tumorStageIndication.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 
 
