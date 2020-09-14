@@ -1,0 +1,168 @@
+@prefix iasis: <http://project-iasis.eu/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+##########################################################################################
+################################## Classes ###############################################
+##########################################################################################
+
+iasis:Concept	rdf:type	owl:Class;
+				rdfs:label	"Concept";
+				rdfs:comment "Constituents of thoughts or real world entities.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Annotation	rdf:type	owl:Class;
+					rdfs:label	"Annotation";
+					rdfs:comment "Annotation of a concept including label, id and source of concept.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Relation	rdf:type	owl:Class;
+					rdfs:label	"Relation";
+					rdfs:comment "Relations between concepts.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+#######################################################
+######################## Drugs ########################
+#######################################################
+
+iasis:Drug	rdf:type	owl:Class;
+			rdfs:label	"Drug";
+			rdfs:subClassOf	iasis:Concept;
+			rdfs:comment "A substance used as a medication or in the preparation of medication.";
+			dcterms:modified "2020-09-14"^^xsd:date;
+			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:LungCancerDrug	rdf:type	owl:Class;
+			rdfs:label	"LungCancerDrug";
+			rdfs:subClassOf	iasis:Drug;
+			rdfs:comment "A Drug used in the Lung Cancer treatment.";
+			dcterms:modified "2020-09-14"^^xsd:date;
+			dcterms:description "mentioned in the mapping files: LCdrugs.ttl";
+			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Biomarker	 rdf:type	owl:Class;
+					rdfs:label	"Biomarker";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment "A biomarker, or biological marker is a measurable indicator of some biological state or condition.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:description "mentioned in the mapping files: biomarker.ttl, biomarkerIndication.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Phenotype	rdf:type	owl:Class;
+					rdfs:label	"Phenotype";
+					rdfs:subClassOf	iasis:Concept;
+					rdfs:comment "The set of observable characteristics of an individual resulting from the interaction of its genotype with the environment. This class include side effects that result from different drugs.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:description "mentioned in the mapping files: toxicity.ttl, drugSideEffectInteraction.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Target	rdf:type	owl:Class;
+				rdfs:label	"Target";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "A drug target is a molecule in the body, usually a protein, that is intrinsically associated with a particular disease process and that could be addressed by a drug to produce a desired therapeutic effect.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: target.ttl, drugTargetInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Protein	rdf:type	owl:Class;
+				rdfs:label	"Protein";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "Large and complex molecules that play many critical roles in the body. They are required for the structure, function and regulation of the body's tissues and organs.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugTargetInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Enzyme	rdf:type	owl:Class;
+				rdfs:label	"Enzyme";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "Macromolecular biological catalyst that accelerate chemical reactions. Most enzymes are proteins.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: enzyme.ttl, drugEnzymeInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:Disorder	rdf:type	owl:Class;
+				rdfs:label	"Disorder";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "A particular abnormal condition that negatively affects the structure or function of all or part of an organism, and that is not due to any immediate external injury.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: indication_CUI";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:DrugDrugInteraction	rdf:type	owl:Class;
+				rdfs:label	"DrugDrugInteraction";
+				rdfs:subClassOf	iasis:Relation;
+				rdfs:comment "The relation between two drugs that interact.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: CRD.ttl, NCRD.ttl, drugDrugInteraction_non-symmetric.ttl, drugDrugInteraction_symmetric.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:DrugDisorderInteraction	rdf:type	owl:Class;
+				rdfs:label	"DrugDisorderInteraction";
+				rdfs:subClassOf	iasis:Interaction;
+				rdfs:comment "A drug-induced disorder.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugDisorder.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/maria-isabel-castellanos/>.
+
+iasis:DrugEnzymeInteraction	rdf:type	owl:Class;
+				rdfs:label	"DrugEnzymeInteraction";
+				rdfs:subClassOf	iasis:Interaction;
+				rdfs:comment "Interactions similar to drug receptor interactions where drugs resemble the natural substrates and bind enzymes.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugEnzymeInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:DrugSideEffectInteraction	rdf:type	owl:Class;
+						rdfs:label	"DrugSideEffectInteraction";
+						rdfs:subClassOf	iasis:Relation;
+						rdfs:comment "Effects of drugs, whether therapeutic or adverse, that are secondary to the one intended.";
+						dcterms:modified "2020-09-14"^^xsd:date;
+						dcterms:description "mentioned in the mapping files: drugSideEffectInteraction.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:DrugTargetInteraction	rdf:type	owl:Class;
+				rdfs:label	"DrugTargetInteraction";
+				rdfs:subClassOf	iasis:Interaction;
+				rdfs:comment "Interactions between chemical compounds and the protein targets in the human body.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugTargetInteraction.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:SymmetricDrugDrugInteraction	rdf:type	owl:Class;
+				rdfs:label	"SymmetricDrugDrugInteraction";
+				rdfs:subClassOf	iasis:DrugDrugInteraction;
+				rdfs:comment "The interactions between two drugs that do not change the effectiveness of the drugs.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugDrugInteraction_symmetric.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:AdverseEvent	rdf:type	owl:Class;
+				rdfs:label	"AdverseEvent";
+				rdfs:subClassOf	iasis:Concept;
+				rdfs:comment "The concept that explains the consequence of the drug drug interaction in their effectiveness.";
+				dcterms:modified "2020-09-14"^^xsd:date;
+				dcterms:description "mentioned in the mapping files: drugDrugInteraction_non-symmetric.ttl, drugDrugInteraction_symmetric.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:TumorStage	rdf:type	owl:Class;
+					rdfs:label	"TumorStage";
+					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
+					dcterms:modified "2020-09-14"^^xsd:date;
+					dcterms:description "mentioned in the mapping files: tumorStageIndication.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+##################################################################################################
+################################### Properties ###################################################
+##################################################################################################
+
+
+
+
+
