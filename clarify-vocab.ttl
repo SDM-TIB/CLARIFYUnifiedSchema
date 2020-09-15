@@ -166,6 +166,8 @@ clarify:TumorStage	rdf:type	owl:Class;
 					prv:File "tumorStageIndication.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+######################## clinical notes ########################
+
 
 #################################################################################################################################################
 ######################################################## Properties - attributes ################################################################
@@ -362,6 +364,14 @@ clarify:impact	rdf:type	owl:DatatypeProperty;
 						prv:File "drugDrugInteraction_symmetric.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+######################## clinical notes ########################
+
+			
+
+
+
+
+
 #################################################################################################################################################
 #################################################### Properties - relationships #################################################################
 #################################################################################################################################################
@@ -501,6 +511,42 @@ clarify:tumorStage_has_indication	rdf:type	owl:ObjectProperty;
 									dcterms:modified "2020-09-14"^^xsd:date;
 									prv:File "tumorStageIndication.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+######################## clinical notes ########################
+
+iasis:drugLabel_ENG	rdf:type owl:DatatypeProperty;
+					rdfs:label "drugLabel_ENG";
+					rdfs:domain iasis:Drug;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Drug label.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "chemotherapyList.ttl";
+					prv:File ".ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+iasis:disorderLabel_ENG	rdf:type owl:DatatypeProperty;
+					rdfs:label "disorderLabel_ENG";
+					rdfs:domain iasis:Disorder;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Disorder label.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "comorbidities.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+iasis:annLabel_SPA	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"annLabel_SPA";
+				rdfs:domain	iasis:Annotation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Spanish label of instances of Annotation class";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				prv:File "chemotherapyList.ttl";
+				prv:File "comorbidities.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+
+
+
+
 
 
 
