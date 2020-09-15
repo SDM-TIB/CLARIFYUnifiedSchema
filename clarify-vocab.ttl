@@ -164,10 +164,64 @@ clarify:TumorStage	rdf:type	owl:Class;
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dcterms:modified "2020-09-14"^^xsd:date;
 					prv:File "tumorStageIndication.ttl";
+					prv:File "stages.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################## clinical notes ########################
 
+clarify:DrugGroup	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:Concept;
+						rdfs:label	"DrugGroup";
+						rdfs:comment "The type of drugs that has been prescribed to the patient.";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "DrugGroups.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:FamiliarAntecedent	rdf:type	owl:Class;
+							rdfs:label	"FamiliarAntecedent";
+							rdfs:comment "Familiar antecedents of the patient.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "familiarAntecedentsList.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Gender	rdf:type	owl:Class;
+						rdfs:label	"Gender";
+						rdfs:comment "The gender of patients.";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "gender.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
+
+clarify:ImmunotherapyDrug	rdf:type	owl:Class;
+							rdfs:label	"ImmunotherapyDrug";
+							rdfs:subClassOf	clarify:Drug;
+							rdfs:comment "An immunotherapy drug which is prescribed as the Lung Cancer treatment.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "immunotherapyList.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NonOncologicalDrug	rdf:type	owl:Class;
+							rdfs:label	"NonOncologicalDrug";
+							rdfs:subClassOf	clarify:Drug;
+							rdfs:comment "A non-oncological drug which is prescribed to the patient as the treatment of a disorder other than lung cancer.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "nonOncologicalTreatments.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:TkiDrug	rdf:type	owl:Class;
+							rdfs:label	"TkiDrug";
+							rdfs:subClassOf	clarify:Drug;
+							rdfs:comment "Represents TKIs or Tyrosine kinase inhibitors that are type of targeted therapy.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "tkiList.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:OncologicalSurgery	rdf:type	owl:Class;
+							rdfs:label	"OncologicalSurgery";
+							rdfs:subClassOf clarify:Concept;
+							rdfs:comment " Is the branch of surgery applied to oncology; it focuses on the surgical management of tumors, especially cancerous tumors.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "oncologicalSurgeries.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.												
 
 #################################################################################################################################################
 ######################################################## Properties - attributes ################################################################
@@ -514,39 +568,94 @@ clarify:tumorStage_has_indication	rdf:type	owl:ObjectProperty;
 
 ######################## clinical notes ########################
 
-iasis:drugLabel_ENG	rdf:type owl:DatatypeProperty;
+clarify:annLabel_SPA	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"annLabel_SPA";
+				rdfs:domain	clarify:Annotation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Spanish label of instances of Annotation class";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				prv:File "chemotherapyList.ttl";
+				prv:File "comorbidities.ttl";
+				prv:File "immunotherapyList.ttl";
+				prv:File "nonOncologicalTreatments.ttl";
+				prv:File "tkiList.ttl";
+				prv:File "toxicities.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:drugLabel_ENG	rdf:type owl:DatatypeProperty;
 					rdfs:label "drugLabel_ENG";
-					rdfs:domain iasis:Drug;
+					rdfs:domain clarify:Drug;
 				  	rdfs:range rdfs:Literal;
 					rdfs:comment "Drug label.";
 					dcterms:modified "2020-09-15"^^xsd:date;
 					prv:File "chemotherapyList.ttl";
-					prv:File ".ttl";
+					prv:File "immunotherapyList.ttl";
+					prv:File "nonOncologicalTreatments.ttl";
+					prv:File "tkiList.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:disorderLabel_ENG	rdf:type owl:DatatypeProperty;
+clarify:disorderLabel_ENG	rdf:type owl:DatatypeProperty;
 					rdfs:label "disorderLabel_ENG";
-					rdfs:domain iasis:Disorder;
+					rdfs:domain clarify:Disorder;
 				  	rdfs:range rdfs:Literal;
 					rdfs:comment "Disorder label.";
 					dcterms:modified "2020-09-15"^^xsd:date;
 					prv:File "comorbidities.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-iasis:annLabel_SPA	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"annLabel_SPA";
-				rdfs:domain	iasis:Annotation;
-				rdfs:range	rdfs:Literal;
-				rdfs:comment	"Spanish label of instances of Annotation class";
-				dcterms:modified "2020-09-15"^^xsd:date;
-				prv:File "chemotherapyList.ttl";
-				prv:File "comorbidities.ttl";
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+clarify:drugGroupLabel  rdf:type	owl:DatatypeProperty;
+					rdfs:label "drugGroupLabel";
+					rdfs:domain clarify:DrugGroup;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Drug Group Label.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "drugGroups.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:familiarAntecedentLabel_ENG	rdf:type        owl:DatatypeProperty;	
+						rdfs:label	"familiarAntecedentLabel_ENG";
+						rdfs:domain	clarify:FamiliarAntecedent;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"The title of familiar antecedent.";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "familiarAntecedentsList.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:genderLabel_ENG	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"genderLabel_ENG";
+							rdfs:domain	clarify:Gender;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Gender name (Female/Male/F/M)";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "gender.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:oncologicalSurgeryLabel_ENG       rdf:type     owl:DatatypeProperty;
+										rdfs:label	"oncologicalSurgeryLabel_ENG";
+										rdfs:domain	clarify:OncologicalSurgery;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment "Name of oncological surgery ";
+										dcterms:modified "2020-09-15"^^xsd:date;
+										prv:File "oncologicalSurgeries.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:tumorStageLabel	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"tumorStageLabel";
+							rdfs:domain	clarify:TumorStage;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Label of Tumor Stage";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "stages.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:toxicityLabel_ENG		rdf:type        owl:DatatypeProperty;	
+							rdfs:label	"toxicityLabel_ENG";
+							rdfs:domain	clarify:Phenotype;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"Label of Toxicity";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "toxicities.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 
 
