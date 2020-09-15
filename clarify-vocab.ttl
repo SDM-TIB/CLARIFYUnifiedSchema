@@ -28,6 +28,11 @@ clarify:Relation	rdf:type	owl:Class;
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Patient	rdf:type	owl:Class;
+					rdfs:label	"Patient";
+					rdfs:comment "Patient independent of their disease.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################## Drugs ########################
 
@@ -169,6 +174,13 @@ clarify:TumorStage	rdf:type	owl:Class;
 
 ######################## clinical notes ########################
 
+clarify:LCPatient	rdf:type	owl:Class;
+				rdfs:label	"LungCancerPatient";
+				rdfs:subClassOf	clarify:Patient;
+				rdfs:comment "A patient who is diagnosed with Lung Cancer.";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:DrugGroup	rdf:type	owl:Class;
 						rdfs:subClassOf clarify:Concept;
 						rdfs:label	"DrugGroup";
@@ -221,7 +233,23 @@ clarify:OncologicalSurgery	rdf:type	owl:Class;
 							rdfs:comment " Is the branch of surgery applied to oncology; it focuses on the surgical management of tumors, especially cancerous tumors.";
 							dcterms:modified "2020-09-15"^^xsd:date;
 							prv:File "oncologicalSurgeries.ttl";
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.												
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:TumorType	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:Concept;
+						rdfs:label	"TumorType";
+						rdfs:comment "The histology kind of the lung cancer. The type of tumor.";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:Diagnosis  	rdf:type owl:Class;
+					rdfs:label	"Diagnosis";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "The identification of the nature of an illness or other problem by examination of the symptoms.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "patient.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																					
 
 #################################################################################################################################################
 ######################################################## Properties - attributes ################################################################
@@ -420,12 +448,42 @@ clarify:impact	rdf:type	owl:DatatypeProperty;
 
 ######################## clinical notes ########################
 
-			
+clarify:gender	rdf:type	owl:ObjectProperty;
+				rdfs:label	"gender";
+				rdfs:domain	clarify:Patient;
+				rdfs:range	clarify:Gender;
+				rdfs:comment	"Gender value of the patient.";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				prv:File "patient.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:hasDiagnosis	rdf:type     owl:ObjectProperty;
+					rdfs:label	"hasDiagnosis";
+					rdfs:domain	clarify:LCPatient;
+					rdfs:range	clarify:Diagnosis;
+					rdfs:comment "Patient's initial diagnosis.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "patient.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:hasDiagnosisDate   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisDate";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	clarify:Date;
+							rdfs:comment "Diagnosis date of the disease.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-
-
+clarify:hasDiagnosisPerformanceStatus   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisPerformanceStatus";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	clarify:PerformanceStatus;
+							rdfs:comment "The Performance Status of the patient at diagnosis.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+							
 #################################################################################################################################################
 #################################################### Properties - relationships #################################################################
 #################################################################################################################################################
@@ -580,6 +638,7 @@ clarify:annLabel_SPA	rdf:type	owl:DatatypeProperty;
 				prv:File "nonOncologicalTreatments.ttl";
 				prv:File "tkiList.ttl";
 				prv:File "toxicities.ttl";
+				prv:File "tumorType.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:drugLabel_ENG	rdf:type owl:DatatypeProperty;
@@ -656,6 +715,259 @@ clarify:toxicityLabel_ENG		rdf:type        owl:DatatypeProperty;
 							dcterms:modified "2020-09-15"^^xsd:date;
 							prv:File "toxicities.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:tumorTypeLabel_ENG	rdf:type	owl:DatatypeProperty;
+					rdfs:label "tumorTypeLabel_ENG";
+					rdfs:domain clarify:TumorType;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "English tumor Type Label.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "tumorType.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:secondTumorTypeLabel	rdf:type	owl:DatatypeProperty;
+					rdfs:label "secondTumorTypeLabel";
+					rdfs:domain clarify:TumorType;
+				  	rdfs:range rdfs:Literal;
+					rdfs:comment "Second Tumor Type label.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "tumorType.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:beingIn_hospitalHealthArea	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"beingIn_hospitalHealthArea";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"if the patient lives in a city which belong to the municipal scope area awarded to the hospital (True/False).";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:distanceToHospital	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"distanceToHospital";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The distance in kilometers from the city in which the patient lives to the hospital.";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:radonRiskLevel	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"radonRiskLevel";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The radon risk level [from 1 (lowest) to 6 (highest)]..";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfCigarettesPerYear	rdf:type	owl:DatatypeProperty;	
+									rdfs:label	"numberOfCigarettesPerYear";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The number of cigarettes per year if the patient is current or former smoker.";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:isDead	rdf:type        owl:DatatypeProperty;	
+								rdfs:label	"isDead";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment	"If the patient is currently dead (True/False).";
+								dcterms:modified "2020-09-15"^^xsd:date;
+								prv:File "patient.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ageAtDeath	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"ageAtDeath";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The age at which the patient died.";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:placeOfDeath	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"placeOfDeath";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"The place where the patient died (home/ hospital/ alive: if the patient is alive).";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:smoking	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"smoking";
+				rdfs:domain	clarify:Patient;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Whether the patient smokes or not; smoker or no_smoker.";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				prv:File "patient.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_biomarker	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"biomarkers";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"If an Entity has been studied, and if the result has been positive or negative in any biomarker (true/ false/ not studied).";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_bioEgfr	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"existenceOf_bioEgfr";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"Whether the patient's biopsies have been studied in terms of EGFR biomarker and if the result has been positive or negative in this specific biomarker (true/ false/ not studied).";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+clarify:existenceOf_bioAlk	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"existenceOf_bioAlk";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"Whether the patient's biopsies have been studied in terms of ALK biomarker and if the result has been positive or negative in this specific biomarker (true/ false/ not studied).";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+clarify:existenceOf_bioRos1	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"existenceOf_bioRos1";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"Whether the patient's biopsies have been studied in terms of ROS1 biomarker and if the result has been positive or negative in this specific biomarker (true/ false/ not studied).";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																											
+
+clarify:existenceOf_chemotherapy	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"existenceOf_chemotherapy";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment	"Whether the patient has received chemotherapy oncology treatment (true/ false/ not studied).";
+								dcterms:modified "2020-09-15"^^xsd:date;
+								prv:File "patient.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_tki	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"existenceOf_tki";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"Whether the patient has received tki oncology treatment (true/ false/ not studied).";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_immunotherapy	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"existenceOf_immunotherapy";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment	"Whether the patient has received immunotherapy oncology treatment (true/ false/ not studied).";
+								dcterms:modified "2020-09-15"^^xsd:date;
+								prv:File "patient.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_antiangiogentic	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_antiangiogentic";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Whether the patient has received antiangiogentic oncology treatment (true/ false/ not studied).";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_radiationtherapy	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_radiationtherapy";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Whether the patient has received radiationtherapy oncology treatment (true/ false/ not studied).";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_surgery	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"existenceOf_surgery";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"Whether the patient has received radiationtherapy oncology treatment (true/ false/ not studied).";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_familiarAntecedents	rdf:type	owl:DatatypeProperty;
+										rdfs:label	"existenceOf_familiarAntecedents";
+										rdfs:domain	clarify:LCPatient;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment	"Whether the patient has families with antecedents of cancer (true/ false/ not studied).";
+										dcterms:modified "2020-09-15"^^xsd:date;
+										prv:File "patient.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+
+clarify:existenceOf_brainMetastasis	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_brainMetastasis";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"Whether brain metastasis has been detected in the patient (true/ false/ not studied).";
+									dcterms:modified "2020-09-15"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:survivalMonths	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"survivalMonths";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"Months from diagnosis to death or until the last documented record of the patient.";
+						dcterms:modified "2020-09-15"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+						
+clarify:patientCurrentStatus	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"patientCurrentStatus";
+				rdfs:domain	clarify:LCPatient;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Current status of Lung Cancer patient (dead, alive_with_cancer, alive_without_cancer, withdrawn of the study)";
+				dcterms:modified "2020-09-15"^^xsd:date;
+				prv:File "patient.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasDiagnosisTumorStage   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisTumorStage";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	clarify:TumorStage;
+							rdfs:comment "The tumor stage at the time of the diagnosis.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasDiagnosisTumorType   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisTumorType";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	clarify:TumorType;
+							rdfs:comment "Tumor Type at diagnosis";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasDiagnosisAge   rdf:type     owl:DatatypeProperty;
+							rdfs:label	"hasDiagnosisAge";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "The age of the patient at diagnosis of the disease.";
+							dcterms:modified "2020-09-15"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+
+
+
+
+
+
 
 
 
