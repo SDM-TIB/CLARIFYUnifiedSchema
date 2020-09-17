@@ -189,13 +189,6 @@ clarify:DrugGroup	rdf:type	owl:Class;
 						prv:File "DrugGroups.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:FamiliarAntecedent	rdf:type	owl:Class;
-							rdfs:label	"FamiliarAntecedent";
-							rdfs:comment "Familiar antecedents of the patient.";
-							dcterms:modified "2020-09-15"^^xsd:date;
-							prv:File "familiarAntecedentsList.ttl";
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:Gender	rdf:type	owl:Class;
 						rdfs:label	"Gender";
 						rdfs:comment "The gender of patients.";
@@ -588,15 +581,6 @@ clarify:hasImmunotherapy	rdf:type        owl:ObjectProperty;
 						prv:File "patient_ImmunotherapyList.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasFamiliarAntecedent	rdf:type        owl:ObjectProperty;	
-						rdfs:label	"hasFamiliarAntecedent";
-						rdfs:domain	clarify:LCPatient;
-						rdfs:range	clarify:FamiliarAntecedent;
-						rdfs:comment	"Connection between patient with lung cancer and her/his familiar antecedents.";
-						dcterms:modified "2020-09-15"^^xsd:date;
-						prv:File "patient_familiarAntecedentsList.ttl";
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:hasDrugGroup	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasDrug";
 						rdfs:domain	clarify:LCPatient;
@@ -796,7 +780,6 @@ clarify:annLabel_SPA	rdf:type	owl:DatatypeProperty;
 				prv:File "nonOncologicalTreatments.ttl";
 				prv:File "tkiList.ttl";
 				prv:File "toxicities.ttl";
-				prv:File "tumorType.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:drugLabel_ENG	rdf:type owl:DatatypeProperty;
@@ -828,15 +811,6 @@ clarify:drugGroupLabel  rdf:type	owl:DatatypeProperty;
 					dcterms:modified "2020-09-15"^^xsd:date;
 					prv:File "drugGroups.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:familiarAntecedentLabel_ENG	rdf:type        owl:DatatypeProperty;	
-						rdfs:label	"familiarAntecedentLabel_ENG";
-						rdfs:domain	clarify:FamiliarAntecedent;
-						rdfs:range	rdfs:Literal;
-						rdfs:comment	"The title of familiar antecedent.";
-						dcterms:modified "2020-09-15"^^xsd:date;
-						prv:File "familiarAntecedentsList.ttl";
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:genderLabel_ENG	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"genderLabel_ENG";
@@ -873,24 +847,6 @@ clarify:toxicityLabel_ENG		rdf:type        owl:DatatypeProperty;
 							dcterms:modified "2020-09-15"^^xsd:date;
 							prv:File "toxicities.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:tumorTypeLabel_ENG	rdf:type	owl:DatatypeProperty;
-					rdfs:label "tumorTypeLabel_ENG";
-					rdfs:domain clarify:TumorType;
-				  	rdfs:range rdfs:Literal;
-					rdfs:comment "English tumor Type Label.";
-					dcterms:modified "2020-09-15"^^xsd:date;
-					prv:File "tumorType.ttl";
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:secondTumorTypeLabel	rdf:type	owl:DatatypeProperty;
-					rdfs:label "secondTumorTypeLabel";
-					rdfs:domain clarify:TumorType;
-				  	rdfs:range rdfs:Literal;
-					rdfs:comment "Second Tumor Type label.";
-					dcterms:modified "2020-09-15"^^xsd:date;
-					prv:File "tumorType.ttl";
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:beingIn_hospitalHealthArea	rdf:type        owl:DatatypeProperty;	
 									rdfs:label	"beingIn_hospitalHealthArea";
@@ -1055,16 +1011,6 @@ clarify:existenceOf_surgery	rdf:type	owl:DatatypeProperty;
 							dcterms:modified "2020-09-15"^^xsd:date;
 							prv:File "patient.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:existenceOf_familiarAntecedents	rdf:type	owl:DatatypeProperty;
-										rdfs:label	"existenceOf_familiarAntecedents";
-										rdfs:domain	clarify:LCPatient;
-										rdfs:range	rdfs:Literal;
-										rdfs:comment	"Whether the patient has families with antecedents of cancer (true/ false/ not studied).";
-										dcterms:modified "2020-09-15"^^xsd:date;
-										prv:File "patient.ttl";
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
 
 clarify:existenceOf_brainMetastasis	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"existenceOf_brainMetastasis";
