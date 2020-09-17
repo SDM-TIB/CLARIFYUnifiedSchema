@@ -985,8 +985,8 @@ clarify:existenceOf_immunotherapy	rdf:type	owl:DatatypeProperty;
 								prv:File "patient.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:existenceOf_antiangiogentic	rdf:type	owl:DatatypeProperty;
-									rdfs:label	"existenceOf_antiangiogentic";
+clarify:existenceOf_antiangiogenic	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_antiangiogenic";
 									rdfs:domain	clarify:LCPatient;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment	"Whether the patient has received antiangiogentic oncology treatment (true/ false/ not studied).";
