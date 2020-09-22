@@ -651,6 +651,15 @@ clarify:existenceOf_bioRos1	rdf:type	owl:ObjectProperty;
 							prv:File "patient.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
 
+clarify:lastTumorStage	rdf:type	owl:ObjectProperty;
+						rdfs:label	"lastTumorStage";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	clarify:Biomarker;
+						rdfs:comment	"";
+						dcterms:modified "2020-09-22"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 #################################################################################################################################################
 #################################################### Properties - relationships #################################################################
 #################################################################################################################################################
@@ -1734,5 +1743,176 @@ clarify:lastDocumentDate	rdf:type	owl:DatatypeProperty;
 							rdfs:comment	"";
 							dcterms:modified "2020-09-21"^^xsd:date;
 							prv:File "patient.ttl";
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:lastDocumentDate	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"lastDocumentDate";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"";
+							dcterms:modified "2020-09-22"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_palliativeCare_BeforeDeath	rdf:type	owl:DatatypeProperty;
+												rdfs:label	"existenceOf_palliativeCare_BeforeDeath";
+												rdfs:domain	clarify:LCPatient;
+												rdfs:range	rdfs:Literal;
+												rdfs:comment	"";
+												dcterms:modified "2020-09-22"^^xsd:date;
+												prv:File "patient.ttl";
+												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:sensit_mutation_date	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"sensit_mutation_date";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment	"";
+								dcterms:modified "2020-09-22"^^xsd:date;
+								prv:File "patient.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOf_antiangiogenic_treatmentLines	rdf:type	owl:DatatypeProperty;
+												rdfs:label	"numberOf_antiangiogenic_treatmentLines";
+												rdfs:domain	clarify:LCPatient;
+												rdfs:range	rdfs:Literal;
+												rdfs:comment	"";
+												dcterms:modified "2020-09-22"^^xsd:date;
+												prv:File "patient.ttl";
+												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ageCategoryAtDeath	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"ageCategoryAtDeath";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"";
+							dcterms:modified "2020-09-22"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:commonCauseOfDeath	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"commonCauseOfDeath";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"";
+							dcterms:modified "2020-09-22"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfNotes	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"numberOfNotes";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"";
+						dcterms:modified "2020-09-22"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:survivalTime_MoreOrLessThan12months	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"survivalTime_MoreOrLessThan12months";
+											rdfs:domain	clarify:LCPatient;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment	"";
+											dcterms:modified "2020-09-22"^^xsd:date;
+											prv:File "patient.ttl";
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOf_immunotherapy_treatmentLines	rdf:type	owl:DatatypeProperty;
+												rdfs:label	"numberOf_immunotherapy_treatmentLines";
+												rdfs:domain	clarify:LCPatient;
+												rdfs:range	rdfs:Literal;
+												rdfs:comment	"";
+												dcterms:modified "2020-09-22"^^xsd:date;
+												prv:File "patient.ttl";
+												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:treatmentsOrder	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"treatmentsOrder";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"";
+						dcterms:modified "2020-09-22"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:survivalMonths_afterThirdTreatmentLine	rdf:type	owl:DatatypeProperty;
+												rdfs:label	"survivalMonths_afterThirdTreatmentLine";
+												rdfs:domain	clarify:LCPatient;
+												rdfs:range	rdfs:Literal;
+												rdfs:comment	"";
+												dcterms:modified "2020-09-22"^^xsd:date;
+												prv:File "patient.ttl";
+												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																																																																								
 																																																																																																																																																																																																																																										
+clarify:city	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"city ";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"";
+						dcterms:modified "2020-09-22"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfReports	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"numberOfReports";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"";
+						dcterms:modified "2020-09-22"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfMonths_afterDiagnosis_beforeSensitMutation	rdf:type	owl:DatatypeProperty;
+															rdfs:label	"numberOfMonths_afterDiagnosis_beforeSensitMutation";
+															rdfs:domain	clarify:LCPatient;
+															rdfs:range	rdfs:Literal;
+															rdfs:comment	"";
+															dcterms:modified "2020-09-22"^^xsd:date;
+															prv:File "patient.ttl";
+															dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_familyHistory	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_familyHistory";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment	"";
+									dcterms:modified "2020-09-22"^^xsd:date;
+									prv:File "patient.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:stageIVDate	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"stageIVDate";
+					rdfs:domain	clarify:LCPatient;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment	"";
+					dcterms:modified "2020-09-22"^^xsd:date;
+					prv:File "patient.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:monthsInTheSystem	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"monthsInTheSystem";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"";
+							dcterms:modified "2020-09-22"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfDrugs_beforeDiagnosis	rdf:type	owl:DatatypeProperty;
+										rdfs:label	"numberOfDrugs_beforeDiagnosis";
+										rdfs:domain	clarify:LCPatient;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment	"";
+										dcterms:modified "2020-09-22"^^xsd:date;
+										prv:File "patient.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasAntiangiogenic	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"hasAntiangiogenic";
+							rdfs:domain	clarify:LCPatient;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"";
+							dcterms:modified "2020-09-22"^^xsd:date;
+							prv:File "patient.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+																																															
