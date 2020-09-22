@@ -655,7 +655,7 @@ clarify:lastTumorStage	rdf:type	owl:ObjectProperty;
 						rdfs:label	"lastTumorStage";
 						rdfs:domain	clarify:LCPatient;
 						rdfs:range	clarify:Biomarker;
-						rdfs:comment	"";
+						rdfs:comment "Representes the last known stage of the patient (I, II, III,  IIIA, IIIB, IV).";
 						dcterms:modified "2020-09-22"^^xsd:date;
 						prv:File "patient.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
@@ -1362,7 +1362,7 @@ clarify:hasDiagnosisAgeCategory_over70	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"hasDiagnosisAgeCategory_over70";
 										rdfs:domain	clarify:Diagnosis;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Represnets the age group that the lung cancer patient belongs to at the time of the diagnostic (<70, >=70)";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1371,7 +1371,7 @@ clarify:hasDiagnosisAgeCategory	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"hasDiagnosisAgeCategory";
 										rdfs:domain	clarify:Diagnosis;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Represents the lung cancer patient's age range at the time of diagnosis diagnosed (40 <, 40-50, 50-60, 60-70, 70 >).";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1380,7 +1380,7 @@ clarify:existenceOf_deathInHospital_rightAfterTreatment	rdf:type	owl:DatatypePro
 														rdfs:label	"existenceOf_deathInHospital_rightAfterTreatment";
 														rdfs:domain	clarify:LCPatient;
 														rdfs:range	rdfs:Literal;
-														rdfs:comment	"";
+														rdfs:comment "Indicates that if the lung cancer patient died in the hospital the month after receiving his/her treatment (yes, no).";
 														dcterms:modified "2020-09-21"^^xsd:date;
 														prv:File "patient.ttl";
 														dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1389,7 +1389,7 @@ clarify:existenceOf_antiangiogentic	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"existenceOf_antiangiogentic";
 									rdfs:domain	clarify:LCPatient;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment	"";
+									rdfs:comment "Indicates that if the patient was treated with antiangiogenic therapy.";
 									dcterms:modified "2020-09-21"^^xsd:date;
 									prv:File "patient.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
@@ -1407,7 +1407,7 @@ clarify:ageCategoryAtDeath_over70	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"ageCategoryAtDeath_over70";
 									rdfs:domain	clarify:LCPatient;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment	"";
+									rdfs:comment "Represents the age group that the lung cancer patient belongs to at the time of death (<70, >=70)";
 									dcterms:modified "2020-09-21"^^xsd:date;
 									prv:File "patient.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																											
@@ -1416,7 +1416,7 @@ clarify:startAge	rdf:type	owl:DatatypeProperty;
 					rdfs:label	"startAge";
 					rdfs:domain	clarify:LCPatient;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment	"";
+					rdfs:comment "Represents the age of the lung cancer patient at the time of diagnosis.";
 					dcterms:modified "2020-09-21"^^xsd:date;
 					prv:File "patient.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1434,7 +1434,7 @@ clarify:numberOfMonth_afterDiagnosis_beforeResistMutation	rdf:type	owl:DatatypeP
 															rdfs:label	"numberOfMonth_afterDiagnosis_beforeResistMutation";
 															rdfs:domain	clarify:LCPatient;
 															rdfs:range	rdfs:Literal;
-															rdfs:comment	"";
+															rdfs:comment "Represents the elapsed time in months, from diagnosis to detection of resist (if negative the difference, resist was detected before the diagnosis, otherwise it was detected after)";
 															dcterms:modified "2020-09-21"^^xsd:date;
 															prv:File "patient.ttl";
 															dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																											
@@ -1443,7 +1443,7 @@ clarify:isParticipatedIn_clinicalTrial	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"isParticipatedIn_clinicalTrial";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Indicates that if the lung cancer patient partipated in any clinical trial.";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1452,7 +1452,7 @@ clarify:existenceOf_stageIVprogression	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"existenceOf_stageIVprogression";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Indicates that if the lung cancer patient has progressed to an advanced stage.";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1461,7 +1461,7 @@ clarify:categorizedNumberOfDrugs_beforeDiagnosis	rdf:type	owl:DatatypeProperty;
 													rdfs:label	"categorizedNumberOfDrugs_beforeDiagnosis";
 													rdfs:domain	clarify:LCPatient;
 													rdfs:range	rdfs:Literal;
-													rdfs:comment	"";
+													rdfs:comment "Categorical number of drugs prescribed to the lung cancer patient before diagnosis (0, 1-2,3-4,>5)";
 													dcterms:modified "2020-09-21"^^xsd:date;
 													prv:File "patient.ttl";
 													dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1470,7 +1470,7 @@ clarify:numberOfMOnths_afterSensitMutation_beforeResistMutation	rdf:type	owl:Dat
 																rdfs:label	"numberOfMOnths_afterSensitMutation_beforeResistMutation";
 																rdfs:domain	clarify:LCPatient;
 																rdfs:range	rdfs:Literal;
-																rdfs:comment	"";
+																rdfs:comment "Represents the elapsed time in months, from detection of sensit mutation to detection of resist (if negative the difference, resist was detected before sensit, otherwise it was detected after)";
 																dcterms:modified "2020-09-21"^^xsd:date;
 																prv:File "patient.ttl";
 																dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																														
@@ -1479,7 +1479,7 @@ clarify:hasCardioVascularRiskFactor	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"hasCardioVascularRiskFactor";
 									rdfs:domain	clarify:LCPatient;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment	"";
+									rdfs:comment "Indicates that if the lung cancer patient had cardiovascular risk factors previous to the diagnosis.";
 									dcterms:modified "2020-09-21"^^xsd:date;
 									prv:File "patient.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1488,7 +1488,7 @@ clarify:lastTumorStageCategory	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"lastTumorStageCategory";
 								rdfs:domain	clarify:LCPatient;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment	"";
+								rdfs:comment "Indicates the last known stage of the lung cancer patient (Early, Intermediate, Advanced).";
 								dcterms:modified "2020-09-21"^^xsd:date;
 								prv:File "patient.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
