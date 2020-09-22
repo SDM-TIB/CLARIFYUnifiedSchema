@@ -1497,7 +1497,7 @@ clarify:survivalDays_afterFirstTreatmentLine	rdf:type	owl:DatatypeProperty;
 												rdfs:label	"survivalDays_afterFirstTreatmentLine";
 												rdfs:domain	clarify:LCPatient;
 												rdfs:range	rdfs:Literal;
-												rdfs:comment	"";
+												rdfs:comment "Indicates the number of survival days since the patient received his/her 1st treatment line.";
 												dcterms:modified "2020-09-21"^^xsd:date;
 												prv:File "patient.ttl";
 												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1506,7 +1506,7 @@ clarify:survivalDays_afterProgression	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"survivalDays_afterProgression";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Indicates the number of survival days since the patient progressed to an advanced stage.";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1515,7 +1515,7 @@ clarify:numberOfDays_afterDiagnosis_beforeResistMutation	rdf:type	owl:DatatypePr
 															rdfs:label	"numberOfDays_afterDiagnosis_beforeResistMutation";
 															rdfs:domain	clarify:LCPatient;
 															rdfs:range	rdfs:Literal;
-															rdfs:comment	"";
+															rdfs:comment "Indicates the elapsed time in days, from diagnosis to detection of resist mutation (if negative the difference, the mutation was detected before diagnosis, otherwise it was detected after)";
 															dcterms:modified "2020-09-21"^^xsd:date;
 															prv:File "patient.ttl";
 															dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																																		
@@ -1524,7 +1524,7 @@ clarify:numberOfToxicities_after2018	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"numberOfToxicities_after2018";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Indicates the number of patient’s toxicities after 2018.";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1533,7 +1533,7 @@ clarify:survivalDays	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"survivalDays";
 						rdfs:domain	clarify:LCPatient;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment	"";
+						rdfs:comment "Indicates the patient's survival days, from diagnosis to date of death if the patient is dead or date file reception in other case.";
 						dcterms:modified "2020-09-21"^^xsd:date;
 						prv:File "patient.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1542,7 +1542,7 @@ clarify:numberOfToxicities_before2018	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"numberOfToxicities_before2018";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	rdfs:Literal;
-										rdfs:comment	"";
+										rdfs:comment "Indicates the number of patient’s toxicities before 2018.";
 										dcterms:modified "2020-09-21"^^xsd:date;
 										prv:File "patient.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
