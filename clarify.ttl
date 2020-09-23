@@ -185,9 +185,9 @@ clarify:TumorStage	rdf:type	owl:Class;
 ######################################################################################################################################
 
 
-iasis:Publication	rdf:type	owl:Class;
+clarify:Publication	rdf:type	owl:Class;
 					rdfs:label	"Publication";
-					rdfs:subClassOf	iasis:Concept;
+					rdfs:subClassOf	clarify:Concept;
 					rdfs:comment "Scientific publications.";
 					dcterms:modified "2020-09-23"^^xsd:date;
 					prv:File "publication_annotation.ttl";
@@ -509,27 +509,27 @@ clarify:impact	rdf:type	owl:DatatypeProperty;
 #######################################################    Publication   #############################################################
 ######################################################################################################################################
 
-iasis:pubmedID	rdf:type owl:DatatypeProperty;
+clarify:pubmedID	rdf:type owl:DatatypeProperty;
 				rdfs:label "PubMed ID";
-				rdfs:domain iasis:Publication;
+				rdfs:domain clarify:Publication;
 			  	rdfs:range rdfs:Literal;
 				rdfs:comment "PubMed ID.";
 				dcterms:modified "2020-09-23"^^xsd:date;
 				prv:File "publication_annotation.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:confidence    rdf:type     owl:DatatypeProperty;
+clarify:confidence    rdf:type     owl:DatatypeProperty;
 					rdfs:label	"confidence";
-					rdfs:domain	iasis:Relation;
+					rdfs:domain	clarify:Relation;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Confidence score of the concept";
 					dcterms:modified "2020-09-23"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:semanticType	rdf:type	owl:DatatypeProperty;
+clarify:semanticType	rdf:type	owl:DatatypeProperty;
 					rdfs:label	"semanticType";
-					rdfs:domain	iasis:Annotation;
+					rdfs:domain	clarify:Annotation;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment	"A list with the allowed semantic_types for this Annotation in the UMLS. ";
 					dcterms:modified "2020-09-23"^^xsd:date;
@@ -1783,10 +1783,10 @@ clarify:tumorStage_has_indication	rdf:type	owl:ObjectProperty;
 									prv:File "tumorStageIndication.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:hasHPOAnnotation	rdf:type owl:ObjectProperty;
+clarify:hasHPOAnnotation	rdf:type owl:ObjectProperty;
 						rdfs:label	"hasHPOAnnotation";
-						rdfs:domain iasis:Phenotype;
-		  				rdfs:range iasis:Annotation;
+						rdfs:domain clarify:Phenotype;
+		  				rdfs:range clarify:Annotation;
 						rdfs:comment	"HPO annotation of the phenotype.";
 						dcterms:modified "2020-09-23"^^xsd:date;
 						prv:File "toxicity.ttl";
@@ -1796,42 +1796,41 @@ iasis:hasHPOAnnotation	rdf:type owl:ObjectProperty;
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
 
-iasis:hasAnnotation	rdf:type owl:ObjectProperty;
+clarify:hasAnnotation	rdf:type owl:ObjectProperty;
 					rdfs:label	"hasAnnotation";
-					rdfs:domain iasis:Relation;
-	  				rdfs:range iasis:Annotation;
+					rdfs:domain clarify:Relation;
+	  				rdfs:range clarify:Annotation;
 					rdfs:comment	"Connection between the annotation and the relation between annotation and publication";
 					dcterms:modified "2020-09-23"^^xsd:date;
 					prv:File "publication_annotation.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:annotates	rdf:type	owl:ObjectProperty;
+clarify:annotates	rdf:type	owl:ObjectProperty;
 				rdfs:label	"annotates";
-				rdfs:domain	iasis:Relation;
-				rdfs:range	iasis:Publication;
+				rdfs:domain	clarify:Relation;
+				rdfs:range	clarify:Publication;
 				rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
 				dcterms:modified "2020-09-23"^^xsd:date;
 				prv:File "publication_annotation.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:relation_isRelatedTo_annotation	rdf:type        owl:ObjectProperty;	
+clarify:relation_isRelatedTo_annotation	rdf:type        owl:ObjectProperty;	
 										rdfs:label	"relation_isRelatedTo_annotation";
-										rdfs:domain	iasis:Relation;
-										rdfs:range	iasis:Annotation;
+										rdfs:domain	clarify:Relation;
+										rdfs:range	clarify:Annotation;
 										rdfs:comment "The relationship between the relation and the annotation.";
 										dcterms:modified "2020-09-23"^^xsd:date;
 										prv:File "publication_annotation.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-iasis:relation_isRelatedTo_publication	rdf:type        owl:ObjectProperty;	
+clarify:relation_isRelatedTo_publication	rdf:type        owl:ObjectProperty;	
 										rdfs:label	"relation_isRelatedTo_publication";
-										rdfs:domain	iasis:Relation;
-										rdfs:range	iasis:Publication;
+										rdfs:domain	clarify:Relation;
+										rdfs:range	clarify:Publication;
 										rdfs:comment "The relationship between the relation and the publication.";
 										dcterms:modified "2020-09-23"^^xsd:date;
 										prv:File "publication_annotation.ttl";
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-																			
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
 
 ######################################################################################################################################
 #####################################################    Clinical Note    ############################################################
