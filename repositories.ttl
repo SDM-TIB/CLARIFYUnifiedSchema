@@ -1,5 +1,3 @@
-- CLARIFY Unified Schema:
-(https://github.com/SDM-TIB/CLARIFYUnifiedSchema)
+[CLARIFY Unified Schema](https://github.com/SDM-TIB/CLARIFYUnifiedSchema)
 
-- Mapping rules to create CLARIFY knowledge graph:
-)https://github.com/SDM-TIB/CLARIFY)
+[Mapping rules to create CLARIFY knowledge graph](https://github.com/SDM-TIB/CLARIFY)
