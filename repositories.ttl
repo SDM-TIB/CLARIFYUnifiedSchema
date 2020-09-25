@@ -1,5 +1,5 @@
 CLARIFY Unified Schema:
-(https://github.com/SDM-TIB/CLARIFYUnifiedSchema) (http://project-iasis.eu/)
+[a link](https://github.com/SDM-TIB/CLARIFYUnifiedSchema)
 
 Mapping rules to create CLARIFY knowledge graph:
-(https://github.com/SDM-TIB/CLARIFY)
+[a link](https://github.com/SDM-TIB/CLARIFY)
