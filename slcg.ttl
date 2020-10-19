@@ -1,0 +1,302 @@
+@prefix clarify: <http://clarify2020.eu/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prv: <http://purl.org/net/provenance/ns#> .
+
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+###############################################################   Classes   #####################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+
+clarify:Concept	rdf:type	owl:Class;
+				rdfs:label	"Concept";
+				rdfs:comment "Constituents of thoughts or real world entities.";
+				dcterms:modified "2020-10-19"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Annotation	rdf:type	owl:Class;
+					rdfs:label	"Annotation";
+					rdfs:comment "Annotation of a concept including label, id and source of concept.";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Relation	rdf:type	owl:Class;
+					rdfs:label	"Relation";
+					rdfs:comment "Relations between concepts.";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:CancerPatient	rdf:type	owl:Class;
+					rdfs:label	"CancerPatient";
+					rdfs:comment "Cancer Patient independent of type of their cancer.";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:LCPatient	rdf:type	owl:Class;
+				rdfs:label	"LungCancerPatient";
+				rdfs:subClassOf	clarify:CancerPatient;
+				rdfs:comment "A patient who is diagnosed with Lung Cancer.";
+				dcterms:modified "2020-10-19"^^xsd:date;
+				prv:File "patient.ttl";				
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Diagnosis  	rdf:type owl:Class;
+					rdfs:label	"Diagnosis";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "The identification of the nature of an illness or other problem by examination of the symptoms.";
+					dcterms:modified "2020-09-15"^^xsd:date;
+					prv:File "diagnostic.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Gender	rdf:type	owl:Class;
+						rdfs:label	"Gender";
+						rdfs:comment "The gender of patients.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Race	rdf:type	owl:Class;
+						rdfs:label	"Race";
+						rdfs:comment "The race of patients.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
+
+clarify:Biomarker	 rdf:type	owl:Class;
+					rdfs:label	"Biomarker";
+					rdfs:subClassOf	clarify:Concept;
+					rdfs:comment "A biomarker, or biological marker is a measurable indicator of some biological state or condition.";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:BiomarkerObservation	 rdf:type	owl:Class;
+					rdfs:label	"BiomarkerObservation";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "A biomarker, or biological marker is a measurable indicator of some biological state or condition.";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+######################################################## Properties - attributes ################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+
+clarify:city	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"city ";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the city of residence of the patient (structured information provided by HUPHM)";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:birthDate	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"birthDate";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the birth date of the patient.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:hospitalID	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"hospitalID";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the ID of the hospital in which the patient is hopitaized.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.											
+
+clarify:ehrID	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"ehrID";
+						rdfs:domain	clarify:Concept;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the ID of the Electronic Health Record (EHR) to which the information is associated.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:recordID	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"recordID";
+						rdfs:domain	clarify:Concept;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the UPM auto-generated numeric ID.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
+
+clarify:biomarkerObservationDate	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"biomarkerObservationDate";
+						rdfs:domain	clarify:biomarkerObservation;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the date on which the mutation is discovered.";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "mutation.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:biomarkerObservationDescription	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"biomarkerObservationDescription";
+							rdfs:domain	clarify:biomarkerObservation;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Represents the description of the discovered mutation.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							prv:File "mutation.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
+
+clarify:biomarkerResult	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"biomarkerResult";
+							rdfs:domain	clarify:Biomarker;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Result of the reactive expression of the gene.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							prv:File "mutation.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:biomarkerSpecification	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"biomarkerSpecification";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "mutation.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:biomarkerNegativeResult	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"biomarkerNegativeResult";
+							rdfs:domain	clarify:Biomarker;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Negativity of the mutation.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:biomarkerResultPositivity	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"biomarkerResultPositivity";
+							rdfs:domain	clarify:Biomarker;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Positivity of the result.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:biomarkerResultReason	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"biomarkerResultReason";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Provided reason to the result.";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_T790M_positive_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_T790M_positive_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_T790M_negative_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_T790M_negative_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_exon19_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_exon19_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_exon21_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_exon21_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_NOS_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_NOS_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mutation_other_result	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mutation_other_result";
+								rdfs:domain	clarify:Biomarker;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment ".";
+								dcterms:modified "2020-10-19"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
+
+#################################################################################################################################################																																			
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################### Properties - relationships #################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+#################################################################################################################################################
+
+clarify:provenance	rdf:type	owl:ObjectProperty;
+					rdfs:label	"provenance";
+					rdfs:domain	clarify:Concept;
+					rdfs:range	clarify:SourceName;
+					rdfs:comment	"The name of the source from which the concept is extracted or derived";
+					dcterms:modified "2020-10-19"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
+							rdfs:label	"hasCUIAnnotation";
+							rdfs:domain clarify:Concept;
+			  				rdfs:range clarify:Annotation;
+							rdfs:comment	"CUI annotation of the concept.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:gender	rdf:type	owl:ObjectProperty;
+				rdfs:label	"gender";
+				rdfs:domain	clarify:CancerPatient;
+				rdfs:range	clarify:Gender;
+				rdfs:comment	"Gender value of the patient.";
+				dcterms:modified "2020-10-19"^^xsd:date;
+				prv:File "patient.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:race	rdf:type	owl:ObjectProperty;
+				rdfs:label	"race";
+				rdfs:domain	clarify:CancerPatient;
+				rdfs:range	clarify:Race;
+				rdfs:comment	"Race value of the patient.";
+				dcterms:modified "2020-10-19"^^xsd:date;
+				prv:File "patient.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:hasBiomarkerObservation	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasBiomarkerObservation";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:BiomarkerObservation;
+						rdfs:comment ".";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
+
+clarify:hasBiomarker	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasBiomarker";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:Biomarker;
+						rdfs:comment ".";
+						dcterms:modified "2020-10-19"^^xsd:date;
+						prv:File "patient.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
