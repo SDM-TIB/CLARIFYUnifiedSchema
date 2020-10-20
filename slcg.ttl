@@ -89,6 +89,13 @@ clarify:Carcinogen	 rdf:type	owl:Class;
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
 
+clarify:ProgressionRelapseObservation	rdf:type	owl:Class;
+										rdfs:label	"ProgressionRelapseObservation";
+										rdfs:subClassOf	clarify:Observation;
+										rdfs:comment "Indicates if the disease is relapsed or progressed.";
+										dcterms:modified "2020-10-20"^^xsd:date;
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -96,6 +103,14 @@ clarify:Carcinogen	 rdf:type	owl:Class;
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
+
+clarify:date	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"date";
+								rdfs:domain	clarify:Concept;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the date of occurrence.";
+								dcterms:modified "2020-10-20"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:city	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"city ";
@@ -343,6 +358,43 @@ clarify:asbestosExposureType	rdf:type	owl:DatatypeProperty;
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "environmental_risk.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
+
+clarify:pregressionOrRelapse	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"pregressionOrRelapse";
+								rdfs:domain	clarify:ProgressionRelapseObservation;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the value indicating if the progression or relapse is occurred.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "relapse_progression.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:pregressionType	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"pregressionType";
+								rdfs:domain	clarify:ProgressionRelapseObservation;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents type of progression that patient has experienced.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "relapse_progression.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:therapyType	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"therapyType";
+								rdfs:domain	clarify:ProgressionRelapseObservation;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the type of therapy that is prescribed to the patient (active or palliative care -pain relieving-).";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "relapse_progression.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:pregressionLocation	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"pregressionLocation";
+								rdfs:domain	clarify:ProgressionRelapseObservation;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the location of occurrence of the progression.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "progression_location.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 #################################################################################################################################################																																			
 #################################################################################################################################################
