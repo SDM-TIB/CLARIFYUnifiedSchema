@@ -110,6 +110,13 @@ clarify:FamilyHistory	rdf:type	owl:Class;
 						dcterms:modified "2020-10-20"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:ClinicalTrial	 rdf:type	owl:Class;
+					rdfs:label	"ClinicalTrial";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "Represents the clinical trial that the patient is involved in.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 #################################################################################################################################################
 #################################################################################################################################################
@@ -463,6 +470,70 @@ clarify:familyType	rdf:type	owl:DatatypeProperty;
 									dcterms:modified "2020-10-20"^^xsd:date;
 									prv:File "oncological_history.ttl";								
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:trialLabel	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"trialLabel";
+					rdfs:domain	clarify:ClinicalTrial;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents the name of the clinical trial.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					prv:File "clinical_trial.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:trialIsObservational	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"trialIsObservational";
+								rdfs:domain	clarify:ClinicalTrial;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Indicates if the clinical trial is observational.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "clinical_trial.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:drugBasedTrial	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"drugBasedTrial";
+						rdfs:domain	clarify:ClinicalTrial;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the clinical trial is based on drugs.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						prv:File "clinical_trial.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:directedTrial	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"directedTrial";
+						rdfs:domain	clarify:ClinicalTrial;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the clinical trial is directed.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						prv:File "clinical_trial.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:trialPhase	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"trialPhase";
+						rdfs:domain	clarify:ClinicalTrial;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates the phase of the clinical trial.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						prv:File "clinical_trial.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:trialTargetLabel	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"trialTargetLabel";
+							rdfs:domain	clarify:ClinicalTrial;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates the name of the target of the clinical trial.";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "targets_clinical_trial.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:trialDescription	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"trialDescription";
+							rdfs:domain	clarify:ClinicalTrial;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates the description of the clinical trial.";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "targets_clinical_trial.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
