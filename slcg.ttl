@@ -96,6 +96,21 @@ clarify:ProgressionRelapseObservation	rdf:type	owl:Class;
 										dcterms:modified "2020-10-20"^^xsd:date;
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:PatientHistory	rdf:type	owl:Class;
+						rdfs:label	"PatientHistory";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the cancers from which the patient have suffered before.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:FamilyHistory	rdf:type	owl:Class;
+						rdfs:label	"FamilyHistory";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the cancers from which the direct blood relatives of the patient have suffered.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -395,7 +410,59 @@ clarify:pregressionLocation	rdf:type	owl:DatatypeProperty;
 								prv:File "progression_location.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:previousCancer	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"previousCancer";
+								rdfs:domain	clarify:PatientHistory;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the previous cancer from which the patient has suffered before.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "oncological_history.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:previousCancerType	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"previousCancerType";
+								rdfs:domain	clarify:PatientHistory;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the type of previous cancer from which the patient has suffered before.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "oncological_history.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:previousCancerDescription	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"previousCancerDescription";
+									rdfs:domain	clarify:PatientHistory;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Represents the description of previous cancer from which the patient has suffered before.";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "oncological_history.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfFamilyWithLC	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"numberOfFamilyWithLC";
+									rdfs:domain	clarify:FamilyHistory;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Represents the number of family members with lung cancer.";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "oncological_history.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfFamilyWithOtherCancers	rdf:type	owl:DatatypeProperty;
+										rdfs:label	"numberOfFamilyWithOtherCancers";
+										rdfs:domain	clarify:FamilyHistory;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment "Represents the number of family members with cancers other than lung.";
+										dcterms:modified "2020-10-20"^^xsd:date;
+										prv:File "oncological_history.ttl";								
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:familyType	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"familyType";
+									rdfs:domain	clarify:FamilyHistory;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Represents the type of family kinship with the patient.";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "oncological_history.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
