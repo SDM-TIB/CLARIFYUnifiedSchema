@@ -176,11 +176,11 @@ clarify:AdverseEvent	rdf:type	owl:Class;
 				prv:File "drugDrugInteraction_symmetric.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:TumorStage	rdf:type	owl:Class;
-					rdfs:label	"TumorStage";
+clarify:CancerStage	rdf:type	owl:Class;
+					rdfs:label	"CancerStage";
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 					dcterms:modified "2020-09-14"^^xsd:date;
-					prv:File "tumorStageIndication.ttl";
+					prv:File "CancerStageIndication.ttl";
 					prv:File "stages.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
@@ -297,16 +297,16 @@ clarify:LiquidBiopsy	rdf:type	owl:Class;
 					prv:File "patient_biopsy.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:Variation	rdf:type	owl:Class;
-				rdfs:label	"Variation";
+clarify:Mutation	rdf:type	owl:Class;
+				rdfs:label	"Mutation";
 				rdfs:subClassOf	clarify:Concept;
 				rdfs:comment "The difference in DNA sequences between individuals within a population. It may occur in germ cells.";
 				dcterms:modified "2020-09-15"^^xsd:date;
 				prv:File "patient_biopsy.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:TumorStageCategory	rdf:type	owl:Class;
-							rdfs:label	"TumorStageCategory";
+clarify:CancerStageCategory	rdf:type	owl:Class;
+							rdfs:label	"CancerStageCategory";
 							rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
 							dcterms:modified "2020-09-18"^^xsd:date;
 							prv:File "patient.ttl";
@@ -632,9 +632,9 @@ clarify:oncologicalSurgeryLabel_ENG       rdf:type     owl:DatatypeProperty;
 										prv:File "oncologicalSurgeries.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:tumorStageLabel	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"tumorStageLabel";
-							rdfs:domain	clarify:TumorStage;
+clarify:CancerStageLabel	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"CancerStageLabel";
+							rdfs:domain	clarify:CancerStage;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Label of Tumor Stage";
 							dcterms:modified "2020-09-15"^^xsd:date;
@@ -812,19 +812,19 @@ clarify:patientCurrentStatus	rdf:type	owl:DatatypeProperty;
 				prv:File "patient.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:hasDiagnosisTumorStage   rdf:type     owl:ObjectProperty;
-							rdfs:label	"hasDiagnosisTumorStage";
+clarify:hasDiagnosisCancerStage   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisCancerStage";
 							rdfs:domain	clarify:Diagnosis;
-							rdfs:range	clarify:TumorStage;
+							rdfs:range	clarify:CancerStage;
 							rdfs:comment "The tumor stage at the time of the diagnosis.";
 							dcterms:modified "2020-09-15"^^xsd:date;
 							prv:File "patient.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:hasDiagnosisTumorStageCategory   rdf:type     owl:ObjectProperty;
-							rdfs:label	"hasDiagnosisTumorStage";
+clarify:hasDiagnosisCancerStageCategory   rdf:type     owl:ObjectProperty;
+							rdfs:label	"hasDiagnosisCancerStage";
 							rdfs:domain	clarify:Diagnosis;
-							rdfs:range	clarify:TumorStageCategory;
+							rdfs:range	clarify:CancerStageCategory;
 							rdfs:comment "The tumor stage type at the time of the diagnosis (Early/Intermediate/Advanced).";
 							dcterms:modified "2020-09-18"^^xsd:date;
 							prv:File "patient.ttl";
@@ -1245,8 +1245,8 @@ clarify:hasCardioVascularRiskFactor	rdf:type	owl:DatatypeProperty;
 									prv:File "patient.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:lastTumorStageCategory	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"lastTumorStageCategory";
+clarify:lastCancerStageCategory	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"lastCancerStageCategory";
 								rdfs:domain	clarify:LCPatient;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Indicates the last known stage of the lung cancer patient (Early, Intermediate, Advanced).";
@@ -1804,13 +1804,13 @@ clarify:target_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
 									prv:File "target.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:tumorStage_has_indication	rdf:type	owl:ObjectProperty;
-									rdfs:label	"tumorStage_has_indication";
-									rdfs:domain	clarify:TumorStage;
+clarify:CancerStage_has_indication	rdf:type	owl:ObjectProperty;
+									rdfs:label	"CancerStage_has_indication";
+									rdfs:domain	clarify:CancerStage;
 									rdfs:range	clarify:Drug;
 									rdfs:comment	"Tumor stage has indication drug";
 									dcterms:modified "2020-09-14"^^xsd:date;
-									prv:File "tumorStageIndication.ttl";
+									prv:File "CancerStageIndication.ttl";
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasHPOAnnotation	rdf:type owl:ObjectProperty;
@@ -2004,7 +2004,7 @@ clarify:hasLiquidBiopsy	rdf:type        owl:ObjectProperty;
 clarify:hasMutation	rdf:type	owl:ObjectProperty;
 					rdfs:label	"hasMutation";
 					rdfs:domain	clarify:LiquidBiopsy;
-					rdfs:range	clarify:Variation;
+					rdfs:range	clarify:Mutation;
 					rdfs:comment	"The Liquid biopsy has a mutation";
 					dcterms:modified "2020-09-15"^^xsd:date;
 					prv:File "patient_biopsy.ttl";
@@ -2039,8 +2039,8 @@ clarify:existenceOf_bioRos1	rdf:type	owl:ObjectProperty;
 							prv:File "patient.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
 
-clarify:lastTumorStage	rdf:type	owl:ObjectProperty;
-						rdfs:label	"lastTumorStage";
+clarify:lastCancerStage	rdf:type	owl:ObjectProperty;
+						rdfs:label	"lastCancerStage";
 						rdfs:domain	clarify:LCPatient;
 						rdfs:range	clarify:Biomarker;
 						rdfs:comment "Representes the last known stage of the patient (I, II, III,  IIIA, IIIB, IV).";

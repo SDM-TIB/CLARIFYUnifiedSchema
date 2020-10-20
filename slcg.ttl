@@ -26,12 +26,6 @@ clarify:Annotation	rdf:type	owl:Class;
 					dcterms:modified "2020-10-19"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:Relation	rdf:type	owl:Class;
-					rdfs:label	"Relation";
-					rdfs:comment "Relations between concepts.";
-					dcterms:modified "2020-10-19"^^xsd:date;
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:CancerPatient	rdf:type	owl:Class;
 					rdfs:label	"CancerPatient";
 					rdfs:comment "Cancer Patient independent of type of their cancer.";
@@ -117,10 +111,17 @@ clarify:ClinicalTrial	 rdf:type	owl:Class;
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:CancerStageTNM	 rdf:type	owl:Class;
+					rdfs:label	"CancerStageTNM";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "Determines a patient's prognosis and the course of treatement to be used for a certain patient based on TNM staging system.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:CancerStage	 rdf:type	owl:Class;
 					rdfs:label	"CancerStage";
 					rdfs:subClassOf	clarify:Observation;
-					rdfs:comment "Determines a patient's prognosis and the course of treatement to be used for a certain patient.";
+					rdfs:comment "Determines a patient's prognosis and the course of treatement to be used for a certain patient, based on a scale of 0 to IV.";
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
@@ -130,6 +131,14 @@ clarify:MetastasisLocation	 rdf:type	owl:Class;
 					rdfs:comment "Determines the area to which the cancer is metastasized.";
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Diagnosis  	rdf:type owl:Class;
+					rdfs:label	"Diagnosis";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "The identification of the nature of an illness or other problem by examination of the symptoms.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					prv:File "diagnostic.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.							
 
 #################################################################################################################################################
 #################################################################################################################################################
@@ -549,7 +558,7 @@ clarify:trialDescription	rdf:type	owl:DatatypeProperty;
 
 clarify:tumorSize	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"tumorSize";
-							rdfs:domain	clarify:CancerStage;
+							rdfs:domain	clarify:CancerStageTNM;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates the size of the patient's tumor (T).";
 							dcterms:modified "2020-10-20"^^xsd:date;
@@ -558,7 +567,7 @@ clarify:tumorSize	rdf:type	owl:DatatypeProperty;
 
 clarify:lymphNodesInvolvement	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"lymphNodesInvolvement";
-							rdfs:domain	clarify:CancerStage;
+							rdfs:domain	clarify:CancerStageTNM;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates if the lymph nodes are involved (N).";
 							dcterms:modified "2020-10-20"^^xsd:date;
@@ -567,7 +576,7 @@ clarify:lymphNodesInvolvement	rdf:type	owl:DatatypeProperty;
 
 clarify:metastatisStage	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"metastatisStage";
-							rdfs:domain	clarify:CancerStage;
+							rdfs:domain	clarify:CancerStageTNM;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates that to what extend the cancer is metastasized (M).";
 							dcterms:modified "2020-10-20"^^xsd:date;
@@ -727,6 +736,33 @@ clarify:existenceOf_otherMetastasis	rdf:type	owl:DatatypeProperty;
 											prv:File "metastasis_location.ttl";								
 											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
+clarify:diagnosisTechnique	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"diagnosisTechnique";
+							rdfs:domain	clarify:Diagnosis;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates the diagnosis technique that is used.";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "diagnostic.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:stagingSystemTechnique	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"stagingSystemTechnique";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Indicates the technique that is applied for staging diagnosis.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "diagnostic.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:diagnosisDescription	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"diagnosisDescription";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the description of the diagnosis.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "diagnostic.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
@@ -808,7 +844,7 @@ clarify:involved_in	rdf:type	owl:ObjectProperty;
 clarify:has_stage	rdf:type	owl:ObjectProperty;
 								rdfs:label	"has_stage";
 								rdfs:domain	clarify:CancerPatient;
-								rdfs:range	clarify:CancerStage;
+								rdfs:range	clarify:CancerStageTNM;
 								rdfs:comment "Relation between the cancer patient and the cancer stage.";
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "tnm_stadification.ttl";								
@@ -816,9 +852,27 @@ clarify:has_stage	rdf:type	owl:ObjectProperty;
 
 clarify:metastasized_to	rdf:type	owl:ObjectProperty;
 								rdfs:label	"metastasized_to";
-								rdfs:domain	clarify:CancerStage;
+								rdfs:domain	clarify:CancerStageTNM;
 								rdfs:range	clarify:MetastasisLocation;
 								rdfs:comment "Relation between the cancer patient and the metastasis location.";
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "metastasis_location.ttl";								
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																															
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:hasDiagnosis	rdf:type     owl:ObjectProperty;
+						rdfs:label	"hasDiagnosis";
+						rdfs:domain	clarify:LCPatient;
+						rdfs:range	clarify:Diagnosis;
+						rdfs:comment "Patient's initial diagnosis.";
+						dcterms:modified "2020-10-20"^^xsd:date;
+						prv:File "diagnostic.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.			
+
+clarify:hasDiagnosisCancerStage  rdf:type     owl:ObjectProperty;
+								rdfs:label	"hasDiagnosisCancerStage";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	clarify:CancerStage;
+								rdfs:comment "The cancer stage at the time of the diagnosis.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "diagnostic.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																									

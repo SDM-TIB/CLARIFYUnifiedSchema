@@ -26,12 +26,6 @@ clarify:Annotation	rdf:type	owl:Class;
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:Relation	rdf:type	owl:Class;
-					rdfs:label	"Relation";
-					rdfs:comment "Relations between concepts.";
-					dcterms:modified "2020-09-14"^^xsd:date;
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:CancerPatient	rdf:type	owl:Class;
 					rdfs:label	"CancerPatient";
 					rdfs:comment "Cancer Patient independent of type of their cancer.";
@@ -1287,10 +1281,6 @@ clarify:numberOfDrugs_beforeDiagnosis	rdf:type	owl:DatatypeProperty;
 #################################################################################################################################################
 #################################################################################################################################################
 
-
-######################################################################################################################################
-#####################################################    Clinical Note    ############################################################
-######################################################################################################################################
 
 clarify:gender	rdf:type	owl:ObjectProperty;
 				rdfs:label	"gender";
