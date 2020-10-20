@@ -601,4 +601,13 @@ clarify:exposed_to	rdf:type	owl:ObjectProperty;
 								rdfs:comment "Relation between the cancer patient and exposed carcinogen.";
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "environmental_risk.ttl";								
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
+clarify:involved_in	rdf:type	owl:ObjectProperty;
+								rdfs:label	"involved_in";
+								rdfs:domain	clarify:CancerPatient;
+								rdfs:range	clarify:ClinicalTrial;
+								rdfs:comment "Relation between the cancer patient and the clinical trial.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "clinical_trial.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.														
