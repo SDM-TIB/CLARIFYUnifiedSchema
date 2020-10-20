@@ -983,7 +983,7 @@ clarify:metastasized_to	rdf:type	owl:ObjectProperty;
 
 clarify:hasDiagnosis	rdf:type     owl:ObjectProperty;
 						rdfs:label	"hasDiagnosis";
-						rdfs:domain	clarify:LCPatient;
+						rdfs:domain	clarify:CancerPatient;
 						rdfs:range	clarify:Diagnosis;
 						rdfs:comment "Patient's initial diagnosis.";
 						dcterms:modified "2020-10-20"^^xsd:date;
@@ -999,21 +999,29 @@ clarify:hasDiagnosisCancerStage  rdf:type     owl:ObjectProperty;
 								prv:File "diagnostic.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:hasOncologicalTreatmentLine       rdf:type     owl:ObjectProperty;
+										rdfs:label	"hasOncologicalTreatmentLine";
+										rdfs:domain	clarify:LCPatient;
+										rdfs:range	clarify:OncologicalTreatmentLine;
+										rdfs:comment "Oncological treatment line  received by the patient.";
+										dcterms:modified "2020-10-20"^^xsd:date;
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:hasChemotherapyTreatmentLine       rdf:type     owl:ObjectProperty;
 										rdfs:label	"hasChemotherapyTreatmentLine";
 										rdfs:domain	clarify:LCPatient;
-										rdfs:range	clarify:OncologicalTreatmentLine;
-										rdfs:subPropertyOf clarify:hasOncologicalTreatmentLine
+										rdfs:range	clarify:ChemotherapyTreatmentLine;
+										rdfs:subPropertyOf clarify:hasOncologicalTreatmentLine;
 										rdfs:comment "Relation between the patient and the chemotherapy treatment line that is received by the patient.";
 										dcterms:modified "2020-10-20"^^xsd:date;
 										prv:File "chemotherapy_treatment_line.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasRadiotherapyTreatmentLine       rdf:type     owl:ObjectProperty;
+clarify:hasRadiotherapyTreatmentLine    rdf:type     owl:ObjectProperty;
 										rdfs:label	"hasRadiotherapyTreatmentLine";
 										rdfs:domain	clarify:LCPatient;
-										rdfs:range	clarify:OncologicalTreatmentLine;
-										rdfs:subPropertyOf clarify:hasOncologicalTreatmentLine
+										rdfs:range	clarify:RadiotherapyTreatmentLine;
+										rdfs:subPropertyOf clarify:hasOncologicalTreatmentLine;
 										rdfs:comment "Relation between the patient and the radiotherapy treatment line that is received by the patient.";
 										dcterms:modified "2020-10-20"^^xsd:date;
 										prv:File "radiotherapy_treatment_line.ttl";
