@@ -404,8 +404,8 @@ clarify:has_biomarker	rdf:type	owl:ObjectProperty;
 						prv:File "patient.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
 
-clarify:exposed_to	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"asbestosExposureType";
+clarify:exposed_to	rdf:type	owl:ObjectProperty;
+								rdfs:label	"exposed_to";
 								rdfs:domain	clarify:CancerPatient;
 								rdfs:range	clarify:Carcinogen;
 								rdfs:comment "Relation between the cancer patient and exposed carcinogen.";
