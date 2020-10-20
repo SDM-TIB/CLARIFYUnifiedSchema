@@ -82,6 +82,13 @@ clarify:BiomarkerObservation	 rdf:type	owl:Class;
 					dcterms:modified "2020-10-19"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Carcinogen	 rdf:type	owl:Class;
+					rdfs:label	"Carcinogen";
+					rdfs:subClassOf	clarify:Concept;
+					rdfs:comment "Represents any substance, radionuclide, or radiation that promotes carcinogenesis, the formation of cancer.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
+
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -197,48 +204,144 @@ clarify:mutation_T790M_positive_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_T790M_positive_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the mutation associated with positive T790M.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_T790M_negative_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_T790M_negative_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the mutation associated with negative T790M.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_exon19_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_exon19_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the mutation associated with exon19.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_exon21_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_exon21_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the mutation associated with exon21.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_NOS_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_NOS_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the mutation assoc\iated with NOS.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_other_result	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"mutation_other_result";
 								rdfs:domain	clarify:Biomarker;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment ".";
+								rdfs:comment "Represents the specification of other observed mutations.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "egfr_mutation.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:occupation	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"occupation";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the occupation of the patient.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																
+
+clarify:occupationDuration	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"occupationDuration";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the years spent in this occupation by patient.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:mostProbable	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"mostProbable";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the the most probable carcinogen that the patient has been exposed to.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:asbestos	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"asbestos";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to asbestos (a group of six naturally occurring minerals composed of soft, flexible fibers that are heat-resistant. Its use is allowed as long as it accounts for less than 1% of the product).";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:arsenic	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"arsenic";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to arsenic.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:radon	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"radon";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to radon.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:silica	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"silica";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to silica.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:dieselSmoke	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"dieselSmoke";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to diesel smoke.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																								
+
+clarify:carcinogenDescription	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"carcinogenDescription";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents if the patient has been exposed to diesel smoke.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:asbestosExposureType	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"asbestosExposureType";
+								rdfs:domain	clarify:Carcinogen;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents type of exposition to asbestos.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
 
 #################################################################################################################################################																																			
@@ -283,7 +386,7 @@ clarify:race	rdf:type	owl:ObjectProperty;
 				prv:File "patient.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
-clarify:hasBiomarkerObservation	rdf:type	owl:ObjectProperty;
+clarify:has_biomarker_observation	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasBiomarkerObservation";
 						rdfs:domain	clarify:CancerPatient;
 						rdfs:range	clarify:BiomarkerObservation;
@@ -292,7 +395,7 @@ clarify:hasBiomarkerObservation	rdf:type	owl:ObjectProperty;
 						prv:File "patient.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
 
-clarify:hasBiomarker	rdf:type	owl:ObjectProperty;
+clarify:has_biomarker	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasBiomarker";
 						rdfs:domain	clarify:CancerPatient;
 						rdfs:range	clarify:Biomarker;
@@ -300,3 +403,12 @@ clarify:hasBiomarker	rdf:type	owl:ObjectProperty;
 						dcterms:modified "2020-10-19"^^xsd:date;
 						prv:File "patient.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
+
+clarify:exposed_to	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"asbestosExposureType";
+								rdfs:domain	clarify:CancerPatient;
+								rdfs:range	clarify:Carcinogen;
+								rdfs:comment "Relation between the cancer patient and exposed carcinogen.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "environmental_risk.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.							
