@@ -117,6 +117,19 @@ clarify:ClinicalTrial	 rdf:type	owl:Class;
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:CancerStage	 rdf:type	owl:Class;
+					rdfs:label	"CancerStage";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "Determines a patient's prognosis and the course of treatement to be used for a certain patient.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:MetastasisLocation	 rdf:type	owl:Class;
+					rdfs:label	"MetastasisLocation";
+					rdfs:subClassOf	clarify:Observation;
+					rdfs:comment "Determines the area to which the cancer is metastasized.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 #################################################################################################################################################
 #################################################################################################################################################
@@ -534,6 +547,186 @@ clarify:trialDescription	rdf:type	owl:DatatypeProperty;
 							prv:File "targets_clinical_trial.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:tumorSize	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"tumorSize";
+							rdfs:domain	clarify:CancerStage;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates the size of the patient's tumor (T).";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "tnm_stadification.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:lymphNodesInvolvement	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"lymphNodesInvolvement";
+							rdfs:domain	clarify:CancerStage;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates if the lymph nodes are involved (N).";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "tnm_stadification.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:metastatisStage	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"metastatisStage";
+							rdfs:domain	clarify:CancerStage;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates that to what extend the cancer is metastasized (M).";
+							dcterms:modified "2020-10-20"^^xsd:date;
+							prv:File "tnm_stadification.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_extrathoracicLymphadenopathies	rdf:type	owl:DatatypeProperty;
+													rdfs:label	"existenceOf_extrathoracicLymphadenopathies";
+													rdfs:domain	clarify:MetastasisLocation;
+													rdfs:range	rdfs:Literal;
+													rdfs:comment ".";
+													dcterms:modified "2020-10-20"^^xsd:date;
+													prv:File "metastasis_location.ttl";								
+													dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_thoracicLymphadenopathy	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_thoracicLymphadenopathy";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_meningealCarcinomatosis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_meningealCarcinomatosis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_pericardialEffusion	rdf:type	owl:DatatypeProperty;
+										rdfs:label	"existenceOf_pericardialEffusion";
+										rdfs:domain	clarify:MetastasisLocation;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment ".";
+										dcterms:modified "2020-10-20"^^xsd:date;
+										prv:File "metastasis_location.ttl";								
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_pleuralEffusion	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_pleuralEffusion";
+									rdfs:domain	clarify:MetastasisLocation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment ".";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "metastasis_location.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_liverMetastasis	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_liverMetastasis";
+									rdfs:domain	clarify:MetastasisLocation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment ".";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "metastasis_location.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_boneMetastasis	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_boneMetastasis";
+									rdfs:domain	clarify:MetastasisLocation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment ".";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "metastasis_location.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_bilateralLymphangitis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_bilateralLymphangitis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
+
+clarify:existenceOf_pleuralNodules	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_pleuralNodules";
+									rdfs:domain	clarify:MetastasisLocation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment ".";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "metastasis_location.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_pancreasMetastasis	rdf:type	owl:DatatypeProperty;
+										rdfs:label	"existenceOf_pancreasMetastasis";
+										rdfs:domain	clarify:MetastasisLocation;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment ".";
+										dcterms:modified "2020-10-20"^^xsd:date;
+										prv:File "metastasis_location.ttl";								
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_peritoneumMetastasis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_peritoneumMetastasis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment "The peritoneum is the serous membrane forming the lining of the abdominal cavity or coelom in amniotes and some invertebrates, such as annelids. It covers most of the intra-abdominal (or coelomic) organs, and is composed of a layer of mesothelium supported by a thin layer of connective tissue.";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_lungMetastasis	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_lungMetastasis";
+									rdfs:domain	clarify:MetastasisLocation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment ".";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "metastasis_location.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_centralNervousSystemMetastasis	rdf:type	owl:DatatypeProperty;
+													rdfs:label	"existenceOf_centralNervousSystemMetastasis";
+													rdfs:domain	clarify:MetastasisLocation;
+													rdfs:range	rdfs:Literal;
+													rdfs:comment ".";
+													dcterms:modified "2020-10-20"^^xsd:date;
+													prv:File "metastasis_location.ttl";								
+													dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_subcutaneousMetastasis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_subcutaneousMetastasis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment "Subcutaneous refers to what is situated or applied under the skin.";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																							
+
+clarify:existenceOf_adrenalMetastasis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_adrenalMetastasis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:existenceOf_softTissuesMetastasis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_softTissuesMetastasis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.												
+
+clarify:existenceOf_otherMetastasis	rdf:type	owl:DatatypeProperty;
+											rdfs:label	"existenceOf_otherMetastasis";
+											rdfs:domain	clarify:MetastasisLocation;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment ".";
+											dcterms:modified "2020-10-20"^^xsd:date;
+											prv:File "metastasis_location.ttl";								
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
+
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
@@ -610,4 +803,22 @@ clarify:involved_in	rdf:type	owl:ObjectProperty;
 								rdfs:comment "Relation between the cancer patient and the clinical trial.";
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "clinical_trial.ttl";								
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.														
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:has_stage	rdf:type	owl:ObjectProperty;
+								rdfs:label	"has_stage";
+								rdfs:domain	clarify:CancerPatient;
+								rdfs:range	clarify:CancerStage;
+								rdfs:comment "Relation between the cancer patient and the cancer stage.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "tnm_stadification.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:metastasized_to	rdf:type	owl:ObjectProperty;
+								rdfs:label	"metastasized_to";
+								rdfs:domain	clarify:CancerStage;
+								rdfs:range	clarify:MetastasisLocation;
+								rdfs:comment "Relation between the cancer patient and the metastasis location.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "metastasis_location.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																															
