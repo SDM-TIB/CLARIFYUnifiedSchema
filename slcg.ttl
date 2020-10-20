@@ -157,7 +157,7 @@ clarify:recordID	rdf:type	owl:DatatypeProperty;
 
 clarify:biomarkerObservationDate	rdf:type	owl:DatatypeProperty;
 						rdfs:label	"biomarkerObservationDate";
-						rdfs:domain	clarify:biomarkerObservation;
+						rdfs:domain	clarify:BiomarkerObservation;
 						rdfs:range	rdfs:Literal;
 						rdfs:comment "Represents the date on which the mutation is discovered.";
 						dcterms:modified "2020-10-19"^^xsd:date;
@@ -166,7 +166,7 @@ clarify:biomarkerObservationDate	rdf:type	owl:DatatypeProperty;
 
 clarify:biomarkerObservationDescription	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"biomarkerObservationDescription";
-							rdfs:domain	clarify:biomarkerObservation;
+							rdfs:domain	clarify:BiomarkerObservation;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Represents the description of the discovered mutation.";
 							dcterms:modified "2020-10-19"^^xsd:date;
@@ -439,7 +439,7 @@ clarify:race	rdf:type	owl:ObjectProperty;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
 clarify:has_biomarker_observation	rdf:type	owl:ObjectProperty;
-						rdfs:label	"hasBiomarkerObservation";
+						rdfs:label	"has_biomarker_observation";
 						rdfs:domain	clarify:CancerPatient;
 						rdfs:range	clarify:BiomarkerObservation;
 						rdfs:comment ".";
@@ -448,8 +448,8 @@ clarify:has_biomarker_observation	rdf:type	owl:ObjectProperty;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
 
 clarify:has_biomarker	rdf:type	owl:ObjectProperty;
-						rdfs:label	"hasBiomarker";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:label	"has_biomarker";
+						rdfs:domain	clarify:BiomarkerObservation;
 						rdfs:range	clarify:Biomarker;
 						rdfs:comment ".";
 						dcterms:modified "2020-10-19"^^xsd:date;
