@@ -199,6 +199,19 @@ clarify:PathologicalStageClassification	rdf:type	owl:Class;
 										dcterms:modified "2020-10-21"^^xsd:date;
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Disorder	rdf:type	owl:Class;
+					rdfs:label	"Disorder";
+					rdfs:subClassOf	clarify:Concept;
+					rdfs:comment "A particular abnormal condition that negatively affects the structure or function of all or part of an organism, and that is not due to any immediate external injury.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:StatusEvolution	rdf:type	owl:Class;
+							rdfs:label	"StatusEvolution";
+							rdfs:subClassOf	clarify:Observation;
+							rdfs:comment "Patient survival status through monitoring.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 #################################################################################################################################################
 #################################################################################################################################################
@@ -1077,6 +1090,68 @@ clarify:bloodSample	rdf:type	owl:DatatypeProperty;
 					prv:File "clinical_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:disorderLabel	rdf:type owl:DatatypeProperty;
+							rdfs:label "disorderLabel";
+							rdfs:domain clarify:Disorder;
+						  	rdfs:range rdfs:Literal;
+							rdfs:comment "Disorder label.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "comorbidity.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:patientCurrentStatus	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"patientCurrentStatus";
+								rdfs:domain	clarify:StatusEvolution;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Current status of Lung Cancer patient";
+								dcterms:modified "2020-10-21"^^xsd:date;
+								prv:File "monitoring.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:lastMonitoringDate	rdf:type owl:DatatypeProperty;
+							rdfs:label "lastMonitoringDate";
+							rdfs:domain clarify:StatusEvolution;
+						  	rdfs:range rdfs:Literal;
+							rdfs:comment "Represents the date on which the patient was monitored for the last time.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "monitoring.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:deathDate	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"deathDate";
+					rdfs:domain	clarify:StatusEvolution;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents the lung cancer patient's date of death (structured information provided by HUPHM).";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "monitoring.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:causeOfDeath	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"causeOfDeath";
+							rdfs:domain	clarify:StatusEvolution;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates the lung cancer patient's cause of death.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "monitoring.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:placeOfDeath	rdf:type        owl:DatatypeProperty;	
+									rdfs:label	"placeOfDeath";
+									rdfs:domain	clarify:StatusEvolution;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "The place where the patient died.";
+									dcterms:modified "2020-10-21"^^xsd:date;
+									prv:File "monitoring.ttl";
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:secondNeoplasm	rdf:type        owl:DatatypeProperty;	
+						rdfs:label	"placeOfDeath";
+						rdfs:domain	clarify:StatusEvolution;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Secondary malignant neoplasm is a malignant tumor whose cause is the treatment (usually radiation or chemotherapy) which was used for a prior tumor.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "monitoring.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 #################################################################################################################################################																																			
 #################################################################################################################################################
@@ -1238,3 +1313,38 @@ clarify:hasDrug	rdf:type        owl:ObjectProperty;
 				prv:File "chemotherapy_drugs.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
 
+clarify:hasClinicalStageClassification	rdf:type        owl:ObjectProperty;	
+										rdfs:label	"hasDrug";
+										rdfs:domain	clarify:CancerPatient;
+										rdfs:range	clarify:ClinicalStageClassification;
+										rdfs:comment "A relation between the patient and the clinical stage technique.";
+										dcterms:modified "2020-10-21"^^xsd:date;
+										prv:File "clinical_stadification_techniques.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasPathologicalStageClassification	rdf:type        owl:ObjectProperty;	
+											rdfs:label	"hasDrug";
+											rdfs:domain	clarify:CancerPatient;
+											rdfs:range	clarify:PathologicalStageClassification;
+											rdfs:comment "A relation between the patient and the pathological stage technique.";
+											dcterms:modified "2020-10-21"^^xsd:date;
+											prv:File "PathologicalStageClassification.ttl";
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
+
+clarify:hasComorbidity	rdf:type        owl:ObjectProperty;	
+						rdfs:label	"hasComorbidity";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:Disorder;
+						rdfs:comment	"Connection between patient and her/his Comorbidities.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "comorbidity.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasMontoring	rdf:type        owl:ObjectProperty;	
+						rdfs:label	"hasMontoring";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:StatusEvolution;
+						rdfs:comment	"Connection between patient and srvival observation.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "monitoring.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.						
