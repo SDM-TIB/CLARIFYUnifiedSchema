@@ -178,6 +178,28 @@ clarify:Drug	rdf:type	owl:Class;
 				dcterms:modified "2020-10-20"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:StageClassification	rdf:type	owl:Class;
+									rdfs:label	"StageClassification";
+									rdfs:subClassOf	clarify:Concept;
+									rdfs:comment "The clinical technique that is applied to indicate the TNM stage.";
+									dcterms:modified "2020-10-21"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ClinicalStageClassification	rdf:type	owl:Class;
+									rdfs:label	"ClinicalStageClassification";
+									rdfs:subClassOf	clarify:StageClassification;
+									rdfs:comment "The clinical technique that is applied to indicate the TNM stage.";
+									dcterms:modified "2020-10-21"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PathologicalStageClassification	rdf:type	owl:Class;
+										rdfs:label	"PathologicalStageClassification";
+										rdfs:subClassOf	clarify:StageClassification;
+										rdfs:comment "The pathological technique that is applied to indicate the TNM stage.";
+										dcterms:modified "2020-10-21"^^xsd:date;
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -884,6 +906,177 @@ clarify:surgerySubType	rdf:type	owl:DatatypeProperty;
 							dcterms:modified "2020-10-20"^^xsd:date;
 							prv:File "surgery_subtype.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:fullBloodCount	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"fullBloodCount";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is FBC (The full blood count, a blood test that may play a role in early detection of the disease).";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:gammaScan	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"gammaScan";
+					rdfs:domain	clarify:ClinicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification technique (pTNM) used is gamma scan.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mediastinoscopy	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"mediastinoscopy";
+						rdfs:domain	clarify:StageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is mediastinoscopy (a procedure used to examine the mediastinum. This is the space behind the breastbone (sternum) in the middle of the chest, between the 2 lungs. It contains: Lymph nodes. The heart and its great vessels).";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:mediastinotomy	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"mediastinotomy";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is mediastinotomy (a surgical procedure opening of the mediastinum).";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:thoracicRX	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"thoracicRX";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is thoracicRX.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:brainRmn	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"brainRmn";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain rmn.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:rmn	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"rmn";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is rmn.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:thoracoscopy	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"thoracoscopy";
+						rdfs:domain	clarify:StageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is thoracoscopy (a visual examination of the lung surfaces and pleural space through a viewing tube (a thoracoscope)).";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:brainTAC	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"brainTAC";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain TAC.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:petTAC	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"petTAC";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is pet TAC.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:tac	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"tac";
+						rdfs:domain	clarify:ClinicalStageClassification;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is TAC.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:stageClassificationDescription	rdf:type	owl:DatatypeProperty;
+												rdfs:label	"stageClassificationDescription";
+												rdfs:domain	clarify:StageClassification;
+												rdfs:range	rdfs:Literal;
+												rdfs:comment "Indicates the description of the technique used and/or other techniques used.";
+												dcterms:modified "2020-10-21"^^xsd:date;
+												prv:File "clinical_stadification_techniques.ttl";								
+												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:biopsy	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"biopsy";
+				rdfs:domain	clarify:PathologicalStageClassification;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is biopsy.";
+				dcterms:modified "2020-10-21"^^xsd:date;
+				prv:File "clinical_stadification_techniques.ttl";								
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:broncoscopy	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"broncoscopy";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is broncoscopy.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ebus	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"ebus";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is EBUS (endoluminal ultrasound).";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+clarify:laparoscopy	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"laparoscopy";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is laparoscopy.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:transthoracicPuncture	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"transthoracicPuncture";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is transthoracic puncture.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:paaf	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"paaf";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is PAAF.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:bloodSample	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"bloodSample";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is blood sample.";
+					dcterms:modified "2020-10-21"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 #################################################################################################################################################																																			
 #################################################################################################################################################
