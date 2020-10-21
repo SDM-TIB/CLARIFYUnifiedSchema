@@ -237,6 +237,14 @@ clarify:SmokingHistory	rdf:type	owl:Class;
 				prv:File "smoker_information.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:ReproductionHistory	rdf:type	owl:Class;
+							rdfs:subClassOf clarify:Concept;
+							rdfs:label	"ReproductionHistory";
+							rdfs:comment "Represents the reproduction history of the patient.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "reproductive_information.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -1311,6 +1319,70 @@ clarify:livedWithSmoker	rdf:type        owl:DatatypeProperty;
 										prv:File "smoker_information.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:numberOfPregnencies	rdf:type owl:DatatypeProperty;	
+							rdfs:label	"numberOfPregnencies";
+							rdfs:domain	clarify:ReproductionHistory;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Represents the number of pregnencies that the patient has had.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "reproductie_information.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:numberOfSuccessfulPregnencies	rdf:type owl:DatatypeProperty;	
+										rdfs:label	"numberOfSuccessfulPregnencies";
+										rdfs:domain	clarify:ReproductionHistory;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment "Represents the number of pregnencies that the patient has had.";
+										dcterms:modified "2020-10-21"^^xsd:date;
+										prv:File "reproductie_information.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ageOfMenstruation 	rdf:type owl:DatatypeProperty;	
+							rdfs:label	"ageOfMenstruation";
+							rdfs:domain	clarify:ReproductionHistory;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Represents the age at which the patient began to menstruate.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "reproductie_information.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:menopause 	rdf:type owl:DatatypeProperty;	
+						rdfs:label	"menopause";
+						rdfs:domain	clarify:ReproductionHistory;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents if the patient has experienced menopause.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "reproductie_information.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ageOfMenopause 	rdf:type owl:DatatypeProperty;	
+						rdfs:label	"ageOfMenopause";
+						rdfs:domain	clarify:ReproductionHistory;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the age at which the menstruate happend.";
+						dcterms:modified "2020-10-21"^^xsd:date;
+						prv:File "reproductie_information.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:contraceptivePill 	rdf:type owl:DatatypeProperty;	
+							rdfs:label	"contraceptivePill";
+							rdfs:domain	clarify:ReproductionHistory;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Indicates if the patient takes a contraceptive pill.";
+							dcterms:modified "2020-10-21"^^xsd:date;
+							prv:File "reproductie_information.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:contraceptivePillStoppingDate 	rdf:type owl:DatatypeProperty;	
+										rdfs:label	"contraceptivePillStoppingDate";
+										rdfs:domain	clarify:ReproductionHistory;
+										rdfs:range	rdfs:Literal;
+										rdfs:comment "Represents the date on which the patient stopped taking contraceptive pills (if it was the case).";
+										dcterms:modified "2020-10-21"^^xsd:date;
+										prv:File "reproductie_information.ttl";
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
 #################################################################################################################################################																																			
 #################################################################################################################################################
 #################################################################################################################################################
@@ -1533,3 +1605,12 @@ clarify:hasSmokingHistory   rdf:type     owl:ObjectProperty;
 							dcterms:modified "2020-10-21"^^xsd:date;
 							prv:File "smoker_information.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasReproductionHistory  rdf:type     owl:ObjectProperty;
+								rdfs:label	"hasReproductionHistory";
+								rdfs:domain	clarify:CancerPatient;
+								rdfs:range	clarify:ReproductionHistory;
+								rdfs:comment "Relation between the patient and their reproduction history.";
+								dcterms:modified "2020-10-21"^^xsd:date;
+								prv:File "reproductive_information.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
