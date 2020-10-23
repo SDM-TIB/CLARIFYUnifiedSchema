@@ -1417,7 +1417,7 @@ clarify:fever 	rdf:type owl:DatatypeProperty;
 
 clarify:weightLoss 	rdf:type owl:DatatypeProperty;	
 					rdfs:label	"weightLoss";
-					rdfs:domain	clarify:Prediagnosis;
+					rdfs:domain	clarify:Observation;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Represents if the patient experienced weight loss prior to the diagnosis.";
 					dcterms:modified "2020-10-23"^^xsd:date;
@@ -1469,7 +1469,77 @@ clarify:synchronousTumor 	rdf:type owl:DatatypeProperty;
 							prv:File "Synchronous_tumor.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:asymptomatic 	rdf:type owl:DatatypeProperty;	
+						rdfs:label	"asymptomatic";
+						rdfs:domain	clarify:NonOncologicalConsultation;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents if the patient was asymptomatic.";
+						dcterms:modified "2020-10-23"^^xsd:date;
+						prv:File "First_consultation_pre_oncology.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:cough 	rdf:type owl:DatatypeProperty;	
+				rdfs:label	"cough";
+				rdfs:domain	clarify:NonOncologicalConsultation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment "Represents if the patient had cough.";
+				dcterms:modified "2020-10-23"^^xsd:date;
+				prv:File "First_consultation_pre_oncology.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:pain 	rdf:type owl:DatatypeProperty;	
+				rdfs:label	"pain";
+				rdfs:domain	clarify:NonOncologicalConsultation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment "Represents if the patient had any pain.";
+				dcterms:modified "2020-10-23"^^xsd:date;
+				prv:File "First_consultation_pre_oncology.ttl";
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:dyspnoea 	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"dyspnoea";
+					rdfs:domain	clarify:NonOncologicalConsultation;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents if the patient experienced dyspnoea (difficulty in breathing.).";
+					dcterms:modified "2020-10-23"^^xsd:date;
+					prv:File "First_consultation_pre_oncology.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.														
+
+clarify:hemoptysis 	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"hemoptysis";
+					rdfs:domain	clarify:NonOncologicalConsultation;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents if the patient experienced hemoptysis (coughing up of blood or blood-stained mucus from the bronchi, larynx, trachea, or lungs).";
+					dcterms:modified "2020-10-23"^^xsd:date;
+					prv:File "First_consultation_pre_oncology.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:asthenia 	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"asthenia";
+					rdfs:domain	clarify:NonOncologicalConsultation;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents if the patient experienced asthenia (abnormal physical weakness or lack of energy).";
+					dcterms:modified "2020-10-23"^^xsd:date;
+					prv:File "First_consultation_pre_oncology.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:anorexia 	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"anorexia";
+					rdfs:domain	clarify:NonOncologicalConsultation;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents if the patient experienced anorexia (eating disorder).";
+					dcterms:modified "2020-10-23"^^xsd:date;
+					prv:File "First_consultation_pre_oncology.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.														
+
+clarify:comment 	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"comment";
+					rdfs:domain	clarify:CancerPatient;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Represents further clinical comments provided in the clinical notes.";
+					dcterms:modified "2020-10-23"^^xsd:date;
+					prv:File "Comments.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
 #################################################################################################################################################																																			
 #################################################################################################################################################
