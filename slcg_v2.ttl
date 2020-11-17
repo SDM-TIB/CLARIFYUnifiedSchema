@@ -352,6 +352,8 @@ clarify:biomarkerResult	rdf:type	owl:DatatypeProperty;
 							rdfs:comment "Result of the reactive expression of the gene.";
 							dcterms:modified "2020-10-19"^^xsd:date;
 							prv:File "biomarker_mutation.ttl";
+							prv:File "pdl1_expression.ttl";
+							prv:File "ros1_mutation.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:biomarkerSpecification	rdf:type	owl:DatatypeProperty;
@@ -360,7 +362,9 @@ clarify:biomarkerSpecification	rdf:type	owl:DatatypeProperty;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "";
 								dcterms:modified "2020-10-19"^^xsd:date;
-								prv:File ".ttl";
+								prv:File "egfr_mutation.ttl";
+								prv:File "pdl1_expression.ttl";
+								prv:File "ros1_mutation.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarkerNegativeResult	rdf:type	owl:DatatypeProperty;
@@ -377,6 +381,7 @@ clarify:biomarkerResultPositivity	rdf:type	owl:DatatypeProperty;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Positivity of the result.";
 							dcterms:modified "2020-10-19"^^xsd:date;
+							prv:File "pdl1_expression.ttl";
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarkerResultReason	rdf:type	owl:DatatypeProperty;
@@ -385,6 +390,7 @@ clarify:biomarkerResultReason	rdf:type	owl:DatatypeProperty;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Provided reason to the result.";
 								dcterms:modified "2020-10-19"^^xsd:date;
+								prv:File "pdl1_expression.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mutation_T790M_positive_result	rdf:type	owl:DatatypeProperty;
@@ -1079,16 +1085,6 @@ clarify:petTAC	rdf:type	owl:DatatypeProperty;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:other	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"other";
-						rdfs:domain	clarify:StageClassification;
-						rdfs:range	rdfs:Literal;
-						rdfs:comment "Indicates if the stage classification technique (pTNM) used is other than mentioned ones.";
-						dcterms:modified "2020-11-17"^^xsd:date;
-						prv:File "clinical_stadification_techniques.ttl";
-						prv:File "pathological_stadification_techniques.ttl";								
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:biopsy	rdf:type	owl:DatatypeProperty;
 				rdfs:label	"biopsy";
 				rdfs:domain	clarify:PathologicalStageClassification;
@@ -1656,7 +1652,7 @@ clarify:hasBiomarkerObservation	rdf:type	owl:ObjectProperty;
 
 clarify:hasBiomarker	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasBiomarker";
-						rdfs:domain	clarify:BiomarkerObservation;
+						rdfs:domain	clarify:Concept;
 						rdfs:range	clarify:Biomarker;
 						rdfs:comment ".";
 						dcterms:modified "2020-10-19"^^xsd:date;
