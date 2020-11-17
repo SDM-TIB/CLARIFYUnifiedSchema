@@ -513,6 +513,15 @@ clarify:dieselSmoke	rdf:type	owl:DatatypeProperty;
 								prv:File "environmental_risk.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																								
 
+clarify:asbestosExposure	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"asbestosExposure";
+							rdfs:domain	clarify:Carcinogen;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Represents if the patient has been exposed to asbestos.";
+							dcterms:modified "2020-11-17"^^xsd:date;
+							prv:File "environmental_risk.ttl";								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:asbestosExposureType	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"asbestosExposureType";
 								rdfs:domain	clarify:Carcinogen;
@@ -523,7 +532,7 @@ clarify:asbestosExposureType	rdf:type	owl:DatatypeProperty;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.								
 
 clarify:progressionOrRelapse	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"pregressionOrRelapse";
+								rdfs:label	"progressionOrRelapse";
 								rdfs:domain	clarify:ProgressionRelapseObservation;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the value indicating if the progression or relapse is occurred.";
@@ -532,7 +541,7 @@ clarify:progressionOrRelapse	rdf:type	owl:DatatypeProperty;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:progressionType	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"pregressionType";
+								rdfs:label	"progressionType";
 								rdfs:domain	clarify:ProgressionRelapseObservation;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents type of progression that patient has experienced.";
@@ -672,7 +681,8 @@ clarify:tumorSize	rdf:type	owl:DatatypeProperty;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates the size of the patient's tumor (T).";
 							dcterms:modified "2020-10-20"^^xsd:date;
-							prv:File "tnm_stadification.ttl";								
+							prv:File "tnm_stadification.ttl";
+							prv:File "surgery.ttl";							
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:lymphNodesInvolvement	rdf:type	owl:DatatypeProperty;
@@ -681,7 +691,8 @@ clarify:lymphNodesInvolvement	rdf:type	owl:DatatypeProperty;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates if the lymph nodes are involved (N).";
 							dcterms:modified "2020-10-20"^^xsd:date;
-							prv:File "tnm_stadification.ttl";								
+							prv:File "tnm_stadification.ttl";
+							prv:File "surgery.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:metastatisStage	rdf:type	owl:DatatypeProperty;
@@ -690,7 +701,8 @@ clarify:metastatisStage	rdf:type	owl:DatatypeProperty;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Indicates that to what extend the cancer is metastasized (M).";
 							dcterms:modified "2020-10-20"^^xsd:date;
-							prv:File "tnm_stadification.ttl";								
+							prv:File "tnm_stadification.ttl";
+							prv:File "surgery.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:existenceOf_extrathoracicLymphadenopathies	rdf:type	owl:DatatypeProperty;
@@ -873,22 +885,24 @@ clarify:chemotherapyResponse	rdf:type	owl:DatatypeProperty;
 							prv:File "chemotherapy_treatment_line.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:chemotherapyStartDate	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"chemotherapyStartDate";
-							rdfs:domain	clarify:ChemotherapyTreatmentLine;
+clarify:treatementLineStartDate	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"treatementLineStartDate";
+							rdfs:domain	clarify:OncologicalTreatmentLine;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Represents the starting date of the chemotherapy treatment line.";
-							dcterms:modified "2020-11-16"^^xsd:date;
-							prv:File "chemotherapy_treatment_line.ttl";								
+							dcterms:modified "2020-11-17"^^xsd:date;
+							prv:File "chemotherapy_treatment_line.ttl";
+							prv:File "radiotherapy_treatment_line.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:chemotherapyEndingDate	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"chemotherapyEndingDate";
-								rdfs:domain	clarify:ChemotherapyTreatmentLine;
+clarify:treatementLineEndingDate	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"treatementLineEndingDate";
+								rdfs:domain	clarify:OncologicalTreatmentLine;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the ending date of the chemotherapy treatment line.";
-								dcterms:modified "2020-11-16"^^xsd:date;
-								prv:File "chemotherapy_treatment_line.ttl";								
+								dcterms:modified "2020-11-17"^^xsd:date;
+								prv:File "chemotherapy_treatment_line.ttl";	
+								prv:File "radiotherapy_treatment_line.ttl";							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:treatmentLineNumber	rdf:type     owl:DatatypeProperty;
@@ -962,7 +976,7 @@ clarify:surgerySubType	rdf:type	owl:DatatypeProperty;
 							rdfs:range	rdfs:Literal;
 							rdfs:comment "Represents the subtype of the surgery.";
 							dcterms:modified "2020-10-20"^^xsd:date;
-							prv:File "surgery_subtype.ttl";								
+							prv:File "surgery.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:fullBloodCount	rdf:type	owl:DatatypeProperty;
@@ -989,7 +1003,8 @@ clarify:mediastinoscopy	rdf:type	owl:DatatypeProperty;
 						rdfs:range	rdfs:Literal;
 						rdfs:comment "Indicates if the stage classification technique (pTNM) used is mediastinoscopy (a procedure used to examine the mediastinum. This is the space behind the breastbone (sternum) in the middle of the chest, between the 2 lungs. It contains: Lymph nodes. The heart and its great vessels).";
 						dcterms:modified "2020-10-21"^^xsd:date;
-						prv:File "clinical_stadification_techniques.ttl";								
+						prv:File "clinical_stadification_techniques.ttl";
+						prv:File "pathological_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mediastinotomy	rdf:type	owl:DatatypeProperty;
@@ -1010,20 +1025,20 @@ clarify:thoracicRX	rdf:type	owl:DatatypeProperty;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:brainRmn	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"brainRmn";
+clarify:brainMRI	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"brainMRI";
 						rdfs:domain	clarify:ClinicalStageClassification;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain rmn.";
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain MRI.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:rmn	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"rmn";
+clarify:mri	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"mri";
 						rdfs:domain	clarify:ClinicalStageClassification;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment "Indicates if the stage classification technique (pTNM) used is rmn.";
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is MRI.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1037,11 +1052,20 @@ clarify:thoracoscopy	rdf:type	owl:DatatypeProperty;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:brainTAC	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"brainTAC";
+clarify:thoracotomy	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"thoracotomy";
+					rdfs:domain	clarify:StageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment ".";
+					dcterms:modified "2020-11-17"^^xsd:date;
+					prv:File "clinical_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:brainCT	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"brainCT";
 						rdfs:domain	clarify:ClinicalStageClassification;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain TAC.";
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is brain CT.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1055,13 +1079,14 @@ clarify:petTAC	rdf:type	owl:DatatypeProperty;
 						prv:File "clinical_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:tac	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"tac";
-						rdfs:domain	clarify:ClinicalStageClassification;
+clarify:other	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"other";
+						rdfs:domain	clarify:StageClassification;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment "Indicates if the stage classification technique (pTNM) used is TAC.";
-						dcterms:modified "2020-10-21"^^xsd:date;
-						prv:File "clinical_stadification_techniques.ttl";								
+						rdfs:comment "Indicates if the stage classification technique (pTNM) used is other than mentioned ones.";
+						dcterms:modified "2020-11-17"^^xsd:date;
+						prv:File "clinical_stadification_techniques.ttl";
+						prv:File "pathological_stadification_techniques.ttl";								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biopsy	rdf:type	owl:DatatypeProperty;
@@ -1070,7 +1095,7 @@ clarify:biopsy	rdf:type	owl:DatatypeProperty;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is biopsy.";
 				dcterms:modified "2020-10-21"^^xsd:date;
-				prv:File "clinical_stadification_techniques.ttl";								
+				prv:File "pathological_stadification_techniques.ttl";								
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:broncoscopy	rdf:type	owl:DatatypeProperty;
@@ -1079,7 +1104,7 @@ clarify:broncoscopy	rdf:type	owl:DatatypeProperty;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is broncoscopy.";
 					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:ebus	rdf:type	owl:DatatypeProperty;
@@ -1088,7 +1113,7 @@ clarify:ebus	rdf:type	owl:DatatypeProperty;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is EBUS (endoluminal ultrasound).";
 					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 clarify:laparoscopy	rdf:type	owl:DatatypeProperty;
 					rdfs:label	"laparoscopy";
@@ -1096,7 +1121,16 @@ clarify:laparoscopy	rdf:type	owl:DatatypeProperty;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is laparoscopy.";
 					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					prv:File "pathological_stadification_techniques.ttl";								
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:fineNeedleAspiration	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"fineNeedleAspiration";
+					rdfs:domain	clarify:PathologicalStageClassification;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment ".";
+					dcterms:modified "2020-11-17"^^xsd:date;
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:transthoracicPuncture	rdf:type	owl:DatatypeProperty;
@@ -1105,16 +1139,16 @@ clarify:transthoracicPuncture	rdf:type	owl:DatatypeProperty;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is transthoracic puncture.";
 					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:paaf	rdf:type	owl:DatatypeProperty;
-					rdfs:label	"paaf";
+clarify:transthoracicVats	rdf:type	owl:DatatypeProperty;
+					rdfs:label	"transthoracicVats";
 					rdfs:domain	clarify:PathologicalStageClassification;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is PAAF.";
-					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					rdfs:comment ".";
+					dcterms:modified "2020-11-17"^^xsd:date;
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:bloodSample	rdf:type	owl:DatatypeProperty;
@@ -1123,7 +1157,7 @@ clarify:bloodSample	rdf:type	owl:DatatypeProperty;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Indicates if the stage classification detection technique (pTNM) used is blood sample.";
 					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "clinical_stadification_techniques.ttl";								
+					prv:File "pathological_stadification_techniques.ttl";								
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:disorderLabel	rdf:type owl:DatatypeProperty;
@@ -1189,15 +1223,6 @@ clarify:secondNeoplasm	rdf:type        owl:DatatypeProperty;
 						prv:File "monitoring.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:histology	rdf:type        owl:DatatypeProperty;	
-					rdfs:label	"histology";
-					rdfs:domain	clarify:TumorType;
-					rdfs:range	rdfs:Literal;
-					rdfs:comment "Represents the histological specification of the patient's tumor.";
-					dcterms:modified "2020-10-21"^^xsd:date;
-					prv:File "tumor_histology.ttl";
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:adenocarcinomaHistology	rdf:type        owl:DatatypeProperty;	
 								rdfs:label	"adenocarcinomaHistology";
 								rdfs:domain	clarify:TumorType;
@@ -1215,6 +1240,15 @@ clarify:smallCellCarcinomaType	rdf:type        owl:DatatypeProperty;
 								dcterms:modified "2020-10-21"^^xsd:date;
 								prv:File "tumor_histology.ttl";
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:carcinomaType	rdf:type        owl:DatatypeProperty;	
+						rdfs:label	"carcinomaType";
+						rdfs:domain	clarify:TumorType;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Represents the type of carcinoma that the patient is experienced.";
+						dcterms:modified "2020-11-17"^^xsd:date;
+						prv:File "tumor_histology.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:mesotheliomaType	rdf:type        owl:DatatypeProperty;	
 							rdfs:label	"mesotheliomaType";
@@ -1324,32 +1358,32 @@ clarify:electronicSmokingStopingDate	rdf:type        owl:DatatypeProperty;
 										prv:File "smoker_information.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:stingTobacco	rdf:type        owl:DatatypeProperty;	
-						rdfs:label	"stingTobacco";
+clarify:rollingTobacco	rdf:type        owl:DatatypeProperty;	
+						rdfs:label	"rollingTobacco";
 						rdfs:domain	clarify:SmokingHistory;
 						rdfs:range	rdfs:Literal;
-						rdfs:comment "Represents if the patient smokes sting tobacco.";
+						rdfs:comment "Represents if the patient smokes rolling(!) tobacco.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						prv:File "smoker_information.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:stingTobaccoSmokingStartingDate	rdf:type        owl:DatatypeProperty;	
-										rdfs:label	"stingTobaccoSmokingStartingDate";
-										rdfs:domain	clarify:SmokingHistory;
-										rdfs:range	rdfs:Literal;
-										rdfs:comment "Represents the date on which the patient started smoking sting tobacco (if it was the case).";
-										dcterms:modified "2020-10-21"^^xsd:date;
-										prv:File "smoker_information.ttl";
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+clarify:rollingTobaccoSmokingStartingDate	rdf:type        owl:DatatypeProperty;	
+											rdfs:label	"rollingTobaccoSmokingStartingDate";
+											rdfs:domain	clarify:SmokingHistory;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment "Represents the date on which the patient started smoking rolling(!) tobacco (if it was the case).";
+											dcterms:modified "2020-10-21"^^xsd:date;
+											prv:File "smoker_information.ttl";
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:stingTobaccoSmokingStopingDate	rdf:type        owl:DatatypeProperty;	
-										rdfs:label	"stingTobaccoSmokingStopingDate";
-										rdfs:domain	clarify:SmokingHistory;
-										rdfs:range	rdfs:Literal;
-										rdfs:comment "Represents the date on which the patient stoped smoking sting tobacco (if it was the case).";
-										dcterms:modified "2020-10-21"^^xsd:date;
-										prv:File "smoker_information.ttl";
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+clarify:rollingTobaccoSmokingStopingDate	rdf:type        owl:DatatypeProperty;	
+											rdfs:label	"rollingTobaccoSmokingStopingDate";
+											rdfs:domain	clarify:SmokingHistory;
+											rdfs:range	rdfs:Literal;
+											rdfs:comment "Represents the date on which the patient stoped smoking rolling(!) tobacco (if it was the case).";
+											dcterms:modified "2020-10-21"^^xsd:date;
+											prv:File "smoker_information.ttl";
+											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:livingWithSmoker	rdf:type        owl:DatatypeProperty;	
 										rdfs:label	"livingWithSmoker";
@@ -1445,9 +1479,10 @@ clarify:weightLoss 	rdf:type owl:DatatypeProperty;
 					rdfs:label	"weightLoss";
 					rdfs:domain	clarify:Observation;
 					rdfs:range	rdfs:Literal;
-					rdfs:comment "Represents if the patient experienced weight loss prior to the diagnosis.";
+					rdfs:comment "Represents if the patient experienced weight loss prior to the diagnosis (1=yes, 0=no, -1=unknown).";
 					dcterms:modified "2020-10-23"^^xsd:date;
 					prv:File "Prediagnosis_symptoms.ttl";
+					prv:File "First_consultation_pre_oncology.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:sleepingDifficulty 	rdf:type owl:DatatypeProperty;	
@@ -1756,7 +1791,7 @@ clarify:hasClinicalStageClassification	rdf:type        owl:ObjectProperty;
 										prv:File "clinical_stadification_techniques.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:hasPathologicalStageClassification	rdf:type        owl:ObjectProperty;	
+clarify:hasPathologicalStageClassification	rdf:type        owl:ObjectProperty;
 											rdfs:label	"hasDrug";
 											rdfs:domain	clarify:CancerPatient;
 											rdfs:range	clarify:PathologicalStageClassification;
@@ -1772,6 +1807,24 @@ clarify:hasComorbidity	rdf:type        owl:ObjectProperty;
 						rdfs:comment	"Connection between patient and her/his Comorbidities.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						prv:File "comorbidity.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasNonOncologicalConsultation	rdf:type        owl:ObjectProperty;	
+						rdfs:label	"hasNonOncologicalConsultation";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:NonOncologicalConsultation;
+						rdfs:comment	"Connection between patient and her/his non-oncological consultation that have had.";
+						dcterms:modified "2020-11-17"^^xsd:date;
+						prv:File "First_consultation_pre_oncology.ttl";
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasPrediagnosis	rdf:type        owl:ObjectProperty;	
+						rdfs:label	"hasPrediagnosis";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:Prediagnosis;
+						rdfs:comment	"Connection between patient and her/his prediagnosis observation.";
+						dcterms:modified "2020-11-17"^^xsd:date;
+						prv:File "Prediagnosis_symptoms.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasMontoring	rdf:type        owl:ObjectProperty;	
