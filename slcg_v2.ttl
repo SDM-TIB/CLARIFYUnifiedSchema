@@ -277,6 +277,14 @@ clarify:NonOncologicalConsultation  	rdf:type owl:Class;
 #################################################################################################################################################
 #################################################################################################################################################
 
+clarify:annID	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"annID";
+				rdfs:domain clarify:Annotation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Identification of instances of Annotation class";	
+				dcterms:modified "2020-11-19"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:date	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"date";
 								rdfs:domain	clarify:Concept;
