@@ -629,6 +629,15 @@ clarify:previousCancerType	rdf:type	owl:DatatypeProperty;
 								prv:File "oncological_history.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:currentCancerType	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"currentCancerType";
+								rdfs:domain	clarify:CancerPatient;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the type of previous cancer from which the patient has suffered before.";
+								dcterms:modified "2020-10-20"^^xsd:date;
+								prv:File "patient.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:numberOfFamilyWithLC	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"numberOfFamilyWithLC";
 									rdfs:domain	clarify:FamilyHistory;
@@ -662,6 +671,24 @@ clarify:familyCancerType	rdf:type	owl:DatatypeProperty;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment "Represents the type of the cancer that the family member had/ has (1=Breast, 2=Head and neck, 3=Germinal tumors, 4=Sarcoma, 5=Central nervous system, 6=Unknown origin carcinoma, 7=Colorrectal, 8=Esophagogastric, 9=Pancreatic, 10=Gall bladder, 11=Liver, 2=Melanoma, 13=Skin no melanoma, 14=Bladder/urinary tract, 15=Renal, 16=Prostate, 17=Uterus/cervical, 18=Lymphoma, 19=Leukemia, 20=Lung, 22=Ovarian, 888=Others, -1=- ).";
 									dcterms:modified "2020-10-20"^^xsd:date;
+									prv:File "oncological_history.ttl";								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_familyWithCancer	rdf:type	owl:DatatypeProperty;
+													rdfs:label	"existenceOf_familyWithCancer";
+													rdfs:domain	clarify:CancerPatient;
+													rdfs:range	rdfs:Literal;
+													rdfs:comment "";
+													dcterms:modified "2020-11-27"^^xsd:date;
+													prv:File "family_antecedents.ttl";								
+													dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:existenceOf_previousHistory	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"existenceOf_previousHistory";
+									rdfs:domain	clarify:CancerPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "";
+									dcterms:modified "2020-11-27"^^xsd:date;
 									prv:File "oncological_history.ttl";								
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
