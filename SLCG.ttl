@@ -1365,6 +1365,15 @@ clarify:secondNeoplasm	rdf:type        owl:DatatypeProperty;
 						prv:File "monitoring.ttl";
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:histology	rdf:type        owl:DatatypeProperty;	
+								rdfs:label	"histology";
+								rdfs:domain	clarify:TumorType;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents type of histology of the cancer experienced by the patient (if any).";
+								dcterms:modified "2020-12-10"^^xsd:date;
+								prv:File "tumor_histology.ttl";
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:adenocarcinomaHistology	rdf:type        owl:DatatypeProperty;	
 								rdfs:label	"adenocarcinomaHistology";
 								rdfs:domain	clarify:TumorType;
