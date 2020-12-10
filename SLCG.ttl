@@ -125,6 +125,14 @@ clarify:CancerStage	 rdf:type	owl:Class;
 					dcterms:modified "2020-10-20"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:CancerStageCoded	rdf:type	owl:Class;
+							rdfs:label	"CancerStageCoded";
+							rdfs:subClassOf	clarify:Observation;
+							rdfs:comment "Determines a patient's prognosis, based on a scale that is provided by UPM.";
+							dcterms:modified "2020-12-10"^^xsd:date;
+							prv:File "diagnosis.ttl";
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:MetastasisLocation	 rdf:type	owl:Class;
 					rdfs:label	"MetastasisLocation";
 					rdfs:subClassOf	clarify:Observation;
@@ -1825,13 +1833,22 @@ clarify:involved_in	rdf:type	owl:ObjectProperty;
 								prv:File "clinical_trial.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:hasStage	rdf:type	owl:ObjectProperty;
-								rdfs:label	"hasStage";
+clarify:hasStageTNM	rdf:type	owl:ObjectProperty;
+								rdfs:label	"hasStageTNM";
 								rdfs:domain	clarify:CancerPatient;
 								rdfs:range	clarify:CancerStageTNM;
 								rdfs:comment "Relation between the cancer patient and the cancer stage.";
 								dcterms:modified "2020-10-20"^^xsd:date;
 								prv:File "tnm_stadification.ttl";								
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasDiagnosisStage	rdf:type	owl:ObjectProperty;
+								rdfs:label	"hasDiagnosisStage";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	clarify:CancerStageCoded;
+								rdfs:comment "Relation between the diagnosis observation and the coded cancer stage (at the diagnosis time).";
+								dcterms:modified "2020-12-10"^^xsd:date;
+								prv:File "diagnosis.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:metastasized_to	rdf:type	owl:ObjectProperty;
