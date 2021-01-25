@@ -48,6 +48,13 @@ clarify:LCPatient	rdf:type	owl:Class;
 				prv:File "patient.ttl";				
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Observation	rdf:type	owl:Class;
+				rdfs:label	"Observation";
+				rdfs:subClassOf	clarify:Concept;
+				rdfs:comment "Any record that relates to monitoring a process.";
+				dcterms:modified "2021-01-25"^^xsd:date;			
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:Diagnosis  	rdf:type owl:Class;
 					rdfs:label	"Diagnosis";
 					rdfs:subClassOf	clarify:Observation;
@@ -189,7 +196,7 @@ clarify:Drug	rdf:type	owl:Class;
 clarify:StageClassification	rdf:type	owl:Class;
 									rdfs:label	"StageClassification";
 									rdfs:subClassOf	clarify:Concept;
-									rdfs:comment "The clinical technique that is applied to indicate the TNM stage.";
+									rdfs:comment "Techniques that are applied to indicate the TNM stage.";
 									dcterms:modified "2020-10-21"^^xsd:date;
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
@@ -358,14 +365,6 @@ clarify:Enzyme	rdf:type	owl:Class;
 				prv:File "drugEnzymeInteraction.ttl";
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:Disorder	rdf:type	owl:Class;
-				rdfs:label	"Disorder";
-				rdfs:subClassOf	clarify:Concept;
-				rdfs:comment "A particular abnormal condition that negatively affects the structure or function of all or part of an organism, and that is not due to any immediate external injury.";
-				dcterms:modified "2020-09-14"^^xsd:date;
-				prv:File "indication_CUI";
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:DrugDrugInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugDrugInteraction";
 				rdfs:subClassOf	clarify:Interaction;
@@ -402,7 +401,7 @@ clarify:DrugEnzymeInteraction	rdf:type	owl:Class;
 
 clarify:DrugSideEffectInteraction	rdf:type	owl:Class;
 						rdfs:label	"DrugSideEffectInteraction";
-						rdfs:subClassOf	clarify:Relation;
+						rdfs:subClassOf	clarify:Interaction;
 						rdfs:comment "Effects of drugs, whether therapeutic or adverse, that are secondary to the one intended.";
 						dcterms:modified "2020-12-15"^^xsd:date;
 						prv:File "drugSideEffectInteraction.ttl";
@@ -427,7 +426,7 @@ clarify:SymmetricDrugDrugInteraction	rdf:type	owl:Class;
 clarify:AdverseEvent	rdf:type	owl:Class;
 				rdfs:label	"AdverseEvent";
 				rdfs:subClassOf	clarify:Concept;
-				rdfs:comment "The concept that explains the consequence of the drug drug interaction in their effectiveness.";
+				rdfs:comment "The concept that explains the consequence of the drug drug interaction resulting in their effectiveness.";
 				dcterms:modified "2020-12-15"^^xsd:date;
 				prv:File "drugDrugInteraction_non-symmetric.ttl";
 				prv:File "drugDrugInteraction_symmetric.ttl";
@@ -2386,7 +2385,7 @@ clarify:hasProgressionRelapseObservation    rdf:type     owl:ObjectProperty;
 										rdfs:label	"hasProgressionRelapseObservation";
 										rdfs:domain	clarify:LCPatient;
 										rdfs:range	clarify:ProgressionRelapseObservation;
-										rdfs:comment "Relation between the patient and the radiotherapy treatment line that is received by the patient.";
+										rdfs:comment "Relation between the patient and the progression relapse observation.";
 										dcterms:modified "2020-11-16"^^xsd:date;
 										prv:File "relapse_progression.ttl";
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
