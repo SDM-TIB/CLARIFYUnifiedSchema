@@ -300,6 +300,504 @@ clarify:Publication	rdf:type	owl:Class;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Relation	rdf:type	owl:Class;
+					rdfs:label	"Relation";
+					rdfs:subClassOf	clarify:Concept;
+					rdfs:comment "Defines relationship between UMLS concepts.";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "publication_annotation.ttl";
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AFFECTS	rdf:type	owl:Class;
+					rdfs:label	"AFFECTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ASSOCIATED_WITH	rdf:type	owl:Class;
+					rdfs:label	"ASSOCIATED_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AUGMENTS	rdf:type	owl:Class;
+					rdfs:label	"AUGMENTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:CAUSES	rdf:type	owl:Class;
+					rdfs:label	"CAUSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:COEXISTS_WITH	rdf:type	owl:Class;
+					rdfs:label	"COEXISTS_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:COMPLICATES	rdf:type	owl:Class;
+					rdfs:label	"COMPLICATES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:CONVERTS_TO	rdf:type	owl:Class;
+					rdfs:label	"CONVERTS_TO";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:DIAGNOSES	rdf:type	owl:Class;
+					rdfs:label	"DIAGNOSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:DISRUPTS	rdf:type	owl:Class;
+					rdfs:label	"DISRUPTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:INHIBITS	rdf:type	owl:Class;
+					rdfs:label	"INHIBITS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:INTERACTS_WITH	rdf:type	owl:Class;
+					rdfs:label	"INTERACTS_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ISA	rdf:type	owl:Class;
+					rdfs:label	"ISA";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:LOCATION_OF	rdf:type	owl:Class;
+					rdfs:label	"LOCATION_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:MANIFESTATION_OF	rdf:type	owl:Class;
+					rdfs:label	"MANIFESTATION_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:MEASUREMENT_OF	rdf:type	owl:Class;
+					rdfs:label	"MEASUREMENT_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.										
+
+clarify:MEASURES	rdf:type	owl:Class;
+					rdfs:label	"MEASURES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:METHOD_OF	rdf:type	owl:Class;
+					rdfs:label	"METHOD_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
+
+clarify:NEG_ADMINISTERED_TO	rdf:type	owl:Class;
+					rdfs:label	"NEG_ADMINISTERED_TO";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_AFFECTS	rdf:type	owl:Class;
+					rdfs:label	"NEG_AFFECTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_ASSOCIATED_WITH	rdf:type	owl:Class;
+					rdfs:label	"NEG_ASSOCIATED_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_AUGMENTS	rdf:type	owl:Class;
+					rdfs:label	"NEG_AUGMENTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_CAUSES	rdf:type	owl:Class;
+					rdfs:label	"NEG_CAUSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_COEXISTS_WITH	rdf:type	owl:Class;
+					rdfs:label	"NEG_COEXISTS_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_COMPLICATES	rdf:type	owl:Class;
+					rdfs:label	"NEG_COMPLICATES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_CONVERTS_TO	rdf:type	owl:Class;
+					rdfs:label	"NEG_CONVERTS_TO";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_DIAGNOSES	rdf:type	owl:Class;
+					rdfs:label	"NEG_DIAGNOSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_DISRUPTS	rdf:type	owl:Class;
+					rdfs:label	"NEG_DISRUPTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_INHIBITS	rdf:type	owl:Class;
+					rdfs:label	"NEG_INHIBITS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_INTERACTS_WITH	rdf:type	owl:Class;
+					rdfs:label	"NEG_INTERACTS_WITH";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_ISA	rdf:type	owl:Class;
+					rdfs:label	"NEG_ISA";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_LOCATION_OF	rdf:type	owl:Class;
+					rdfs:label	"NEG_LOCATION_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_MANIFESTATION_OF	rdf:type	owl:Class;
+					rdfs:label	"NEG_MANIFESTATION_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_MEASURES	rdf:type	owl:Class;
+					rdfs:label	"NEG_MEASURES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_METHOD_OF	rdf:type	owl:Class;
+					rdfs:label	"NEG_METHOD_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_OCCURS_IN	rdf:type	owl:Class;
+					rdfs:label	"NEG_OCCURS_IN";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PART_OF	rdf:type	owl:Class;
+					rdfs:label	"NEG_PART_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PRECEDES	rdf:type	owl:Class;
+					rdfs:label	"NEG_PRECEDES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PREDISPOSES	rdf:type	owl:Class;
+					rdfs:label	"NEG_PREDISPOSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PREVENTS	rdf:type	owl:Class;
+					rdfs:label	"NEG_PREVENTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PROCESS_OF	rdf:type	owl:Class;
+					rdfs:label	"NEG_PROCESS_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_PRODUCES	rdf:type	owl:Class;
+					rdfs:label	"NEG_PRODUCES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_STIMULATES	rdf:type	owl:Class;
+					rdfs:label	"NEG_STIMULATES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_TREATS	rdf:type	owl:Class;
+					rdfs:label	"NEG_TREATS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_USES	rdf:type	owl:Class;
+					rdfs:label	"NEG_USES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_higher_than	rdf:type	owl:Class;
+					rdfs:label	"NEG_higher_than";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_lower_than	rdf:type	owl:Class;
+					rdfs:label	"NEG_lower_than";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:NEG_same_as	rdf:type	owl:Class;
+					rdfs:label	"NEG_same_as";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:OCCURS_IN	rdf:type	owl:Class;
+					rdfs:label	"OCCURS_IN";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PART_OF	rdf:type	owl:Class;
+					rdfs:label	"PART_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PRECEDES	rdf:type	owl:Class;
+					rdfs:label	"PRECEDES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PREDISPOSES	rdf:type	owl:Class;
+					rdfs:label	"PREDISPOSES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PREVENTS	rdf:type	owl:Class;
+					rdfs:label	"PREVENTS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PROCESS_OF	rdf:type	owl:Class;
+					rdfs:label	"PROCESS_OF";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PRODUCES	rdf:type	owl:Class;
+					rdfs:label	"PRODUCES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:STIMULATES	rdf:type	owl:Class;
+					rdfs:label	"STIMULATES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:TREATS	rdf:type	owl:Class;
+					rdfs:label	"TREATS";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:USES	rdf:type	owl:Class;
+					rdfs:label	"USES";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:compared_with	rdf:type	owl:Class;
+					rdfs:label	"compared_with";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:higher_than	rdf:type	owl:Class;
+					rdfs:label	"higher_than";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:lower_than	rdf:type	owl:Class;
+					rdfs:label	"lower_than";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:same_as	rdf:type	owl:Class;
+					rdfs:label	"same_as";
+					rdfs:subClassOf	clarify:Relation;
+					rdfs:comment "";
+					dcterms:modified "2021-01-26"^^xsd:date;
+					prv:File "semrep.ttl";
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
 
 ######################################################################################################################################
 #########################################################    Drug    #################################################################
@@ -1978,7 +2476,7 @@ clarify:pubmedID	rdf:type owl:DatatypeProperty;
 
 clarify:confidence    rdf:type     owl:DatatypeProperty;
 					rdfs:label	"confidence";
-					rdfs:domain	clarify:Relation;
+					rdfs:domain	clarify:Concept;
 					rdfs:range	rdfs:Literal;
 					rdfs:comment "Confidence score of the concept";
 					dcterms:modified "2020-12-15"^^xsd:date;
