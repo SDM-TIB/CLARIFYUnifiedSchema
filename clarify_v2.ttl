@@ -1662,30 +1662,30 @@ clarify:stagingSystemTechnique	rdf:type	owl:DatatypeProperty;
 								prv:File "diagnostic.ttl";								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:treatementLineBestResponse	rdf:type	owl:DatatypeProperty;
+clarify:treatmentLineBestResponse	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"treatementLineBestResponse";
 									rdfs:domain	clarify:OncologicalTreatmentLine;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment "Represents the best response of the patient to the treatement line.";
+									rdfs:comment "Represents the best response of the patient to the treatment line.";
 									dcterms:modified "2020-11-19"^^xsd:date;
 									prv:File "chemotherapy_treatment_line.ttl";								
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:treatementLineStartDate	rdf:type	owl:DatatypeProperty;
+clarify:treatmentLineStartDate	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"treatementLineStartDate";
 							rdfs:domain	clarify:OncologicalTreatmentLine;
 							rdfs:range	rdfs:Literal;
-							rdfs:comment "Represents the starting date of the chemotherapy treatment line.";
+							rdfs:comment "Represents the starting date of the treatment line.";
 							dcterms:modified "2020-11-17"^^xsd:date;
 							prv:File "chemotherapy_treatment_line.ttl";
 							prv:File "radiotherapy_treatment_line.ttl";								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:treatementLineEndingDate	rdf:type	owl:DatatypeProperty;
+clarify:treatmentLineEndingDate	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"treatementLineEndingDate";
 								rdfs:domain	clarify:OncologicalTreatmentLine;
 								rdfs:range	rdfs:Literal;
-								rdfs:comment "Represents the ending date of the chemotherapy treatment line.";
+								rdfs:comment "Represents the ending date of the treatment line.";
 								dcterms:modified "2020-11-17"^^xsd:date;
 								prv:File "chemotherapy_treatment_line.ttl";	
 								prv:File "radiotherapy_treatment_line.ttl";							
@@ -1734,7 +1734,7 @@ clarify:treatmentLineFractioning	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"treatmentLineFractioning";
 									rdfs:domain	clarify:OncologicalTreatmentLine;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment "Represents the fractioning that is prescribed to the patient.";
+									rdfs:comment "Represents the fraction that is prescribed to the patient.";
 									dcterms:modified "2020-11-19"^^xsd:date;
 									prv:File "radiotherapy_drugs.ttl";															
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1743,7 +1743,7 @@ clarify:treatmentLineMaintenance	rdf:type	owl:DatatypeProperty;
 									rdfs:label	"treatmentLineMaintenance";
 									rdfs:domain	clarify:OncologicalTreatmentLine;
 									rdfs:range	rdfs:Literal;
-									rdfs:comment "Represents the type of drugs that are prescribed for the maintenance!";
+									rdfs:comment "Represents the type of drugs that are prescribed for the maintenance.";
 									dcterms:modified "2020-11-19"^^xsd:date;
 									prv:File "chemotherapy_drugs.ttl";															
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
