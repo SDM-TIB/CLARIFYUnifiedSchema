@@ -876,7 +876,7 @@ clarify:DrugDrugInteraction	rdf:type	owl:Class;
 
 clarify:Interaction	rdf:type owl:Class;
 			rdfs:label	"Interaction";
-			rdfs:subClassOf	clarify:Concept;
+			rdfs:subClassOf	clarify:INTERACTS_WITH;
 			rdfs:comment "Interaction between drugs and disorder, enzyme, target.";
 			dcterms:modified "2021-01-07"^^xsd:date;
 			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
