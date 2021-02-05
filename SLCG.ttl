@@ -149,11 +149,11 @@ clarify:Diagnosis  	rdf:type owl:Class;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
 
 clarify:OncologicalTreatmentLine	rdf:type	owl:Class;
-								rdfs:label	"OncologicalTreatmentLine";
-								rdfs:subClassOf clarify:Concept;
-								rdfs:comment "Records of patients in clinical notes that are related to oncological treatment lines";
-								dcterms:modified "2020-10-20"^^xsd:date;
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+									rdfs:label	"OncologicalTreatmentLine";
+									rdfs:subClassOf clarify:Concept;
+									rdfs:comment "Records of patients in clinical notes that are related to oncological treatment lines";
+									dcterms:modified "2020-10-20"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:ChemotherapyTreatmentLine	rdf:type	owl:Class;
 								rdfs:label	"ChemotherapyTreatmentLine";
