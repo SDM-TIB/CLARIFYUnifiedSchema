@@ -6,19 +6,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prv: <http://purl.org/net/provenance/ns#> .
 
-#######################################################################################################################
-
-<http://clarify2020.eu/vocab/> 	rdf:type owl:Ontology ;
-	                            dc:description "The main classes and properties presented in data sources that are integrated in CLARIFY KG and the relationships among them."@en ;
-	                            dc:title "CLARIFY Unified Schema"@en ;
-	                            terms:created "2020-02-01"@en ;
-	                            terms:creator "Samaneh Jozashoori"@en ,
-	                                          "Maria-Esther Vidal"@en ;
-	                            terms:modified "2021-02-18"@en ;
-	                            terms:title "CLARIFY Unified Schema"@en ;
-	                            owl:versionInfo "Version 3.0"@en .
-
-
 #################################################################################################################################################
 #################################################################################################################################################
 #################################################################################################################################################
@@ -309,6 +296,11 @@ clarify:CancerType  rdf:type owl:Class;
 					dcterms:modified "2021-02-18"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:BiomarkerIHQResult  rdf:type owl:Class;
+							rdfs:label	"BiomarkerIHQResult";
+							rdfs:subClassOf	clarify:Concept;
+							dcterms:modified "2021-02-25"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 
 ######################################################################################################################################
