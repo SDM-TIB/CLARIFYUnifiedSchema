@@ -535,7 +535,7 @@ clarify:LymphNodesInvolvement	rdf:type	owl:Class;
 
 clarify:PerioperativeDeath	rdf:type	owl:Class;
 							rdfs:label	"PerioperativeDeath";
-							rdfs:subClassOf	clarify:Concept;
+							rdfs:subClassOf	clarify:CauseOfDeath;
 							dcterms:modified "2021-02-25"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
