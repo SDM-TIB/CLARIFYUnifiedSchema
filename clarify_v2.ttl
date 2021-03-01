@@ -312,7 +312,7 @@ clarify:Relation	rdf:type	owl:Class;
 clarify:AFFECTS	rdf:type	owl:Class;
 					rdfs:label	"AFFECTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent pharmacogenomics it implies a direct effect on.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -320,7 +320,7 @@ clarify:AFFECTS	rdf:type	owl:Class;
 clarify:ASSOCIATED_WITH	rdf:type	owl:Class;
 					rdfs:label	"ASSOCIATED_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs to represent the genetic etiology of disease the relation is of type association between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -328,7 +328,7 @@ clarify:ASSOCIATED_WITH	rdf:type	owl:Class;
 clarify:AUGMENTS	rdf:type	owl:Class;
 					rdfs:label	"AUGMENTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent pharmacogenomics. It implies expanding or stimulating a process.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -336,7 +336,7 @@ clarify:AUGMENTS	rdf:type	owl:Class;
 clarify:CAUSES	rdf:type	owl:Class;
 					rdfs:label	"CAUSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent the genetic etiology of disease; it implies bringing about a condition or an effect.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -344,7 +344,7 @@ clarify:CAUSES	rdf:type	owl:Class;
 clarify:COEXISTS_WITH	rdf:type	owl:Class;
 					rdfs:label	"COEXISTS_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent the genetic etiology of disease; it implies “occurring together with, or jointly.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -352,7 +352,7 @@ clarify:COEXISTS_WITH	rdf:type	owl:Class;
 clarify:COMPLICATES	rdf:type	owl:Class;
 					rdfs:label	"COMPLICATES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent the genetic etiology of disease; it represents causes to become more severe or complex, or results in adverse effects.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -360,7 +360,7 @@ clarify:COMPLICATES	rdf:type	owl:Class;
 clarify:CONVERTS_TO	rdf:type	owl:Class;
 					rdfs:label	"CONVERTS_TO";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs to represent the genetic etiology of disease it implies changing from one form to another.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -368,7 +368,7 @@ clarify:CONVERTS_TO	rdf:type	owl:Class;
 clarify:DIAGNOSES	rdf:type	owl:Class;
 					rdfs:label	"DIAGNOSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the relation of type distinguishing or identifying the nature or characteristics of two clinical medicine terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -376,7 +376,7 @@ clarify:DIAGNOSES	rdf:type	owl:Class;
 clarify:DISRUPTS	rdf:type	owl:Class;
 					rdfs:label	"DISRUPTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs to represent pharmacogenomics; the relation is of type altering or influencing an already existing condition, state, or situation and producing a negative effect on between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -384,7 +384,7 @@ clarify:DISRUPTS	rdf:type	owl:Class;
 clarify:INHIBITS	rdf:type	owl:Class;
 					rdfs:label	"INHIBITS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that describes substance interactions in terms of decreasing, limiting, or blocks the action or function.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -392,7 +392,7 @@ clarify:INHIBITS	rdf:type	owl:Class;
 clarify:INTERACTS_WITH	rdf:type	owl:Class;
 					rdfs:label	"INTERACTS_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that describes interactions between two terms representing substances.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -400,7 +400,7 @@ clarify:INTERACTS_WITH	rdf:type	owl:Class;
 clarify:ISA	rdf:type	owl:Class;
 					rdfs:label	"ISA";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents that if one item has this relation to another item then the first item is more specific in meaning than the second item.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -416,7 +416,7 @@ clarify:LOCATION_OF	rdf:type	owl:Class;
 clarify:MANIFESTATION_OF	rdf:type	owl:Class;
 					rdfs:label	"MANIFESTATION_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents that part of a phenomenon which is directly observable or concretely or visibly expressed, or which gives evidence to the underlying process.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -424,7 +424,7 @@ clarify:MANIFESTATION_OF	rdf:type	owl:Class;
 clarify:MEASUREMENT_OF	rdf:type	owl:Class;
 					rdfs:label	"MEASUREMENT_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type measurement between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.										
@@ -432,7 +432,7 @@ clarify:MEASUREMENT_OF	rdf:type	owl:Class;
 clarify:MEASURES	rdf:type	owl:Class;
 					rdfs:label	"MEASURES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type measurement  between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -440,7 +440,7 @@ clarify:MEASURES	rdf:type	owl:Class;
 clarify:METHOD_OF	rdf:type	owl:Class;
 					rdfs:label	"METHOD_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the manner and sequence of events in performing an act or procedure.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.					
@@ -448,7 +448,7 @@ clarify:METHOD_OF	rdf:type	owl:Class;
 clarify:NEG_ADMINISTERED_TO	rdf:type	owl:Class;
 					rdfs:label	"NEG_ADMINISTERED_TO";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of ADMINISTERED_TO relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -456,7 +456,7 @@ clarify:NEG_ADMINISTERED_TO	rdf:type	owl:Class;
 clarify:NEG_AFFECTS	rdf:type	owl:Class;
 					rdfs:label	"NEG_AFFECTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of AFFECTS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -464,7 +464,7 @@ clarify:NEG_AFFECTS	rdf:type	owl:Class;
 clarify:NEG_ASSOCIATED_WITH	rdf:type	owl:Class;
 					rdfs:label	"NEG_ASSOCIATED_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of ASSOCIATED_WITH relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -472,7 +472,7 @@ clarify:NEG_ASSOCIATED_WITH	rdf:type	owl:Class;
 clarify:NEG_AUGMENTS	rdf:type	owl:Class;
 					rdfs:label	"NEG_AUGMENTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of AUGMENTS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -480,7 +480,7 @@ clarify:NEG_AUGMENTS	rdf:type	owl:Class;
 clarify:NEG_CAUSES	rdf:type	owl:Class;
 					rdfs:label	"NEG_CAUSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of CAUSES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -488,7 +488,7 @@ clarify:NEG_CAUSES	rdf:type	owl:Class;
 clarify:NEG_COEXISTS_WITH	rdf:type	owl:Class;
 					rdfs:label	"NEG_COEXISTS_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of COEXISTS_WITH relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -496,7 +496,7 @@ clarify:NEG_COEXISTS_WITH	rdf:type	owl:Class;
 clarify:NEG_COMPLICATES	rdf:type	owl:Class;
 					rdfs:label	"NEG_COMPLICATES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of COMPLICATES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -504,7 +504,7 @@ clarify:NEG_COMPLICATES	rdf:type	owl:Class;
 clarify:NEG_CONVERTS_TO	rdf:type	owl:Class;
 					rdfs:label	"NEG_CONVERTS_TO";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of CONVERTS_TO relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -512,7 +512,7 @@ clarify:NEG_CONVERTS_TO	rdf:type	owl:Class;
 clarify:NEG_DIAGNOSES	rdf:type	owl:Class;
 					rdfs:label	"NEG_DIAGNOSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of DIAGNOSES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -520,7 +520,7 @@ clarify:NEG_DIAGNOSES	rdf:type	owl:Class;
 clarify:NEG_DISRUPTS	rdf:type	owl:Class;
 					rdfs:label	"NEG_DISRUPTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of DISRUPTS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -528,7 +528,7 @@ clarify:NEG_DISRUPTS	rdf:type	owl:Class;
 clarify:NEG_INHIBITS	rdf:type	owl:Class;
 					rdfs:label	"NEG_INHIBITS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of INHIBITS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -536,7 +536,7 @@ clarify:NEG_INHIBITS	rdf:type	owl:Class;
 clarify:NEG_INTERACTS_WITH	rdf:type	owl:Class;
 					rdfs:label	"NEG_INTERACTS_WITH";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of INTERACTS_WITH relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -544,7 +544,7 @@ clarify:NEG_INTERACTS_WITH	rdf:type	owl:Class;
 clarify:NEG_ISA	rdf:type	owl:Class;
 					rdfs:label	"NEG_ISA";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of ISA relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -552,7 +552,7 @@ clarify:NEG_ISA	rdf:type	owl:Class;
 clarify:NEG_LOCATION_OF	rdf:type	owl:Class;
 					rdfs:label	"NEG_LOCATION_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of LOCATION_OF relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -560,7 +560,7 @@ clarify:NEG_LOCATION_OF	rdf:type	owl:Class;
 clarify:NEG_MANIFESTATION_OF	rdf:type	owl:Class;
 					rdfs:label	"NEG_MANIFESTATION_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of MANIFESTATION_OF relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -568,7 +568,7 @@ clarify:NEG_MANIFESTATION_OF	rdf:type	owl:Class;
 clarify:NEG_MEASURES	rdf:type	owl:Class;
 					rdfs:label	"NEG_MEASURES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of MEASURES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -576,7 +576,7 @@ clarify:NEG_MEASURES	rdf:type	owl:Class;
 clarify:NEG_METHOD_OF	rdf:type	owl:Class;
 					rdfs:label	"NEG_METHOD_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of METHOD_OF relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -584,7 +584,7 @@ clarify:NEG_METHOD_OF	rdf:type	owl:Class;
 clarify:NEG_OCCURS_IN	rdf:type	owl:Class;
 					rdfs:label	"NEG_OCCURS_IN";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of OCCURS_IN relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -592,7 +592,7 @@ clarify:NEG_OCCURS_IN	rdf:type	owl:Class;
 clarify:NEG_PART_OF	rdf:type	owl:Class;
 					rdfs:label	"NEG_PART_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PART_OF relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -600,7 +600,7 @@ clarify:NEG_PART_OF	rdf:type	owl:Class;
 clarify:NEG_PRECEDES	rdf:type	owl:Class;
 					rdfs:label	"NEG_PRECEDES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PRECEDES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -608,7 +608,7 @@ clarify:NEG_PRECEDES	rdf:type	owl:Class;
 clarify:NEG_PREDISPOSES	rdf:type	owl:Class;
 					rdfs:label	"NEG_PREDISPOSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PREDISPOSES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -616,7 +616,7 @@ clarify:NEG_PREDISPOSES	rdf:type	owl:Class;
 clarify:NEG_PREVENTS	rdf:type	owl:Class;
 					rdfs:label	"NEG_PREVENTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PREVENTS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -624,7 +624,7 @@ clarify:NEG_PREVENTS	rdf:type	owl:Class;
 clarify:NEG_PROCESS_OF	rdf:type	owl:Class;
 					rdfs:label	"NEG_PROCESS_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PROCESS_OF relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -632,7 +632,7 @@ clarify:NEG_PROCESS_OF	rdf:type	owl:Class;
 clarify:NEG_PRODUCES	rdf:type	owl:Class;
 					rdfs:label	"NEG_PRODUCES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of PRODUCES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -640,7 +640,7 @@ clarify:NEG_PRODUCES	rdf:type	owl:Class;
 clarify:NEG_STIMULATES	rdf:type	owl:Class;
 					rdfs:label	"NEG_STIMULATES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of STIMULATES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -648,7 +648,7 @@ clarify:NEG_STIMULATES	rdf:type	owl:Class;
 clarify:NEG_TREATS	rdf:type	owl:Class;
 					rdfs:label	"NEG_TREATS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of TREATS relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -656,7 +656,7 @@ clarify:NEG_TREATS	rdf:type	owl:Class;
 clarify:NEG_USES	rdf:type	owl:Class;
 					rdfs:label	"NEG_USES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of USES relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -664,7 +664,7 @@ clarify:NEG_USES	rdf:type	owl:Class;
 clarify:NEG_higher_than	rdf:type	owl:Class;
 					rdfs:label	"NEG_higher_than";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of higher_than relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -672,7 +672,7 @@ clarify:NEG_higher_than	rdf:type	owl:Class;
 clarify:NEG_lower_than	rdf:type	owl:Class;
 					rdfs:label	"NEG_lower_than";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of lower_than relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -680,7 +680,7 @@ clarify:NEG_lower_than	rdf:type	owl:Class;
 clarify:NEG_same_as	rdf:type	owl:Class;
 					rdfs:label	"NEG_same_as";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the negation of same_as relation.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -688,7 +688,7 @@ clarify:NEG_same_as	rdf:type	owl:Class;
 clarify:OCCURS_IN	rdf:type	owl:Class;
 					rdfs:label	"OCCURS_IN";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents having incidence in a group or population.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -696,7 +696,7 @@ clarify:OCCURS_IN	rdf:type	owl:Class;
 clarify:PART_OF	rdf:type	owl:Class;
 					rdfs:label	"PART_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents composing, with one or more other physical units, some larger whole.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -704,7 +704,7 @@ clarify:PART_OF	rdf:type	owl:Class;
 clarify:PRECEDES	rdf:type	owl:Class;
 					rdfs:label	"PRECEDES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents occurring earlier in time.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -712,7 +712,7 @@ clarify:PRECEDES	rdf:type	owl:Class;
 clarify:PREDISPOSES	rdf:type	owl:Class;
 					rdfs:label	"PREDISPOSES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs to represent the genetic etiology of disease; the relation is of type predisposal between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -720,7 +720,7 @@ clarify:PREDISPOSES	rdf:type	owl:Class;
 clarify:PREVENTS	rdf:type	owl:Class;
 					rdfs:label	"PREVENTS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs to represent stopping, hindering or eliminating an action or condition.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -728,7 +728,7 @@ clarify:PREVENTS	rdf:type	owl:Class;
 clarify:PROCESS_OF	rdf:type	owl:Class;
 					rdfs:label	"PROCESS_OF";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents the disorder occurs in (higher) organisms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -736,7 +736,7 @@ clarify:PROCESS_OF	rdf:type	owl:Class;
 clarify:PRODUCES	rdf:type	owl:Class;
 					rdfs:label	"PRODUCES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents bringing forth, generating or creating.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -744,7 +744,7 @@ clarify:PRODUCES	rdf:type	owl:Class;
 clarify:STIMULATES	rdf:type	owl:Class;
 					rdfs:label	"STIMULATES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that describes substance interactions in terms of increasing or facilitating the action or function.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -752,7 +752,7 @@ clarify:STIMULATES	rdf:type	owl:Class;
 clarify:TREATS	rdf:type	owl:Class;
 					rdfs:label	"TREATS";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type treating between two clinical medicine terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -760,7 +760,7 @@ clarify:TREATS	rdf:type	owl:Class;
 clarify:USES	rdf:type	owl:Class;
 					rdfs:label	"USES";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between two UMLS CUIs that represents employing in the carrying out of some activity.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -768,7 +768,7 @@ clarify:USES	rdf:type	owl:Class;
 clarify:compared_with	rdf:type	owl:Class;
 					rdfs:label	"compared_with";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type comparative between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -776,7 +776,7 @@ clarify:compared_with	rdf:type	owl:Class;
 clarify:higher_than	rdf:type	owl:Class;
 					rdfs:label	"higher_than";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type comparative between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -784,7 +784,7 @@ clarify:higher_than	rdf:type	owl:Class;
 clarify:lower_than	rdf:type	owl:Class;
 					rdfs:label	"lower_than";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type comparative between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -792,7 +792,7 @@ clarify:lower_than	rdf:type	owl:Class;
 clarify:same_as	rdf:type	owl:Class;
 					rdfs:label	"same_as";
 					rdfs:subClassOf	clarify:Relation;
-					rdfs:comment "";
+					rdfs:comment "Relation between UMLS CUIs that represents the relation of type comparative between two terms.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					prv:File "semrep.ttl";
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
