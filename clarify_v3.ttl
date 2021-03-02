@@ -315,59 +315,11 @@ clarify:CancerType  rdf:type owl:Class;
 					dcterms:modified "2021-02-18"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:BiomarkerResult rdf:type owl:Class;
-						rdfs:label	"BiomarkerResult";
+clarify:BiomarkerTestResult rdf:type owl:Class;
+						rdfs:label	"BiomarkerTestResult";
 						rdfs:subClassOf	clarify:Concept;
-						dcterms:modified "2021-02-25"^^xsd:date;
+						dcterms:modified "2021-03-02"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:BiomarkerIHQResult  rdf:type owl:Class;
-							rdfs:label	"BiomarkerIHQResult";
-							rdfs:subClassOf	clarify:BiomarkerResult;
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:BiomarkerFISHResult rdf:type owl:Class;
-							rdfs:label	"BiomarkerFISHResult";
-							rdfs:subClassOf	clarify:BiomarkerResult;
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:BiomarkerRNAResult  rdf:type owl:Class;
-							rdfs:label	"BiomarkerRNAResult";
-							rdfs:subClassOf	clarify:BiomarkerResult;
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:T790NegativeResult  rdf:type owl:Class;
-							rdfs:label	"T790NegativeResult";
-							rdfs:subClassOf	clarify:BiomarkerResult;
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:BiomarkerNegativeResult rdf:type owl:Class;
-								rdfs:label	"BiomarkerNegativeResult";
-								rdfs:subClassOf	clarify:BiomarkerResult;
-								dcterms:modified "2021-02-25"^^xsd:date;
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:Exon21Result 	rdf:type owl:Class;
-						rdfs:label	"Exon21Result";
-						rdfs:subClassOf	clarify:BiomarkerResult;
-						dcterms:modified "2021-02-25"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:Exon19Result 	rdf:type owl:Class;
-						rdfs:label	"Exon19Result";
-						rdfs:subClassOf	clarify:BiomarkerResult;
-						dcterms:modified "2021-02-25"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:T790PositiveResult 	rdf:type owl:Class;
-							rdfs:label	"T790PositiveResult";
-							rdfs:subClassOf	clarify:BiomarkerResult;
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:TreatmentLineCycle  rdf:type owl:Class;
 							rdfs:label	"TreatmentLineCycle";
