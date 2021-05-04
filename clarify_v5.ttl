@@ -536,8 +536,8 @@ clarify:PerioperativeDeath	rdf:type	owl:Class;
 							dcterms:modified "2021-02-25"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:SurgeryResectionGrade	rdf:type	owl:Class;
-								rdfs:label	"SurgeryResectionGrade";
+clarify:SurgeryResectionDegree	rdf:type	owl:Class;
+								rdfs:label	"SurgeryResectionDegree";
 								rdfs:subClassOf	clarify:Concept;
 								rdfs:comment "Indicates the degree of the resection that is applied during the surgery.";							dcterms:modified "2021-02-25"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -555,6 +555,14 @@ clarify:SurgerySubType	rdf:type	owl:Class;
 						rdfs:comment "Represents the subtype of the surgery.";
 						dcterms:modified "2021-02-25"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:SurgeryType	rdf:type	owl:Class;
+					rdfs:label	"SurgeryType";
+					rdfs:subClassOf	clarify:Concept;
+					rdfs:comment "Represents the type of the surgery.";
+					dcterms:modified "2021-04-26"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 clarify:MetastatisStage	rdf:type	owl:Class;
 						rdfs:label	"MetastatisStage";
@@ -625,6 +633,20 @@ clarify:SecondNeoplasm	rdf:type        owl:Class;
 						rdfs:comment "Secondary malignant neoplasm is a malignant tumor whose cause is the treatment (usually radiation or chemotherapy) which was used for a prior tumor.";
 						dcterms:modified "2021-03-18"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Version	rdf:type        owl:Class;	
+				rdfs:label	"Version";
+				rdfs:subClassOf	clarify:Concept;
+				rdfs:comment "Indicates the versioning of a concept.";
+				dcterms:modified "2021-04-26"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PerformedMonitoring	rdf:type        owl:Class;	
+							rdfs:label	"PerformedMonitoring";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "Indicates performed monitoring.";
+							dcterms:modified "2021-04-29"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 
 ######################################################################################################################################
@@ -1364,22 +1386,6 @@ clarify:numberOfCigarettesPerYear	rdf:type	owl:DatatypeProperty;
 									dcterms:modified "2020-11-19"^^xsd:date;
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:smokingStartingDate	rdf:type owl:DatatypeProperty;	
-							rdfs:label	"smokingStartingDate";
-							rdfs:domain	clarify:SmokingHistory;
-							rdfs:range	rdfs:Literal;
-							rdfs:comment "Represents the date on which the patient started smoking (if it was the case).";
-							dcterms:modified "2020-10-21"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:smokingStopingDate	rdf:type owl:DatatypeProperty;	
-							rdfs:label	"smokingStartingDate";
-							rdfs:domain	clarify:SmokingHistory;
-							rdfs:range	rdfs:Literal;
-							rdfs:comment "Represents the date on which the patient stoped smoking (if it was the case).";
-							dcterms:modified "2020-10-21"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:numberOfYearsOfSmoking	rdf:type        owl:DatatypeProperty;	
 								rdfs:label	"numberOfYearsOfSmoking";
 								rdfs:domain	clarify:SmokingHistory;
@@ -1707,7 +1713,13 @@ clarify:methodAbbreviation	rdf:type	owl:DatatypeProperty;
 							dcterms:modified "2021-01-07"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-
+clarify:total_number_of_metastasis	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"total_number_of_metastasis";
+									rdfs:domain	clarify:LCPatient;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Indicates the total number of metastasis of the patient.";
+									dcterms:modified "2021-04-29"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 
 #################################################################################################################################################																																			
@@ -1961,7 +1973,7 @@ clarify:placeOfDeath	rdf:type owl:ObjectProperty;
 
 clarify:hasTestResult	rdf:type owl:ObjectProperty;	
 							rdfs:label	"hasTestResult";
-							rdfs:domain	clarify:Biomarker;
+							rdfs:domain	clarify:Concept;
 							rdfs:range	clarify:BiomarkerTestResult;
 							rdfs:comment "Indicates a positive test result.";
 							dcterms:modified "2021-02-25"^^xsd:date;
@@ -2066,7 +2078,7 @@ clarify:has_mutation_exon21_result	rdf:type owl:ObjectProperty;
 clarify:has_performed_study	rdf:type owl:ObjectProperty;	
 							rdfs:label	"has_performed_study";
 							rdfs:domain	clarify:Biomarker;
-							rdfs:range	clarify:;
+							rdfs:range	clarify:PerformedStudyStatus;
 							rdfs:comment	"Connect the biomarker to the indication of performed study.";
 							dcterms:modified "2021-04-07"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -2343,6 +2355,14 @@ clarify:livingWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 								dcterms:modified "2021-02-25"^^xsd:date;								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:performedMonitoring_OrNot	rdf:type	owl:ObjectProperty;
+									rdfs:label	"performedMonitoring_OrNot";
+									rdfs:domain	clarify:StatusEvolution;
+									rdfs:range	clarify:PerformedMonitoring;
+									rdfs:comment	"Indicates if the monitoring has been performed on the patient.";
+									dcterms:modified "2021-04-29"^^xsd:date;								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:hasPathologicalResponse	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasPathologicalResponse";
 								rdfs:domain	clarify:OncologicalSurgery;
@@ -2367,11 +2387,11 @@ clarify:hasSubType	rdf:type	owl:ObjectProperty;
 					dcterms:modified "2021-02-25"^^xsd:date;							
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasResectionGrade	rdf:type	owl:ObjectProperty;
-							rdfs:label	"hasResectionGrade";
+clarify:hasResectionDegree	rdf:type	owl:ObjectProperty;
+							rdfs:label	"hasResectionDegree";
 							rdfs:domain	clarify:OncologicalSurgery;
-							rdfs:range	clarify:SurgeryResectionGrade;
-							rdfs:comment	"Indicates the grade of resection of the patient.";
+							rdfs:range	clarify:SurgeryResectionDegree;
+							rdfs:comment	"Indicates the degree of resection of the patient.";
 							dcterms:modified "2021-02-25"^^xsd:date;								
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
@@ -2406,6 +2426,14 @@ clarify:basedOn_MetastatisStage	rdf:type	owl:ObjectProperty;
 								rdfs:comment "Associates the cancer stage (based on on TNM system) of the patient with the metasta stage, based on which the cancer stage is evaluated.";
 								dcterms:modified "2021-02-25"^^xsd:date;								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:basedOn_Version	rdf:type	owl:ObjectProperty;
+						rdfs:label	"basedOn_Version";
+						rdfs:domain	clarify:Concept;
+						rdfs:range	clarify:Version;
+						rdfs:comment "Associates the concept with the version, based on which the concept value is provided.";
+						dcterms:modified "2021-04-26"^^xsd:date;								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:basedOn_Scale	rdf:type	owl:ObjectProperty;
 						rdfs:label	"basedOn_Scale";
