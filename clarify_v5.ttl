@@ -466,6 +466,13 @@ clarify:SmokerFamily	rdf:type	owl:Class;
 						dcterms:modified "2021-02-25"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:SmokingHabit	rdf:type	owl:Class;
+						rdfs:label	"SmokingHabit";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the smoking habit of the patient.";
+						dcterms:modified "2021-06-04"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:LymphNodesInvolvement	rdf:type	owl:Class;
 								rdfs:label	"LymphNodesInvolvement";
 								rdfs:subClassOf	clarify:Concept;
@@ -2155,6 +2162,14 @@ clarify:livingWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 								rdfs:comment	"Indicates if the person live with smokers.";
 								dcterms:modified "2021-02-25"^^xsd:date;								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasSmokingHabit	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasSmokingHabit";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:SmokingHabit;
+						rdfs:comment	"Indicates the patient's smoking habit.";
+						dcterms:modified "2021-06-05"^^xsd:date;								
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:performedMonitoring_OrNot	rdf:type	owl:ObjectProperty;
 									rdfs:label	"performedMonitoring_OrNot";
