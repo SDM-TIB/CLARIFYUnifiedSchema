@@ -610,7 +610,6 @@ clarify:SurgeryIteration	rdf:type        owl:Class;
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
 
-
 clarify:Publication	rdf:type	owl:Class;
 					rdfs:label	"Publication";
 					rdfs:subClassOf	clarify:Concept;
@@ -631,6 +630,13 @@ clarify:Relation	rdf:type	owl:Class;
 					rdfs:comment "Defines relationship between UMLS concepts.";
 					dcterms:modified "2021-01-26"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:PublicationType	rdf:type	owl:Class;
+						rdfs:label	"PublicationType";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Defines the type of publication.";
+						dcterms:modified "2021-06-08"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:AFFECTS	rdf:type	owl:Class;
 					rdfs:label	"AFFECTS";
@@ -1434,14 +1440,6 @@ clarify:authorName	rdf:type owl:DatatypeProperty;
 					dcterms:modified "2021-05-17"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:journal	rdf:type owl:DatatypeProperty;
-				rdfs:label "journal";
-				rdfs:domain clarify:Publication;
-			  	rdfs:range rdfs:Literal;
-				rdfs:comment "Journal in which the publication is published.";
-				dcterms:modified "2021-05-17"^^xsd:date;
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:rankingScore_SJR	rdf:type owl:DatatypeProperty;
 							rdfs:label "rankingScore_SJR";
 							rdfs:domain clarify:Publication;
@@ -1457,15 +1455,6 @@ clarify:rankingScore_hIndex	rdf:type owl:DatatypeProperty;
 							rdfs:comment "ranking Score_hIndex of Journal of publication.";
 							dcterms:modified "2021-05-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:publicationType	rdf:type owl:DatatypeProperty;
-						rdfs:label "publicationType";
-						rdfs:domain clarify:Publication;
-					  	rdfs:range rdfs:Literal;
-						rdfs:comment "Type of publication.";
-						dcterms:modified "2021-05-17"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:authorAffiliation	rdf:type owl:DatatypeProperty;
 							rdfs:label "authorAffiliation";
 							rdfs:domain clarify:Publication;
@@ -2392,20 +2381,20 @@ clarify:hasResectionGrade	rdf:type 	owl:ObjectProperty;
 ######################################################################################################################################
 
 clarify:hasAnnotation	rdf:type owl:ObjectProperty;
-					rdfs:label	"hasAnnotation";
-					rdfs:domain clarify:Relation;
-	  				rdfs:range clarify:Annotation;
-					rdfs:comment	"Connection between the annotation and the relation between annotation and publication";
-					dcterms:modified "2020-12-15"^^xsd:date;
-					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+						rdfs:label	"hasAnnotation";
+						rdfs:domain clarify:Relation;
+		  				rdfs:range clarify:Annotation;
+						rdfs:comment	"Connection between the annotation and the relation between annotation and publication";
+						dcterms:modified "2020-12-15"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:annotates	rdf:type	owl:ObjectProperty;
-				rdfs:label	"annotates";
-				rdfs:domain	clarify:Relation;
-				rdfs:range	clarify:Publication;
-				rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
-				dcterms:modified "2020-12-15"^^xsd:date;
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+					rdfs:label	"annotates";
+					rdfs:domain	clarify:Relation;
+					rdfs:range	clarify:Publication;
+					rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
+					dcterms:modified "2020-12-15"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:relation_isRelatedTo_annotation	rdf:type        owl:ObjectProperty;	
 										rdfs:label	"relation_isRelatedTo_annotation";
@@ -2423,13 +2412,21 @@ clarify:relation_isRelatedTo_publication	rdf:type        owl:ObjectProperty;
 											dcterms:modified "2020-12-15"^^xsd:date;
 											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.				
 
-clarify:author	rdf:type owl:ObjectProperty;
-				rdfs:label "author";
-				rdfs:domain clarify:Publication;
-			  	rdfs:range clarify:Author;
-				rdfs:comment "Author of Publication.";
-				dcterms:modified "2021-05-17"^^xsd:date;
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+clarify:hasAuthor	rdf:type owl:ObjectProperty;
+					rdfs:label "hasAuthor";
+					rdfs:domain clarify:Publication;
+				  	rdfs:range clarify:Author;
+					rdfs:comment "Author of Publication.";
+					dcterms:modified "2021-05-17"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasPublicationType	rdf:type owl:ObjectProperty;
+					rdfs:label "hasPublicationType";
+					rdfs:domain clarify:Publication;
+				  	rdfs:range clarify:PublicationType;
+					rdfs:comment "The publication type.";
+					dcterms:modified "2021-06-08"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #########################################################    Drug    #################################################################
