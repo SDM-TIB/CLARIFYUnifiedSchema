@@ -200,6 +200,13 @@ clarify:ComorbidityStatus	rdf:type	owl:Class;
 							dcterms:modified "2021-04-07"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:ComorbidityTreatmentLine	rdf:type	owl:Class;
+									rdfs:label	"ComorbidityTreatmentLine";
+									rdfs:subClassOf	clarify:Concept;
+									rdfs:comment "Represents the observation of comorbidities and symptoms in patients in each treatment line.";
+									dcterms:modified "2021-06-22"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:StatusEvolution	rdf:type	owl:Class;
 							rdfs:label	"StatusEvolution";
 							rdfs:subClassOf	clarify:Observation;
@@ -1797,6 +1804,14 @@ clarify:hasComorbidity	rdf:type        owl:ObjectProperty;
 						rdfs:comment	"Connection between patient and her/his Comorbidities.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasTreatmentLineSymptom	rdf:type        owl:ObjectProperty;	
+								rdfs:label	"hasTreatmentLineSymptom";
+								rdfs:domain	clarify:ComorbidityTreatmentLine;
+								rdfs:range	clarify:Disorder;
+								rdfs:comment	"Connection between the ComorbidityTreatmentLine and the observed Comorbidities.";
+								dcterms:modified "2021-06-22"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasNonOncologicalConsultation	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasNonOncologicalConsultation";
