@@ -1079,12 +1079,47 @@ clarify:Drug	rdf:type	owl:Class;
 			dcterms:modified "2020-09-14"^^xsd:date;
 			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:LungCancerDrug	rdf:type	owl:Class;
-			rdfs:label	"LungCancerDrug";
-			rdfs:subClassOf	clarify:Drug;
-			rdfs:comment "A Drug used in the Lung Cancer treatment.";
-			dcterms:modified "2020-12-15"^^xsd:date;
-			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+clarify:NonOncologicalDrug	rdf:type	owl:Class;
+							rdfs:label	"NonOncologicalDrug";
+							rdfs:subClassOf	clarify:Drug;
+							rdfs:comment "A Drug which is prescribed to treat disorders other than cancer.";
+							dcterms:modified "2021-06-29"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:OncologicalDrug	rdf:type	owl:Class;
+							rdfs:label	"OncologicalDrug";
+							rdfs:subClassOf	clarify:Drug;
+							rdfs:comment "A Drug category which is prescribed to treat cancer.";
+							dcterms:modified "2021-06-29"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ChemotherapyDrug	rdf:type	owl:Class;
+							rdfs:label	"ChemotherapyDrug";
+							rdfs:subClassOf	clarify:OncologicalDrug;
+							rdfs:comment "A subcategory of oncological drugs.";
+							dcterms:modified "2021-06-29"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:TKIDrug	rdf:type	owl:Class;
+				rdfs:label	"TKIDrug";
+				rdfs:subClassOf	clarify:OncologicalDrug;
+				rdfs:comment "A subcategory of oncological drugs.";
+				dcterms:modified "2021-06-29"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:ImmunotherapyDrug	rdf:type	owl:Class;
+							rdfs:label	"ImmunotherapyDrug";
+							rdfs:subClassOf	clarify:OncologicalDrug;
+							rdfs:comment "A subcategory of oncological drugs.";
+							dcterms:modified "2021-06-29"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AngiogenesisInhibitorDrug	rdf:type	owl:Class;
+									rdfs:label	"AngiogenesisInhibitorDrug";
+									rdfs:subClassOf	clarify:OncologicalDrug;
+									rdfs:comment "A subcategory of oncological drugs.";
+									dcterms:modified "2021-06-29"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:Biomarker	 rdf:type	owl:Class;
 					rdfs:label	"Biomarker";
@@ -1642,7 +1677,30 @@ clarify:impact	rdf:type	owl:DatatypeProperty;
 				rdfs:comment	"Represents the type impact of the adverse event i.e. increase/decrease";
 				dcterms:modified "2020-12-15"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+ 
+clarify:ddi_description	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"ddi_description";
+						rdfs:domain	clarify:DrugDrugInteraction;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "The texual description of the drug drug interacion.";
+						dcterms:modified "2021-06-29"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:drugAbsorption	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"drugAbsorption";
+						rdfs:domain	clarify:Drug;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "The texual explanation about the drug absorption.";
+						dcterms:modified "2021-06-29"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:drugsMechanismOfAction	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"drugsMechanismOfAction";
+								rdfs:domain	clarify:Drug;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "The texual explanation about the mechanism of action of the drug.";
+								dcterms:modified "2021-06-29"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 ######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
