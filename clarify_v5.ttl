@@ -1177,6 +1177,13 @@ clarify:AdverseEvent	rdf:type	owl:Class;
 				dcterms:modified "2020-12-15"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:Impact	rdf:type	owl:Class;
+				rdfs:label	"Impact";
+				rdfs:subClassOf	clarify:Concept;
+				rdfs:comment "The concept that explains the impact of the drug drug interaction resulting in the effectiveness of the object drug.";
+				dcterms:modified "2020-12-15"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:CancerStage	rdf:type	owl:Class;
 					rdfs:label	"CancerStage";
 					rdfs:comment "Represents the assessment of the stage of tumor in a particular date.";
@@ -2512,21 +2519,53 @@ clarify:precipitant_drug	rdf:type	owl:ObjectProperty;
 								dcterms:modified "2020-12-15"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:precipitant_drug_cui	rdf:type	owl:ObjectProperty;
+								rdfs:label	"precipitant_drug_cui";
+								rdfs:domain	clarify:DrugDrugInteraction;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding precipitant drug annotated by CUI IDs.";
+								dcterms:modified "2021-06-30"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:object_drug	rdf:type	owl:ObjectProperty;
 								rdfs:label	"object_drug";
 								rdfs:domain	clarify:DrugDrugInteraction;
 								rdfs:range	clarify:Drug;
-								rdfs:comment	"The relationship between the drug drug interaction and corresponding object drug.";
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding object drug .";
 								dcterms:modified "2020-12-15"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:effect	rdf:type	owl:ObjectProperty;
-								rdfs:label	"effect";
+clarify:object_drug_cui	rdf:type	owl:ObjectProperty;
+								rdfs:label	"object_drug_cui";
 								rdfs:domain	clarify:DrugDrugInteraction;
-								rdfs:range	clarify:AdverseEvent;
-								rdfs:comment	"The relationship between the drug drug interaction and corresponding adverse event.";
-								dcterms:modified "2020-12-15"^^xsd:date;
+								rdfs:range	clarify:Drug;
+								rdfs:comment	"The relationship between the drug drug interaction and corresponding object drug annotated by CUI IDs.";
+								dcterms:modified "2021-06-30"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:effect	rdf:type	owl:ObjectProperty;
+				rdfs:label	"effect";
+				rdfs:domain	clarify:DrugDrugInteraction;
+				rdfs:range	clarify:AdverseEvent;
+				rdfs:comment	"The relationship between the drug drug interaction and corresponding adverse event.";
+				dcterms:modified "2020-12-15"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:impact	rdf:type	owl:ObjectProperty;
+				rdfs:label	"impact";
+				rdfs:domain	clarify:DrugDrugInteraction;
+				rdfs:range	clarify:Impact;
+				rdfs:comment	"The relationship between the drug drug interaction and corresponding impact.";
+				dcterms:modified "2021-06-30"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:effect_cui	rdf:type	owl:ObjectProperty;
+					rdfs:label	"effect_cui";
+					rdfs:domain	clarify:DrugDrugInteraction;
+					rdfs:range	clarify:AdverseEvent;
+					rdfs:comment	"The relationship between the drug drug interaction and corresponding adverse event annotated by CUI IDs.";
+					dcterms:modified "2021-06-30"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:target_isRelatedTo_gene	rdf:type	owl:ObjectProperty;
 									rdfs:label	"target_isRelatedTo_gene";
