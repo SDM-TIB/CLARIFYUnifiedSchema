@@ -1205,6 +1205,14 @@ clarify:SymmetricDrugDrugInteraction	rdf:type	owl:Class;
 				dcterms:modified "2020-12-15"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:NonSymmetricDrugDrugInteraction	rdf:type	owl:Class;
+				rdfs:label	"NonSymmetricDrugDrugInteraction";
+				rdfs:subClassOf	clarify:DrugDrugInteraction;
+				rdfs:comment "The interactions between two drugs that change the effectiveness of the drugs.";
+				dcterms:modified "2020-12-15"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
 clarify:AdverseEvent	rdf:type	owl:Class;
 				rdfs:label	"AdverseEvent";
 				rdfs:subClassOf	clarify:Concept;
