@@ -1244,6 +1244,20 @@ clarify:CancerStage	rdf:type	owl:Class;
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:SemanticType	rdf:type	owl:Class;
+						rdfs:label	"SemanticType";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the Semantic Type provided by UMLS.";
+						dcterms:modified "2021-07-21"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:SemanticTypeGroup	rdf:type	owl:Class;
+							rdfs:label	"SemanticTypeGroup";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "Represents the Semantic Type Group provided by UMLS.";
+							dcterms:modified "2021-07-21"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 ######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
 ######################################################################################################################################
@@ -1536,30 +1550,6 @@ clarify:annLabel	rdf:type	owl:DatatypeProperty;
 					dcterms:modified "2020-12-15"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:semanticTypeID	rdf:type	owl:DatatypeProperty;
-						rdfs:label	"semanticTypeID";
-						rdfs:domain	clarify:Annotation;
-						rdfs:range	rdfs:Literal;
-		                rdfs:comment "The semantic type id provided by UMLS.";
-						dcterms:modified "2019-12-15"^^xsd:date;				
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeLabel	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"semanticTypeLabel";
-							rdfs:domain	clarify:Annotation;
-							rdfs:range	rdfs:Literal;
-			                rdfs:comment "The semantic type label provided by UMLS.";
-							dcterms:modified "2020-12-15"^^xsd:date;				
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeGroup	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"semanticTypeGroup";
-							rdfs:domain	clarify:Annotation;
-							rdfs:range	rdfs:Literal;
-			                rdfs:comment "The semantic type group provided by UMLS.";
-							dcterms:modified "2020-12-15"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:drugLabel	rdf:type owl:DatatypeProperty;
 					rdfs:label "DrugLabel";
 					rdfs:domain clarify:Drug;
@@ -1575,6 +1565,30 @@ clarify:drugBankID	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Drug Bank ID.";
 					dcterms:modified "2020-12-15"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:semanticTypeLabel	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"semanticTypeLabel";
+							rdfs:domain	clarify:SemanticType;
+							rdfs:range	rdfs:Literal;
+			                rdfs:comment "The semantic type label provided by UMLS.";
+							dcterms:modified "2021-07-21"^^xsd:date;				
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:semanticTypeGroupLabel	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"semanticTypeGroupLabel";
+								rdfs:domain	clarify:SemanticTypeGroup;
+								rdfs:range	rdfs:Literal;
+				                rdfs:comment "The semantic type group label provided by UMLS.";
+								dcterms:modified "2021-07-21"^^xsd:date;				
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:semanticTypeDefition	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"semanticTypeDefition";
+								rdfs:domain	clarify:SemanticType;
+								rdfs:range	rdfs:Literal;
+				                rdfs:comment "The semantic type definition provided by UMLS.";
+								dcterms:modified "2021-07-21"^^xsd:date;				
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarkerLabel	rdf:type	owl:DatatypeProperty;
 				rdfs:label	"biomarkerLabel";
@@ -2515,6 +2529,22 @@ clarify:hasPublicationType	rdf:type owl:ObjectProperty;
 ######################################################################################################################################
 #########################################################    Drug    #################################################################
 ######################################################################################################################################
+
+clarify:semanticTypeID	rdf:type	owl:ObjectProperty;
+						rdfs:label	"semanticTypeID";
+						rdfs:domain	clarify:Annotation;
+						rdfs:range	clarify:SemanticType;
+		                rdfs:comment "The semantic type id provided by UMLS.";
+						dcterms:modified "2019-12-15"^^xsd:date;				
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:semanticTypeGroupID	rdf:type	owl:ObjectProperty;
+							rdfs:label	"semanticTypeGroupID";
+							rdfs:domain	clarify:SemanticType;
+							rdfs:range	clarify:SemanticTypeGroup;
+			                rdfs:comment "The semantic type group id provided by UMLS.";
+							dcterms:modified "2021-07-21"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarker_has_indication	rdf:type	owl:ObjectProperty;
 								rdfs:label	"biomarker_has_indication";
