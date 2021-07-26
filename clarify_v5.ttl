@@ -354,6 +354,13 @@ clarify:FamilyType 	rdf:type owl:Class;
 					dcterms:modified "2021-02-25"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:FamilyRelationDegree 	rdf:type owl:Class;
+								rdfs:label	"FamilyRelationDegree";
+								rdfs:subClassOf	clarify:Concept;
+								rdfs:comment "Represents the relative degree of the family member with the patient.";
+								dcterms:modified "2021-07-26"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 clarify:CauseOfDeath 	rdf:type owl:Class;
 						rdfs:label	"CauseOfDeath";
 						rdfs:subClassOf	clarify:Concept;
@@ -1921,6 +1928,14 @@ clarify:familyType	rdf:type	owl:ObjectProperty;
 					rdfs:comment "Represents the type of family kinship with the patient.";
 					dcterms:modified "2021-02-25"^^xsd:date;							
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:familyRelationDegree	rdf:type	owl:ObjectProperty;
+								rdfs:label	"familyRelationDegree";
+								rdfs:domain	clarify:FamilyHistory;
+								rdfs:range	clarify:FamilyRelationDegree;
+								rdfs:comment "Represents the relative degree of the family member with the patient.";
+								dcterms:modified "2021-07-26"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:placeOfDeath	rdf:type owl:ObjectProperty;	
 						rdfs:label	"placeOfDeath";
