@@ -1478,6 +1478,14 @@ clarify:age	rdf:type owl:DatatypeProperty;
 				dcterms:modified "2021-06-02"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:categoryDescription	rdf:type owl:DatatypeProperty;	
+							rdfs:label	"categoryDescription";
+							rdfs:domain	clarify:Concept;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment "Represents the desciption of the category to which the patient belong provided by HUPHM.";
+							dcterms:modified "2021-11-03"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
