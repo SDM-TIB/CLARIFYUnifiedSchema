@@ -44,7 +44,7 @@ clarify:Annotation	rdf:type	owl:Class;
 					dcterms:modified "2020-10-19"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:CancerPatient	rdf:type	owl:Class;
+clarify:CPatient	rdf:type	owl:Class;
 					rdfs:label	"CancerPatient";
 					rdfs:comment "Cancer Patient independent of type of their cancer.";
 					dcterms:modified "2020-10-19"^^xsd:date;
@@ -52,7 +52,7 @@ clarify:CancerPatient	rdf:type	owl:Class;
 
 clarify:LCPatient	rdf:type	owl:Class;
 				rdfs:label	"LungCancerPatient";
-				rdfs:subClassOf	clarify:CancerPatient;
+				rdfs:subClassOf	clarify:CPatient;
 				rdfs:comment "A patient who is diagnosed with Lung Cancer.";
 				dcterms:modified "2020-10-19"^^xsd:date;			
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -1408,7 +1408,7 @@ clarify:deathDate	rdf:type	owl:DatatypeProperty;
 
 clarify:numberOfCigarettesPerDay	rdf:type	owl:DatatypeProperty;	
 									rdfs:label	"numberOfCigarettesPerDay";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment	"The number of cigarettes per day that the patient smokes.";
 									dcterms:modified "2020-10-21"^^xsd:date;
@@ -1416,7 +1416,7 @@ clarify:numberOfCigarettesPerDay	rdf:type	owl:DatatypeProperty;
 
 clarify:numberOfCigarettesPerYear	rdf:type	owl:DatatypeProperty;	
 									rdfs:label	"numberOfCigarettesPerYear";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	rdfs:Literal;
 									rdfs:comment	"The number of cigarettes per year that the patient smokes.";
 									dcterms:modified "2020-11-19"^^xsd:date;
@@ -1424,7 +1424,7 @@ clarify:numberOfCigarettesPerYear	rdf:type	owl:DatatypeProperty;
 
 clarify:numberOfYearsOfSmoking	rdf:type        owl:DatatypeProperty;	
 								rdfs:label	"numberOfYearsOfSmoking";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents for how many years the patient used to be an active smoker.";
 								dcterms:modified "2020-10-21"^^xsd:date;
@@ -1456,7 +1456,7 @@ clarify:hasOriginalValue	rdf:type owl:DatatypeProperty;
 
 clarify:biomarkerAnalysisDate	rdf:type owl:DatatypeProperty;	
 								rdfs:label	"biomarkerAnalysisDate";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "The date on which a biomarker test of the patient is analysed.";
 								dcterms:modified "2021-05-17"^^xsd:date;
@@ -1472,7 +1472,7 @@ clarify:surgerySubTypeSpecification	rdf:type owl:DatatypeProperty;
 
 clarify:age	rdf:type owl:DatatypeProperty;	
 				rdfs:label	"age";
-				rdfs:domain	clarify:CancerPatient;
+				rdfs:domain	clarify:CPatient;
 				rdfs:range	rdfs:Literal;
 				rdfs:comment "Indicates the calculated age of the patient.";
 				dcterms:modified "2021-06-02"^^xsd:date;
@@ -1485,6 +1485,22 @@ clarify:categoryDescription	rdf:type owl:DatatypeProperty;
 							rdfs:comment "Represents the desciption of the category to which the patient belong provided by HUPHM.";
 							dcterms:modified "2021-11-03"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasDiagnosisDate	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"hasDiagnosisDate";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the information regarding the date of diagnosis provided by HUPHM.";
+								dcterms:modified "2021-11-05"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasTreatment	rdf:type	owl:ObjectProperty;
+						rdfs:label	"hasTreatment";
+						rdfs:domain	clarify:CPatient;
+						rdfs:range	clarify:OncologicalTreatmentLine;
+						rdfs:comment "Represents the type of treatment.";
+						dcterms:modified "2021-11-05"^^xsd:date;														
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
@@ -1809,7 +1825,7 @@ clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
 
 clarify:sex	rdf:type	owl:ObjectProperty;
 			rdfs:label	"sex";
-			rdfs:domain	clarify:CancerPatient;
+			rdfs:domain	clarify:CPatient;
 			rdfs:range	clarify:Sex;
 			rdfs:comment	"Association of the patient to one of the two main biological categories of female or male.";
 			dcterms:modified "2020-10-19"^^xsd:date;
@@ -1817,7 +1833,7 @@ clarify:sex	rdf:type	owl:ObjectProperty;
 
 clarify:hasRace	rdf:type	owl:ObjectProperty;
 				rdfs:label	"hasRace";
-				rdfs:domain	clarify:CancerPatient;
+				rdfs:domain	clarify:CPatient;
 				rdfs:range	clarify:Race;
 				rdfs:comment	"Association of the patient with one of the categories of humankind that shares certain distinctive physical traits.";
 				dcterms:modified "2020-11-16"^^xsd:date;
@@ -1833,7 +1849,7 @@ clarify:hasBiomarker	rdf:type	owl:ObjectProperty;
 
 clarify:involved_in	rdf:type	owl:ObjectProperty;
 								rdfs:label	"involved_in";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:ClinicalTrial;
 								rdfs:comment "Relation between the cancer patient and the clinical trial.";
 								dcterms:modified "2020-10-20"^^xsd:date;								
@@ -1847,9 +1863,17 @@ clarify:hasDiagnosisStage	rdf:type	owl:ObjectProperty;
 								dcterms:modified "2020-12-10"^^xsd:date;							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:hasDiagnosisDate	rdf:type	owl:DataProperty;
+								rdfs:label	"hasDiagnosisDate";
+								rdfs:domain	clarify:Diagnosis;
+								rdfs:range	clarify:CancerStage;
+								rdfs:comment "Relation between the diagnosis observation and the coded cancer stage (at the diagnosis time).";
+								dcterms:modified "2020-12-10"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:hasDiagnosis	rdf:type     owl:ObjectProperty;
 						rdfs:label	"hasDiagnosis";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:Diagnosis;
 						rdfs:comment "Patient's initial diagnosis.";
 						dcterms:modified "2020-10-20"^^xsd:date;
@@ -1881,7 +1905,7 @@ clarify:hasOncologicalSurgery	rdf:type        owl:ObjectProperty;
 
 clarify:hasFamilyHistory	rdf:type        owl:ObjectProperty;	
 							rdfs:label	"hasFamilyHistory";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:FamilyHistory;
 							rdfs:comment "Connection between patient and her/his family history.";
 							dcterms:modified "2020-11-16"^^xsd:date;
@@ -1897,7 +1921,7 @@ clarify:hasDrug	rdf:type        owl:ObjectProperty;
 
 clarify:hasComorbidity	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasComorbidity";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:Disorder;
 						rdfs:comment	"Connection between patient and her/his Comorbidities.";
 						dcterms:modified "2020-10-21"^^xsd:date;
@@ -1913,7 +1937,7 @@ clarify:hasTreatmentLineSymptom	rdf:type        owl:ObjectProperty;
 
 clarify:hasNonOncologicalConsultation	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasNonOncologicalConsultation";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:NonOncologicalConsultation;
 						rdfs:comment	"Connection between patient and her/his non-oncological consultation that have had.";
 						dcterms:modified "2020-11-17"^^xsd:date;
@@ -1921,7 +1945,7 @@ clarify:hasNonOncologicalConsultation	rdf:type        owl:ObjectProperty;
 
 clarify:hasPrediagnosis	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasPrediagnosis";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:Prediagnosis;
 						rdfs:comment	"Connection between patient and her/his prediagnosis observation.";
 						dcterms:modified "2020-11-17"^^xsd:date;
@@ -1929,7 +1953,7 @@ clarify:hasPrediagnosis	rdf:type        owl:ObjectProperty;
 
 clarify:hasMontoring	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasMontoring";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:StatusEvolution;
 						rdfs:comment	"Connection between patient and srvival observation.";
 						dcterms:modified "2020-10-21"^^xsd:date;
@@ -1937,7 +1961,7 @@ clarify:hasMontoring	rdf:type        owl:ObjectProperty;
 
 clarify:hasTumorHistology	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasTumorHistology";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:TumorType;
 						rdfs:comment	"Connection between patient and the tumor histology (type).";
 						dcterms:modified "2020-10-21"^^xsd:date;
@@ -1950,8 +1974,6 @@ clarify:hasTreatmentLineMaintenance	rdf:type	owl:ObjectProperty;
 									rdfs:comment "Represents the type of drugs that are prescribed for the maintenance.";
 									dcterms:modified "2021-02-18"^^xsd:date;														
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-
 
 clarify:treatmentLineCycle	rdf:type	owl:ObjectProperty;
 							rdfs:label	"treatmentLineCycle";
@@ -2099,7 +2121,7 @@ clarify:hasNegativeTestResult	rdf:type owl:ObjectProperty;
 
 clarify:has_familyWithCancer_OrNot	rdf:type owl:ObjectProperty;	
 									rdfs:label	"has_familyWithCancer_OrNot";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	clarify:FamilyWithCancer;
 									rdfs:comment "Indicates if the patient has a family with cancer or not.";
 									dcterms:modified "2021-02-25"^^xsd:date;
@@ -2107,7 +2129,7 @@ clarify:has_familyWithCancer_OrNot	rdf:type owl:ObjectProperty;
 
 clarify:hasFamilyCancerType	rdf:type owl:ObjectProperty;	
 							rdfs:label	"hasFamilyCancerType";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:CancerType;
 							rdfs:comment "Indicates the type of cancer of the relatives.";
 							dcterms:modified "2021-02-25"^^xsd:date;
@@ -2131,7 +2153,7 @@ clarify:patient_is_asymptomatic	rdf:type owl:ObjectProperty;
 
 clarify:has_cancer_metastasized_to	rdf:type owl:ObjectProperty;	
 									rdfs:label	"has_cancer_metastasized_to";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	clarify:MetastasisLocation;
 									rdfs:comment	"Associates the patient with the location to where the cancer is metastasized.";
 									dcterms:modified "2021-02-25"^^xsd:date;
@@ -2163,7 +2185,7 @@ clarify:hasCauseOfDeath	rdf:type owl:ObjectProperty;
 
 clarify:has_previousCancerHistory_OrNot	rdf:type owl:ObjectProperty;	
 										rdfs:label	"has_previousCancerHistory_OrNot";
-										rdfs:domain	clarify:CancerPatient;
+										rdfs:domain	clarify:CPatient;
 										rdfs:range	clarify:PatientCancerHistory;
 										rdfs:comment "Indicates if the patient has previous cancer history or not.";
 										dcterms:modified "2021-02-25"^^xsd:date;
@@ -2171,7 +2193,7 @@ clarify:has_previousCancerHistory_OrNot	rdf:type owl:ObjectProperty;
 
 clarify:hasPreviousCancerType	rdf:type owl:ObjectProperty;	
 								rdfs:label	"hasPreviousCancerType";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:CancerType;
 								rdfs:comment "Indicates whicht type of previous cancer.";
 								dcterms:modified "2021-02-25"^^xsd:date;
@@ -2179,7 +2201,7 @@ clarify:hasPreviousCancerType	rdf:type owl:ObjectProperty;
 
 clarify:hasCurrentCancerType	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasCurrentCancerType";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:CancerType;
 								rdfs:comment	"Indicates the cancer type of the patient.";
 								dcterms:modified "2021-02-25"^^xsd:date;								
@@ -2187,7 +2209,7 @@ clarify:hasCurrentCancerType	rdf:type	owl:ObjectProperty;
 
 clarify:locatedInHospital	rdf:type	owl:ObjectProperty;
 							rdfs:label	"locatedInHospital";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:Hospital;
 							rdfs:comment	"Represents the hospital where the patient is assigned.";
 							dcterms:modified "2021-02-25"^^xsd:date;							
@@ -2195,7 +2217,7 @@ clarify:locatedInHospital	rdf:type	owl:ObjectProperty;
 
 clarify:locatedInCity	rdf:type	owl:ObjectProperty;
 						rdfs:label	"locatedInCity";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:City;
 						rdfs:comment	"Represents the city where the patient is assigned.";
 						dcterms:modified "2021-02-25"^^xsd:date;							
@@ -2219,7 +2241,7 @@ clarify:hasIntention	rdf:type	owl:ObjectProperty;
 
 clarify:hasProgressionRelapse	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasProgressionRelapse";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:ProgressionRelapse;
 								rdfs:comment	"Specifies which of progression or relapse occured.";
 								dcterms:modified "2021-05-11"^^xsd:date;							
@@ -2227,7 +2249,7 @@ clarify:hasProgressionRelapse	rdf:type	owl:ObjectProperty;
 
 clarify:hasProgressionOrRelapse	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasProgressionOrRelapse";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:ProgressionRelapse;
 								rdfs:comment	"Specifies that either of progression or relapse exists.";
 								dcterms:modified "2021-05-17"^^xsd:date;							
@@ -2235,7 +2257,7 @@ clarify:hasProgressionOrRelapse	rdf:type	owl:ObjectProperty;
 
 clarify:hasTherapyType	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasTherapyType";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:TherapyType;
 						rdfs:comment	"Type of therapy.";
 						dcterms:modified "2021-02-25"^^xsd:date;							
@@ -2243,7 +2265,7 @@ clarify:hasTherapyType	rdf:type	owl:ObjectProperty;
 
 clarify:hasProgressionType	rdf:type	owl:ObjectProperty;
 							rdfs:label	"hasProgressionType";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:ProgressionType;
 							rdfs:comment	"Indicates the type of therapy at progression .";
 							dcterms:modified "2021-02-25"^^xsd:date;							
@@ -2259,7 +2281,7 @@ clarify:hasTreatmentLineNumber	rdf:type	owl:ObjectProperty;
 
 clarify:livedWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 								rdfs:label	"livedWithSmoker_OrNot";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:SmokerFamily;
 								rdfs:comment	"Indicates if the person has lived with smokers (last 20 years).";
 								dcterms:modified "2021-02-25"^^xsd:date;								
@@ -2267,7 +2289,7 @@ clarify:livedWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 
 clarify:livingWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 								rdfs:label	"livingWithSmoker_OrNot";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:SmokerFamily;
 								rdfs:comment	"Indicates if the person live with smokers.";
 								dcterms:modified "2021-02-25"^^xsd:date;								
@@ -2275,7 +2297,7 @@ clarify:livingWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
 
 clarify:hasSmokingHabit	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasSmokingHabit";
-						rdfs:domain	clarify:CancerPatient;
+						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:SmokingHabit;
 						rdfs:comment	"Indicates the patient's smoking habit.";
 						dcterms:modified "2021-06-05"^^xsd:date;								
@@ -2323,7 +2345,7 @@ clarify:has_PerioperativeDeath_orNot	rdf:type	owl:ObjectProperty;
 
 clarify:cancerStageTNM_TumorSize	rdf:type	owl:ObjectProperty;
 									rdfs:label	"cancerStageTNM_TumorSize";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	clarify:TumorSize;
 									rdfs:comment "Associates the cancer stage (based on on TNM system) of the patient with the size of the primary tumor, based on which the cancer stage is evaluated.";
 									dcterms:modified "2021-05-11"^^xsd:date;							
@@ -2331,7 +2353,7 @@ clarify:cancerStageTNM_TumorSize	rdf:type	owl:ObjectProperty;
 
 clarify:cancerStageTNM_LymphNodesInvolvement	rdf:type	owl:ObjectProperty;
 												rdfs:label	"cancerStageTNM_LymphNodesInvolvement";
-												rdfs:domain	clarify:CancerPatient;
+												rdfs:domain	clarify:CPatient;
 												rdfs:range	clarify:LymphNodesInvolvement;
 												rdfs:comment "Associates the cancer stage (based on on TNM system) of the patient with the involvement of lymph nodes, based on which the cancer stage is evaluated.";
 												dcterms:modified "2021-05-11"^^xsd:date;							
@@ -2339,7 +2361,7 @@ clarify:cancerStageTNM_LymphNodesInvolvement	rdf:type	owl:ObjectProperty;
 
 clarify:cancerStageTNM_MetastatisStage	rdf:type	owl:ObjectProperty;
 										rdfs:label	"cancerStageTNM_MetastatisStage";
-										rdfs:domain	clarify:CancerPatient;
+										rdfs:domain	clarify:CPatient;
 										rdfs:range	clarify:MetastatisStage;
 										rdfs:comment "Associates the cancer stage (based on on TNM system) of the patient with the metasta stage, based on which the cancer stage is evaluated.";
 										dcterms:modified "2021-05-11"^^xsd:date;								
@@ -2363,7 +2385,7 @@ clarify:basedOn_Scale	rdf:type	owl:ObjectProperty;
 
 clarify:has_SynchronousTumor_OrNot	rdf:type	owl:ObjectProperty;
 									rdfs:label	"has_SynchronousTumor_OrNot";
-									rdfs:domain	clarify:CancerPatient;
+									rdfs:domain	clarify:CPatient;
 									rdfs:range	clarify:SynchronousTumor;
 									rdfs:comment "indicates if a second primary cancer is diagnosed within 6 months of the primary cancer or not.";
 									dcterms:modified "2021-02-25"^^xsd:date;								
@@ -2435,7 +2457,7 @@ clarify:has_NOS_result	rdf:type owl:ObjectProperty;
 
 clarify:hasClinicalTrialTreatmentLine	rdf:type 	owl:ObjectProperty;	
 							rdfs:label	"hasClinicalTrialTreatmentLine";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:ClinicalTrialTreatmentLine;
 							rdfs:comment "Associates Patient with treatment line of the clinical trial .";
 							dcterms:modified "2021-05-17"^^xsd:date;
@@ -2443,7 +2465,7 @@ clarify:hasClinicalTrialTreatmentLine	rdf:type 	owl:ObjectProperty;
 
 clarify:hasComorbidityStatus	rdf:type 	owl:ObjectProperty;	
 								rdfs:label	"hasComorbidityStatus";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:ComorbidityStatus;
 								rdfs:comment "Associates Patient with the comorbidity status.";
 								dcterms:modified "2021-05-17"^^xsd:date;
@@ -2459,7 +2481,7 @@ clarify:hasSecondNeoplasmType	rdf:type 	owl:ObjectProperty;
 
 clarify:hasPerformanceStatus	rdf:type 	owl:ObjectProperty;	
 								rdfs:label	"hasPerformanceStatus";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:PerformanceStatus;
 								rdfs:comment "Associates Patient with her/his performance status.";
 								dcterms:modified "2021-05-17"^^xsd:date;
@@ -2467,7 +2489,7 @@ clarify:hasPerformanceStatus	rdf:type 	owl:ObjectProperty;
 
 clarify:hasStudiedBiomarker	rdf:type 	owl:ObjectProperty;	
 							rdfs:label	"hasStudiedBiomarker";
-							rdfs:domain	clarify:CancerPatient;
+							rdfs:domain	clarify:CPatient;
 							rdfs:range	clarify:Biomarker;
 							rdfs:comment "Associates Patient with the studied biomarkers.";
 							dcterms:modified "2021-05-17"^^xsd:date;
@@ -2475,7 +2497,7 @@ clarify:hasStudiedBiomarker	rdf:type 	owl:ObjectProperty;
 
 clarify:hasBiomarkerTestResult	rdf:type 	owl:ObjectProperty;	
 								rdfs:label	"hasBiomarkerTestResult";
-								rdfs:domain	clarify:CancerPatient;
+								rdfs:domain	clarify:CPatient;
 								rdfs:range	clarify:BiomarkerTestResult;
 								rdfs:comment "Associates Patient with the result of the studied biomarkers.";
 								dcterms:modified "2021-05-17"^^xsd:date;
