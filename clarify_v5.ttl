@@ -1189,11 +1189,11 @@ clarify:Interaction	rdf:type owl:Class;
 			dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:DrugDisorderInteraction	rdf:type	owl:Class;
-				rdfs:label	"DrugDisorderInteraction";
-				rdfs:subClassOf	clarify:Interaction;
-				rdfs:comment "A drug-induced disorder.";
-				dcterms:modified "2020-12-15"^^xsd:date;
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/maria-isabel-castellanos/>.
+								rdfs:label	"DrugDisorderInteraction";
+								rdfs:subClassOf	clarify:Interaction;
+								rdfs:comment "A drug-induced disorder.";
+								dcterms:modified "2020-12-15"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/maria-isabel-castellanos/>.
 
 clarify:DrugEnzymeInteraction	rdf:type	owl:Class;
 				rdfs:label	"DrugEnzymeInteraction";
@@ -1768,14 +1768,6 @@ clarify:drugsMechanismOfAction	rdf:type	owl:DatatypeProperty;
 ######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
 ######################################################################################################################################
-
-clarify:interactor2	rdf:type	owl:ObjectProperty;
-							rdfs:label	"interactor2";
-							rdfs:domain	clarify:Interaction;
-							rdfs:range	clarify:Concept;
-							rdfs:comment	"Relation which connects an interacion to the second involved concept (e.g. disorder, enzyme,...).";
-							dcterms:modified "2021-01-07"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.							
 
 clarify:predictionMethod	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"predictionMethod";
@@ -2602,7 +2594,7 @@ clarify:biomarker_has_indication	rdf:type	owl:ObjectProperty;
 clarify:interactor1	rdf:type owl:ObjectProperty;
 					rdfs:label "interactor1";
 					rdfs:domain clarify:Interaction;
-				  	rdfs:range clarify:Drug;
+				  	rdfs:range clarify:Concept;
 					rdfs:comment "Interactor 1";
 					dcterms:modified "2020-12-15"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
@@ -2612,7 +2604,7 @@ clarify:interactor2	rdf:type owl:ObjectProperty;
 					rdfs:domain clarify:Interaction;
 				  	rdfs:range clarify:Concept;
 					rdfs:comment "Interactor 2";
-					dcterms:modified "2020-12-15"^^xsd:date;
+					dcterms:modified "2021-11-16"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:drug_isRelatedTo_dse	rdf:type	owl:ObjectProperty;
