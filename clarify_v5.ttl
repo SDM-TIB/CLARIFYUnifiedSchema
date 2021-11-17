@@ -624,6 +624,13 @@ clarify:SurgeryIteration	rdf:type        owl:Class;
 							dcterms:modified "2021-05-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:PatientIdentifier	rdf:type        owl:Class;	
+							rdfs:label	"PatientIdentifier";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "A unique identifier of patients.";
+							dcterms:modified "2021-11-17"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
@@ -1561,13 +1568,6 @@ clarify:rankingScore_hIndex	rdf:type owl:DatatypeProperty;
 							rdfs:comment "ranking Score_hIndex of Journal of publication.";
 							dcterms:modified "2021-05-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-clarify:authorAffiliation	rdf:type owl:DatatypeProperty;
-							rdfs:label "authorAffiliation";
-							rdfs:domain clarify:Publication;
-						  	rdfs:range rdfs:Literal;
-							rdfs:comment "Type of publication.";
-							dcterms:modified "2021-05-17"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #########################################################    Drug    #################################################################
@@ -1935,14 +1935,6 @@ clarify:hasNonOncologicalConsultation	rdf:type        owl:ObjectProperty;
 						dcterms:modified "2020-11-17"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasPrediagnosis	rdf:type        owl:ObjectProperty;	
-						rdfs:label	"hasPrediagnosis";
-						rdfs:domain	clarify:CPatient;
-						rdfs:range	clarify:Prediagnosis;
-						rdfs:comment	"Connection between patient and her/his prediagnosis observation.";
-						dcterms:modified "2020-11-17"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:hasMontoring	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasMontoring";
 						rdfs:domain	clarify:CPatient;
@@ -1990,14 +1982,6 @@ clarify:familyRelationDegree	rdf:type	owl:ObjectProperty;
 								rdfs:comment "Represents the relative degree of the family member with the patient.";
 								dcterms:modified "2021-07-26"^^xsd:date;							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:placeOfDeath	rdf:type owl:ObjectProperty;	
-						rdfs:label	"placeOfDeath";
-						rdfs:domain	clarify:StatusEvolution;
-						rdfs:range	clarify:PlaceOfDeath;
-						rdfs:comment "The place where the patient died.";
-						dcterms:modified "2021-02-25"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasTestResult	rdf:type owl:ObjectProperty;	
 							rdfs:label	"hasTestResult";
@@ -2510,6 +2494,47 @@ clarify:hasResectionGrade	rdf:type 	owl:ObjectProperty;
 							rdfs:comment "Associates the oncological surgery with the surgery resection degree.";
 							dcterms:modified "2021-05-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:has_LC_SLCG_ID	rdf:type 	owl:ObjectProperty;	
+						rdfs:label	"has_LC_SLCG_ID";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:PatientIdentifier;
+						rdfs:comment "Associates LC patients with their SLCG identifiers.";
+						dcterms:modified "2021-11-17"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:has_LC_HUPHM_ID	rdf:type 	owl:ObjectProperty;	
+						rdfs:label	"has_LC_HUPHM_ID";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:PatientIdentifier;
+						rdfs:comment "Associates LC patients with their HUPHM identifiers.";
+						dcterms:modified "2021-11-17"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:has_LC_KH_ID	rdf:type 	owl:ObjectProperty;	
+						rdfs:label	"has_LC_KH_ID";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:PatientIdentifier;
+						rdfs:comment "Associates LC patients with their KH identifiers.";
+						dcterms:modified "2021-11-17"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:has_BC_HUPHM_ID	rdf:type 	owl:ObjectProperty;	
+						rdfs:label	"has_BC_HUPHM_ID";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:PatientIdentifier;
+						rdfs:comment "Associates BC patients with their HUPHM identifiers.";
+						dcterms:modified "2021-11-17"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:has_BC_KH_ID	rdf:type 	owl:ObjectProperty;	
+						rdfs:label	"has_BC_KH_ID";
+						rdfs:domain	clarify:CancerPatient;
+						rdfs:range	clarify:PatientIdentifier;
+						rdfs:comment "Associates BC patients with their KH identifiers.";
+						dcterms:modified "2021-11-17"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
