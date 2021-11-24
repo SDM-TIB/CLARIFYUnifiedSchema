@@ -694,6 +694,13 @@ clarify:TumorTypeCategory	rdf:type	owl:Class;
 							dcterms:modified "2021-11-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:BiomarkerObservation	rdf:type	owl:Class;
+								rdfs:subClassOf clarify:Concept;
+								rdfs:label	"BiomarkerObservation";
+								rdfs:comment "Represents all the tests and results related to each biomarker study on the patient.";
+								dcterms:modified "2021-11-24"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
