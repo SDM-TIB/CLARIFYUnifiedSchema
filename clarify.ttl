@@ -477,17 +477,10 @@ clarify:TherapyType	rdf:type	owl:Class;
 					dcterms:modified "2021-02-25"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:SmokerFamily	rdf:type	owl:Class;
-						rdfs:label	"SmokerFamily";
-						rdfs:subClassOf	clarify:Concept;
-						rdfs:comment "Represents if the patient lives with smokers.";
-						dcterms:modified "2021-02-25"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:SmokingHabit	rdf:type	owl:Class;
 						rdfs:label	"SmokingHabit";
 						rdfs:subClassOf	clarify:Concept;
-						rdfs:comment "Represents the smoking habit of the patient.";
+						rdfs:comment "Represents the smoking habit of the patient and people with whom the patient lives/ lived.";
 						dcterms:modified "2021-06-04"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
