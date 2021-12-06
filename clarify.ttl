@@ -2350,28 +2350,12 @@ clarify:hasTreatmentLineNumber	rdf:type	owl:ObjectProperty;
 							dcterms:modified "2021-02-25"^^xsd:date;							
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:livedWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
-								rdfs:label	"livedWithSmoker_OrNot";
-								rdfs:domain	clarify:CPatient;
-								rdfs:range	clarify:SmokerFamily;
-								rdfs:comment	"Indicates if the person has lived with smokers (last 20 years).";
-								dcterms:modified "2021-02-25"^^xsd:date;								
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:livingWithSmoker_OrNot	rdf:type	owl:ObjectProperty;
-								rdfs:label	"livingWithSmoker_OrNot";
-								rdfs:domain	clarify:CPatient;
-								rdfs:range	clarify:SmokerFamily;
-								rdfs:comment	"Indicates if the person live with smokers.";
-								dcterms:modified "2021-02-25"^^xsd:date;								
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:hasSmokingHabit	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasSmokingHabit";
 						rdfs:domain	clarify:CPatient;
 						rdfs:range	clarify:SmokingHabit;
-						rdfs:comment	"Indicates the patient's smoking habit.";
-						dcterms:modified "2021-06-05"^^xsd:date;								
+						rdfs:comment	"Indicates the smoking habit of the patient and people whoe are living/ lived with the patient.";
+						dcterms:modified "2021-12-06"^^xsd:date;								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:performedMonitoring_OrNot	rdf:type	owl:ObjectProperty;
