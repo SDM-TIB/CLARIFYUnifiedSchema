@@ -1321,6 +1321,13 @@ clarify:CancerStage	rdf:type	owl:Class;
 					dcterms:modified "2020-09-14"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+
+
+######################################################################################################################################
+#################################################    annotation   ##############################################################
+######################################################################################################################################
+
+
 clarify:SemanticType	rdf:type	owl:Class;
 						rdfs:label	"SemanticType";
 						rdfs:subClassOf	clarify:Concept;
@@ -1334,6 +1341,20 @@ clarify:SemanticTypeGroup	rdf:type	owl:Class;
 							rdfs:comment "Represents the Semantic Type Group provided by UMLS.";
 							dcterms:modified "2021-07-21"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AnnotationDefinition	rdf:type	owl:Class;
+								rdfs:label	"AnnotationDefinition";
+								rdfs:subClassOf	clarify:Concept;
+								rdfs:comment "Represents the definition of the UMLS CUI.";
+								dcterms:modified "2021-12-16"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AnnotationType	rdf:type	owl:Class;
+						rdfs:label	"AnnotationType";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the type of the UMLS CUI.";
+						dcterms:modified "2021-12-16"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
@@ -1380,13 +1401,6 @@ clarify:DrugTargetPrediction	rdf:type owl:Class;
 #########################################################    SLCG    #################################################################
 ######################################################################################################################################
 
-clarify:annID	rdf:type	owl:DatatypeProperty;
-				rdfs:label	"annID";
-				rdfs:domain clarify:Annotation;
-				rdfs:range	rdfs:Literal;
-				rdfs:comment	"Identification of instances of Annotation class";	
-				dcterms:modified "2020-11-19"^^xsd:date;
-				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:date	rdf:type	owl:DatatypeProperty;
 								rdfs:label	"date";
@@ -1572,6 +1586,52 @@ clarify:oralContraceptiveEndingDate	rdf:type	owl:DatatypeProperty;
 								dcterms:modified "2021-11-17"^^xsd:date;							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+
+######################################################################################################################################
+#####################################################    Annotation    ##############################################################
+######################################################################################################################################
+
+clarify:annID	rdf:type	owl:DatatypeProperty;
+				rdfs:label	"annID";
+				rdfs:domain clarify:Annotation;
+				rdfs:range	rdfs:Literal;
+				rdfs:comment	"Identification of instances of Annotation class";	
+				dcterms:modified "2020-11-19"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:definition	rdf:type	owl:DatatypeProperty;
+						rdfs:label	"definition";
+						rdfs:domain clarify:Concept;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment	"Definition that is provided by UMLS";	
+						dcterms:modified "2021-12-16"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:semanticTypeLabel	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"semanticTypeLabel";
+							rdfs:domain clarify:SemanticType;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"The label of the UMLS semantic type.";	
+							dcterms:modified "2021-12-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:typeGroup	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"typeGroup";
+							rdfs:domain clarify:SemanticTypeGroup;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"The group of the UMLS CUI type.";	
+							dcterms:modified "2021-12-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:annotationFrequency	rdf:type	owl:DatatypeProperty;
+							rdfs:label	"annotationFrequency";
+							rdfs:domain clarify:Annotation;
+							rdfs:range	rdfs:Literal;
+							rdfs:comment	"The frequency of the UMLS CUI.";	
+							dcterms:modified "2021-12-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
@@ -1692,30 +1752,6 @@ clarify:drugBankID	rdf:type	owl:DatatypeProperty;
 					rdfs:comment "Drug Bank ID.";
 					dcterms:modified "2020-12-15"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeLabel	rdf:type	owl:DatatypeProperty;
-							rdfs:label	"semanticTypeLabel";
-							rdfs:domain	clarify:SemanticType;
-							rdfs:range	rdfs:Literal;
-			                rdfs:comment "The semantic type label provided by UMLS.";
-							dcterms:modified "2021-07-21"^^xsd:date;				
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeGroupLabel	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"semanticTypeGroupLabel";
-								rdfs:domain	clarify:SemanticTypeGroup;
-								rdfs:range	rdfs:Literal;
-				                rdfs:comment "The semantic type group label provided by UMLS.";
-								dcterms:modified "2021-07-21"^^xsd:date;				
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeDefition	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"semanticTypeDefition";
-								rdfs:domain	clarify:SemanticType;
-								rdfs:range	rdfs:Literal;
-				                rdfs:comment "The semantic type definition provided by UMLS.";
-								dcterms:modified "2021-07-21"^^xsd:date;				
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarkerLabel	rdf:type	owl:DatatypeProperty;
 				rdfs:label	"biomarkerLabel";
@@ -1860,6 +1896,9 @@ clarify:drugsMechanismOfAction	rdf:type	owl:DatatypeProperty;
 								rdfs:comment "The texual explanation about the mechanism of action of the drug.";
 								dcterms:modified "2021-06-29"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+
+
 
 ######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
@@ -2767,21 +2806,6 @@ clarify:publication_isRelatedTo_Disease	rdf:type owl:ObjectProperty;
 #########################################################    Drug    #################################################################
 ######################################################################################################################################
 
-clarify:semanticTypeID	rdf:type	owl:ObjectProperty;
-						rdfs:label	"semanticTypeID";
-						rdfs:domain	clarify:Annotation;
-						rdfs:range	clarify:SemanticType;
-		                rdfs:comment "The semantic type id provided by UMLS.";
-						dcterms:modified "2019-12-15"^^xsd:date;				
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:semanticTypeGroupID	rdf:type	owl:ObjectProperty;
-							rdfs:label	"semanticTypeGroupID";
-							rdfs:domain	clarify:SemanticType;
-							rdfs:range	clarify:SemanticTypeGroup;
-			                rdfs:comment "The semantic type group id provided by UMLS.";
-							dcterms:modified "2021-07-21"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:biomarker_has_indication	rdf:type	owl:ObjectProperty;
 								rdfs:label	"biomarker_has_indication";
