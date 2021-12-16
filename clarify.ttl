@@ -1942,14 +1942,6 @@ clarify:total_number_of_metastasis	rdf:type	owl:DatatypeProperty;
 ##########################################################    SLCG    ################################################################
 ######################################################################################################################################
 
-clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
-							rdfs:label	"hasCUIAnnotation";
-							rdfs:domain clarify:Concept;
-			  				rdfs:range clarify:Annotation;
-							rdfs:comment	"CUI annotation of the concept.";
-							dcterms:modified "2020-10-19"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:sex	rdf:type	owl:ObjectProperty;
 			rdfs:label	"sex";
 			rdfs:domain	clarify:CPatient;
@@ -2741,6 +2733,27 @@ clarify:hasTumorCategory	rdf:type 	owl:ObjectProperty;
 							rdfs:comment "The association between the tumor type and its category.";
 							dcterms:modified "2021-11-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+######################################################################################################################################
+#####################################################    annotation    ##############################################################
+######################################################################################################################################
+
+clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
+							rdfs:label	"hasCUIAnnotation";
+							rdfs:domain clarify:Concept;
+			  				rdfs:range clarify:Annotation;
+							rdfs:comment	"CUI annotation of the concept.";
+							dcterms:modified "2020-10-19"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasCUI	rdf:type owl:ObjectProperty;
+				rdfs:label	"hasCUI";
+				rdfs:domain clarify:Concept;
+  				rdfs:range clarify:Annotation;
+				rdfs:comment	"Connection between a concept and corresponding CUI.";
+				dcterms:modified "2021-12-16"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
