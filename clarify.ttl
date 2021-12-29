@@ -27,7 +27,47 @@
 
 
 ######################################################################################################################################
-#########################################################    SLCG    #################################################################
+#################################################    annotation   ##############################################################
+######################################################################################################################################
+
+clarify:Source	rdf:type	owl:Class;
+				rdfs:label	"Source";
+				rdfs:subClassOf	clarify:Concept;
+				rdfs:comment "Represents the provenance of an extracted concept.";
+				dcterms:modified "2021-12-29"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:SemanticType	rdf:type	owl:Class;
+						rdfs:label	"SemanticType";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the Semantic Type provided by UMLS.";
+						dcterms:modified "2021-07-21"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:SemanticTypeGroup	rdf:type	owl:Class;
+							rdfs:label	"SemanticTypeGroup";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "Represents the Semantic Type Group provided by UMLS.";
+							dcterms:modified "2021-07-21"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AnnotationDefinition	rdf:type	owl:Class;
+								rdfs:label	"AnnotationDefinition";
+								rdfs:subClassOf	clarify:Concept;
+								rdfs:comment "Represents the definition of the UMLS CUI.";
+								dcterms:modified "2021-12-16"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:AnnotationType	rdf:type	owl:Class;
+						rdfs:label	"AnnotationType";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the type of the UMLS CUI.";
+						dcterms:modified "2021-12-16"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+
+######################################################################################################################################
+#########################################################    Clinical    #############################################################
 ######################################################################################################################################
 
 
@@ -1324,39 +1364,6 @@ clarify:CancerStage	rdf:type	owl:Class;
 
 
 ######################################################################################################################################
-#################################################    annotation   ##############################################################
-######################################################################################################################################
-
-
-clarify:SemanticType	rdf:type	owl:Class;
-						rdfs:label	"SemanticType";
-						rdfs:subClassOf	clarify:Concept;
-						rdfs:comment "Represents the Semantic Type provided by UMLS.";
-						dcterms:modified "2021-07-21"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:SemanticTypeGroup	rdf:type	owl:Class;
-							rdfs:label	"SemanticTypeGroup";
-							rdfs:subClassOf	clarify:Concept;
-							rdfs:comment "Represents the Semantic Type Group provided by UMLS.";
-							dcterms:modified "2021-07-21"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:AnnotationDefinition	rdf:type	owl:Class;
-								rdfs:label	"AnnotationDefinition";
-								rdfs:subClassOf	clarify:Concept;
-								rdfs:comment "Represents the definition of the UMLS CUI.";
-								dcterms:modified "2021-12-16"^^xsd:date;
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:AnnotationType	rdf:type	owl:Class;
-						rdfs:label	"AnnotationType";
-						rdfs:subClassOf	clarify:Concept;
-						rdfs:comment "Represents the type of the UMLS CUI.";
-						dcterms:modified "2021-12-16"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-######################################################################################################################################
 #################################################    Drug Predictions   ##############################################################
 ######################################################################################################################################
 
@@ -1398,7 +1405,7 @@ clarify:DrugTargetPrediction	rdf:type owl:Class;
 
 
 ######################################################################################################################################
-#########################################################    SLCG    #################################################################
+#########################################################    Clinical    #################################################################
 ######################################################################################################################################
 
 
@@ -1630,7 +1637,6 @@ clarify:annotationFrequency	rdf:type	owl:DatatypeProperty;
 							rdfs:comment	"The frequency of the UMLS CUI.";	
 							dcterms:modified "2021-12-16"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
@@ -1939,7 +1945,7 @@ clarify:total_number_of_metastasis	rdf:type	owl:DatatypeProperty;
 
 
 ######################################################################################################################################
-##########################################################    SLCG    ################################################################
+##########################################################    Clinical    ################################################################
 ######################################################################################################################################
 
 clarify:sex	rdf:type	owl:ObjectProperty;
@@ -2738,6 +2744,14 @@ clarify:hasTumorCategory	rdf:type 	owl:ObjectProperty;
 ######################################################################################################################################
 #####################################################    annotation    ##############################################################
 ######################################################################################################################################
+
+prov:has_provenance	rdf:type	owl:ObjectProperty;
+					rdfs:label	"has_provenance";
+					rdfs:domain clarify:Concept;
+					rdfs:range	clarify:Source;
+					rdfs:comment	"Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource.";	
+					dcterms:modified "2021-12-29"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasCUIAnnotation	rdf:type owl:ObjectProperty;
 							rdfs:label	"hasCUIAnnotation";
