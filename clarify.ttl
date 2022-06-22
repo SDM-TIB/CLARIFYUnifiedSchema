@@ -196,6 +196,13 @@ clarify:OncologicalSurgery	rdf:type	owl:Class;
 							dcterms:modified "2020-10-20"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																	
 
+clarify:NeoadjuvantTherapy	rdf:type	owl:Class;
+							rdfs:label	"NeoadjuvantTherapy";
+							rdfs:subClassOf clarify:Concept;
+							rdfs:comment "Is the administration of therapeutic agents before the main treatment with the purpose of shrinking a tumor.";
+							dcterms:modified "2022-06-22"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																	
+
 clarify:Drug	rdf:type	owl:Class;
 				rdfs:label	"Drug";
 				rdfs:subClassOf	clarify:Concept;
@@ -1283,6 +1290,23 @@ clarify:date	rdf:type	owl:DatatypeProperty;
 								dcterms:modified "2020-10-20"^^xsd:date;							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:surgeryDate	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"surgeryDate";
+								rdfs:subPropertyOf clarify:date;
+								rdfs:domain	clarify:Concept;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the date of occurrence.";
+								dcterms:modified "2022-06-22"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:relapseYear	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"relapseYear";
+								rdfs:domain	clarify:Concept;
+								rdfs:range	rdfs:Literal;
+								rdfs:comment "Represents the year of re-occurrence/ relapse.";
+								dcterms:modified "2022-06-22"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:previousCancerTypeDescription	rdf:type	owl:DatatypeProperty;
 										rdfs:label	"previousCancerTypeDescription";
 										rdfs:domain	clarify:Concept;
@@ -1435,6 +1459,24 @@ clarify:age	rdf:type owl:DatatypeProperty;
 				dcterms:modified "2021-06-02"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:diagnosisAge	rdf:type owl:DatatypeProperty;	
+						rdfs:label	"diagnosisAge";
+						rdfs:subPropertyOf clarify:age;
+						rdfs:domain	clarify:CPatient;
+						rdfs:range	rdfs:Literal;
+						rdfs:comment "Indicates the calculated age of the patient at the time of diagnosis.";
+						dcterms:modified "2022-06-22"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:deathAge	rdf:type owl:DatatypeProperty;	
+					rdfs:label	"deathAge";
+					rdfs:subPropertyOf clarify:age;
+					rdfs:domain	clarify:CPatient;
+					rdfs:range	rdfs:Literal;
+					rdfs:comment "Indicates the calculated age of the patient at the time of death.";
+					dcterms:modified "2022-06-22"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:categoryDescription	rdf:type owl:DatatypeProperty;	
 							rdfs:label	"categoryDescription";
 							rdfs:domain	clarify:Concept;
@@ -1443,8 +1485,8 @@ clarify:categoryDescription	rdf:type owl:DatatypeProperty;
 							dcterms:modified "2021-11-03"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasDiagnosisDate	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"hasDiagnosisDate";
+clarify:diagnosisDate	rdf:type	owl:DatatypeProperty;
+								rdfs:label	"diagnosisDate";
 								rdfs:domain	clarify:Diagnosis;
 								rdfs:range	rdfs:Literal;
 								rdfs:comment "Represents the information regarding the date of diagnosis provided by HUPHM.";
@@ -1925,6 +1967,14 @@ clarify:hasOncologicalSurgery	rdf:type        owl:ObjectProperty;
 											rdfs:comment "A relation between each oncological surgery observation and related data.";
 											dcterms:modified "2020-10-20"^^xsd:date;
 											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:hasNeoadjuvantTherapy	rdf:type        owl:ObjectProperty;	
+								rdfs:label	"hasNeoadjuvantTherapy";
+								rdfs:domain	clarify:LCPatient;
+								rdfs:range	clarify:NeoadjuvantTherapy;
+								rdfs:comment "A relation between neoadjuvant therapy and the patient.";
+								dcterms:modified "2022-06-22"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:hasFamilyHistory	rdf:type        owl:ObjectProperty;	
 							rdfs:label	"hasFamilyHistory";
