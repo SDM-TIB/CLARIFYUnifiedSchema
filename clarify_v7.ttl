@@ -448,6 +448,13 @@ clarify:SmokingHabit	rdf:type	owl:Class;
 						dcterms:modified "2021-06-04"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:SmokeEnvironment	rdf:type	owl:Class;
+							rdfs:label	"SmokeEnvironment";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "Represents the information about the exposure of the patient to the smoke due to living with smokers.";
+							dcterms:modified "2021-02-16"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:LymphNodesInvolvement	rdf:type	owl:Class;
 								rdfs:label	"LymphNodesInvolvement";
 								rdfs:subClassOf	clarify:Concept;
@@ -2421,6 +2428,14 @@ clarify:hasSmokingHabit	rdf:type	owl:ObjectProperty;
 						rdfs:comment	"Indicates the smoking habit of the patient and people whoe are living/ lived with the patient.";
 						dcterms:modified "2021-12-06"^^xsd:date;								
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasSmokeEnvironment	rdf:type	owl:ObjectProperty;
+							rdfs:label	"hasSmokeEnvironment";
+							rdfs:domain	clarify:CPatient;
+							rdfs:range	clarify:SmokeEnvironment;
+							rdfs:comment	"Indicates the connection of the patient with exposure to the smoking environment.";
+							dcterms:modified "2022-02-16"^^xsd:date;								
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:performedMonitoring_OrNot	rdf:type	owl:ObjectProperty;
 									rdfs:label	"performedMonitoring_OrNot";
