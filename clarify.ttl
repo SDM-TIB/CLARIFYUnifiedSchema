@@ -1539,6 +1539,21 @@ clarify:percentage	rdf:type	owl:DatatypeProperty;
 					dcterms:modified "2022-02-09"^^xsd:date;							
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:cancerStageTNM_combination	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"cancerStageTNM_combination";
+									rdfs:domain	clarify:Observation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Associates the observation with the combination of TNM staging values; this combination occurs appear in original data from UPM.";
+									dcterms:modified "2022-06-29"^^xsd:date;								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:tnm_staging_method	rdf:type	owl:DatatypeProperty;
+									rdfs:label	"tnm_staging_method";
+									rdfs:domain	clarify:Observation;
+									rdfs:range	rdfs:Literal;
+									rdfs:comment "Representing clinical and pathological stages; clinical stage is based on all of the available information obtained before a surgery to remove the tumor, while pathologic stage adds additional information gained by examination of the tumor microscopically after surgery expressing the stage before therapy.";
+									dcterms:modified "2022-06-29"^^xsd:date;								
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #####################################################    Annotation    ##############################################################
@@ -2566,6 +2581,7 @@ clarify:cancerStageTNM_Version	rdf:type	owl:ObjectProperty;
 								dcterms:modified "2021-04-26"^^xsd:date;								
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+
 clarify:basedOn_Scale	rdf:type	owl:ObjectProperty;
 						rdfs:label	"basedOn_Scale";
 						rdfs:domain	clarify:PerformanceStatusObservation;
@@ -2838,6 +2854,29 @@ clarify:usesContraceptive	rdf:type 	owl:ObjectProperty;
 							dcterms:modified "2021-11-17"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:hasTNM_TumorSize	rdf:type	owl:ObjectProperty;
+									rdfs:label	"hasTNM_TumorSize";
+									rdfs:domain	clarify:Observation;
+									rdfs:range	clarify:TumorSize;
+									rdfs:comment "Associates the observation to the tumor size concept.";
+									dcterms:modified "2022-06-29"^^xsd:date;							
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasTNM_LymphNodesInvolvement	rdf:type	owl:ObjectProperty;
+										rdfs:label	"hasTNM_LymphNodesInvolvement";
+										rdfs:domain	clarify:Observation;
+										rdfs:range	clarify:LymphNodesInvolvement;
+										rdfs:comment "Associates the observation to the lymph node involvement concept.";
+										dcterms:modified "2022-06-29"^^xsd:date;							
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:hasTNM_MetastatisStage	rdf:type	owl:ObjectProperty;
+								rdfs:label	"hasTNM_MetastatisStage";
+								rdfs:domain	clarify:Observation;
+								rdfs:range	clarify:MetastatisStage;
+								rdfs:comment "Associates the observation to the lymph metastasis stage concept.";
+								dcterms:modified "2022-06-29"^^xsd:date;							
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 ######################################################################################################################################
 #####################################################    annotation    ##############################################################
