@@ -175,6 +175,13 @@ clarify:OncologicalTreatmentLine	rdf:type	owl:Class;
 								dcterms:modified "2020-10-20"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:DrugSchema	rdf:type	owl:Class;
+					rdfs:label	"DrugSchema";
+					rdfs:subClassOf clarify:OncologicalTreatmentLine;
+					rdfs:comment "The combination of drugs prescribed in each line (cycle) of treatment.";
+					dcterms:modified "2022-06-23"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:RadiotherapyTreatmentLine	rdf:type	owl:Class;
 								rdfs:label	"RadiotherapyTreatmentLine";
 								rdfs:subClassOf clarify:OncologicalTreatmentLine;
