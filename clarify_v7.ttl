@@ -135,9 +135,9 @@ clarify:Biomarker	 rdf:type	owl:Class;
 
 clarify:ProgressionRelapse	rdf:type	owl:Class;
 							rdfs:label	"ProgressionRelapse";
-							rdfs:subClassOf	clarify:Concept;
+							rdfs:subClassOf	clarify:Observation;
 							rdfs:comment "Indicates the existance of progression OR relapse in the patient.";
-							dcterms:modified "2021-02-25"^^xsd:date;
+							dcterms:modified "2022-07-15"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:FamilyHistory	rdf:type	owl:Class;
@@ -2399,18 +2399,18 @@ clarify:hasProgressionOrRelapse	rdf:type	owl:ObjectProperty;
 
 clarify:hasTherapyType	rdf:type	owl:ObjectProperty;
 						rdfs:label	"hasTherapyType";
-						rdfs:domain	clarify:CPatient;
+						rdfs:domain	clarify:ProgressionRelapse;
 						rdfs:range	clarify:TherapyType;
 						rdfs:comment	"Type of therapy.";
-						dcterms:modified "2021-02-25"^^xsd:date;							
+						dcterms:modified "2022-07-17"^^xsd:date;							
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasProgressionType	rdf:type	owl:ObjectProperty;
 							rdfs:label	"hasProgressionType";
-							rdfs:domain	clarify:CPatient;
+							rdfs:domain	clarify:ProgressionRelapse;
 							rdfs:range	clarify:ProgressionType;
 							rdfs:comment	"Indicates the type of therapy at progression .";
-							dcterms:modified "2021-02-25"^^xsd:date;							
+							dcterms:modified "2022-07-17"^^xsd:date;							
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:hasTreatmentLineNumber	rdf:type	owl:ObjectProperty;
