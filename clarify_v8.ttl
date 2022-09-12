@@ -175,20 +175,6 @@ clarify:MetastasisLocation	rdf:type	owl:Class;
 							dcterms:modified "2020-10-20"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:OncologicalTreatmentLine	rdf:type	owl:Class;
-								rdfs:label	"OncologicalTreatmentLine";
-								rdfs:subClassOf clarify:Observation;
-								rdfs:comment "Records of patients in clinical notes that are related to oncological treatment lines";
-								dcterms:modified "2020-10-20"^^xsd:date;
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:RadiotherapyTreatmentLine	rdf:type	owl:Class;
-								rdfs:label	"RadiotherapyTreatmentLine";
-								rdfs:subClassOf clarify:OncologicalTreatmentLine;
-								rdfs:comment "Records of patients in clinical notes that are related to radiotherapy treatment lines";
-								dcterms:modified "2020-09-15"^^xsd:date;
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
 clarify:ClinicalTrialTreatmentLine	rdf:type	owl:Class;
 									rdfs:label	"ClinicalTrialTreatmentLine";
 									rdfs:subClassOf clarify:OncologicalTreatmentLine;
@@ -200,7 +186,7 @@ clarify:OncologicalSurgery	rdf:type	owl:Class;
 							rdfs:label	"OncologicalSurgery";
 							rdfs:subClassOf clarify:TreatmentEpisode;
 							rdfs:comment "Is the branch of surgery applied to oncology; it focuses on the surgical management of tumors, especially cancerous tumors.";
-							dcterms:modified "2020-10-20"^^xsd:date;
+							dcterms:modified "2022-09-12"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																	
 
 clarify:Drug	rdf:type	owl:Class;
@@ -296,7 +282,7 @@ clarify:BiomarkerTestResult rdf:type owl:Class;
 
 clarify:TreatmentLineNumber rdf:type owl:Class;
 							rdfs:label	"TreatmentLineNumber";
-							rdfs:subClassOf	clarify:Concept;
+							rdfs:subClassOf	clarify:Episode;
 							rdfs:comment "The number representing the oncological line of treatment.";
 							dcterms:modified "2021-02-25"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
@@ -671,6 +657,13 @@ clarify:OncologicalAssessment	rdf:type	owl:Class;
 								dcterms:modified "2022-09-12"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:Episode	rdf:type	owl:Class;
+				rdfs:subClassOf clarify:Concept;
+				rdfs:label	"Episode";
+				rdfs:comment "Indicates the episode of an oncological procedure..";
+				dcterms:modified "2022-09-12"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 clarify:TreatmentEpisode	rdf:type	owl:Class;
 							rdfs:subClassOf clarify:OncologicalProcedure;
 							rdfs:label	"TreatmentEpisode";
@@ -692,12 +685,61 @@ clarify:Radiotherapy	rdf:type	owl:Class;
 						dcterms:modified "2022-09-12"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
-clarify:Radiotherapy	rdf:type	owl:Class;
+clarify:HormonalTherapy	rdf:type	owl:Class;
 						rdfs:subClassOf clarify:TreatmentEpisode;
-						rdfs:label	"Radiotherapy";
+						rdfs:label	"HormonalTherapy";
 						rdfs:comment ".";
 						dcterms:modified "2022-09-12"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Immunotherapy	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:TreatmentEpisode;
+						rdfs:label	"Immunotherapy";
+						rdfs:comment "Represents the t.";
+						dcterms:modified "2022-09-12"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:RadiotherapyRound	rdf:type	owl:Class;
+							rdfs:subClassOf clarify:Episode;
+							rdfs:label	"RadiotherapyRound";
+							rdfs:comment "Indicates the occurrence number of the radiotherapy.";
+							dcterms:modified "2022-09-12"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:ProgressionRelapseAssessment	rdf:type	owl:Class;
+										rdfs:subClassOf clarify:OncologicalAssessment;
+										rdfs:label	"ProgressionRelapseAssessment";
+										rdfs:comment "The assessment of the progression and relapse.";
+										dcterms:modified "2022-09-12"^^xsd:date;
+										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:TNMstageAssessment	rdf:type	owl:Class;
+							rdfs:subClassOf clarify:OncologicalAssessment;
+							rdfs:label	"TNMstageAssessment";
+							rdfs:comment "The assessment of the cancer stage based on TNM staging system.";
+							dcterms:modified "2022-09-12"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:TumorHistologyAssessment	rdf:type	owl:Class;
+									rdfs:subClassOf clarify:OncologicalAssessment;
+									rdfs:label	"TumorHistologyAssessment";
+									rdfs:comment "The assessment of the histology of the tumor.";
+									dcterms:modified "2022-09-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:TNMstage	rdf:type	owl:Class;
+					rdfs:subClassOf clarify:Concept;
+					rdfs:label	"TNMstage";
+					rdfs:comment "A measurement system assessing the stage of the cancer based on the tumor size (T), Lymph nodes involvement (N), and the metastasis (M).";
+					dcterms:modified "2022-09-12"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:OncologicalSurgeryIteration	rdf:type	owl:Class;
+									rdfs:subClassOf clarify:Concept;
+									rdfs:label	"OncologicalSurgeryIteration";
+									rdfs:comment "Represents the iteration of a specific oncological surgery.";
+									dcterms:modified "2022-09-12"^^xsd:date;
+									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 
 ######################################################################################################################################
@@ -1975,6 +2017,42 @@ clarify:hasDrug	rdf:type        owl:ObjectProperty;
 				dcterms:modified "2020-10-20"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
 
+clarify:hasDrug1	rdf:type        owl:ObjectProperty;	
+					rdfs:label	"hasDrug";
+					rdfs:subPropertyOf clarify:hasDrug;
+					rdfs:domain	clarify:OncologicalTreatmentLine;
+					rdfs:range	clarify:Drug;
+					rdfs:comment "A relation between the oncological treatment line and the prescribed drug.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
+
+clarify:hasDrug2	rdf:type        owl:ObjectProperty;	
+					rdfs:label	"hasDrug";
+					rdfs:subPropertyOf clarify:hasDrug;
+					rdfs:domain	clarify:OncologicalTreatmentLine;
+					rdfs:range	clarify:Drug;
+					rdfs:comment "A relation between the oncological treatment line and the prescribed drug.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
+
+clarify:hasDrug3	rdf:type        owl:ObjectProperty;	
+					rdfs:label	"hasDrug";
+					rdfs:subPropertyOf clarify:hasDrug;
+					rdfs:domain	clarify:OncologicalTreatmentLine;
+					rdfs:range	clarify:Drug;
+					rdfs:comment "A relation between the oncological treatment line and the prescribed drug.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
+
+clarify:hasDrug4	rdf:type        owl:ObjectProperty;	
+					rdfs:label	"hasDrug";
+					rdfs:subPropertyOf clarify:hasDrug;
+					rdfs:domain	clarify:OncologicalTreatmentLine;
+					rdfs:range	clarify:Drug;
+					rdfs:comment "A relation between the oncological treatment line and the prescribed drug.";
+					dcterms:modified "2020-10-20"^^xsd:date;
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.													
+
 clarify:hasComorbidity	rdf:type        owl:ObjectProperty;	
 						rdfs:label	"hasComorbidity";
 						rdfs:domain	clarify:CPatient;
@@ -2009,7 +2087,7 @@ clarify:hasMontoring	rdf:type        owl:ObjectProperty;
 
 clarify:treatmentLineCycle	rdf:type	owl:ObjectProperty;
 							rdfs:label	"treatmentLineCycle";
-							rdfs:domain	clarify:OncologicalTreatmentLine;
+							rdfs:domain	clarify:Episode;
 							rdfs:range	clarify:TreatmentLineCycle;
 							rdfs:comment "Represents the number of cycles through which the corresponding drugs have been applied.";
 							dcterms:modified "2021-02-25"^^xsd:date;														
