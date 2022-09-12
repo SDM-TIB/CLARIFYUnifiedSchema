@@ -98,6 +98,13 @@ clarify:LCPatient	rdf:type	owl:Class;
 				dcterms:modified "2020-10-19"^^xsd:date;			
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:BCPatient	rdf:type	owl:Class;
+					rdfs:label	"BCPatient";
+					rdfs:subClassOf	clarify:CPatient;
+					rdfs:comment "A patient who is diagnosed with Breast Cancer.";
+					dcterms:modified "2022-09-12"^^xsd:date;			
+					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
 clarify:Observation	rdf:type	owl:Class;
 				rdfs:label	"Observation";
 				rdfs:subClassOf	clarify:Concept;
@@ -191,7 +198,7 @@ clarify:ClinicalTrialTreatmentLine	rdf:type	owl:Class;
 
 clarify:OncologicalSurgery	rdf:type	owl:Class;
 							rdfs:label	"OncologicalSurgery";
-							rdfs:subClassOf clarify:Concept;
+							rdfs:subClassOf clarify:TreatmentEpisode;
 							rdfs:comment "Is the branch of surgery applied to oncology; it focuses on the surgical management of tumors, especially cancerous tumors.";
 							dcterms:modified "2020-10-20"^^xsd:date;
 							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.																																	
@@ -286,13 +293,6 @@ clarify:BiomarkerTestResult rdf:type owl:Class;
 						rdfs:comment "Represents the results of a Biomarket test.";
 						dcterms:modified "2021-03-02"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
-clarify:TreatmentLineCycle  rdf:type owl:Class;
-							rdfs:label	"TreatmentLineCycle";
-							rdfs:subClassOf	clarify:Concept;
-							rdfs:comment "Represents the number of cycles through which the corresponding treatment have been applied.";
-							dcterms:modified "2021-02-25"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
 clarify:TreatmentLineNumber rdf:type owl:Class;
 							rdfs:label	"TreatmentLineNumber";
@@ -649,6 +649,56 @@ clarify:BiomarkerObservation	rdf:type	owl:Class;
 								rdfs:comment "Represents all the tests and results related to each biomarker study on the patient.";
 								dcterms:modified "2021-11-24"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Event	rdf:type	owl:Class;
+				rdfs:subClassOf clarify:Concept;
+				rdfs:label	"Event";
+				rdfs:comment "The fundamental entity of observed physical reality represented by a point designated by three coordinates of place and one of time.";
+				dcterms:modified "2022-09-12"^^xsd:date;
+				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:OncologicalProcedure	rdf:type	owl:Class;
+								rdfs:subClassOf clarify:Event;
+								rdfs:label	"OncologicalProcedure";
+								rdfs:comment "Any oncological event impacting on the status of the patient.";
+								dcterms:modified "2022-09-12"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:OncologicalAssessment	rdf:type	owl:Class;
+								rdfs:subClassOf clarify:Event;
+								rdfs:label	"OncologicalAssessment";
+								rdfs:comment "Any oncological event involving an assessment examination or observation.";
+								dcterms:modified "2022-09-12"^^xsd:date;
+								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:TreatmentEpisode	rdf:type	owl:Class;
+							rdfs:subClassOf clarify:OncologicalProcedure;
+							rdfs:label	"TreatmentEpisode";
+							rdfs:comment "Any oncological event impacting on the status of the patient.";
+							dcterms:modified "2022-09-12"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Chemotherapy	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:TreatmentEpisode;
+						rdfs:label	"Chemotherapy";
+						rdfs:comment ".";
+						dcterms:modified "2022-09-12"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Radiotherapy	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:TreatmentEpisode;
+						rdfs:label	"Radiotherapy";
+						rdfs:comment ".";
+						dcterms:modified "2022-09-12"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+clarify:Radiotherapy	rdf:type	owl:Class;
+						rdfs:subClassOf clarify:TreatmentEpisode;
+						rdfs:label	"Radiotherapy";
+						rdfs:comment ".";
+						dcterms:modified "2022-09-12"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
 
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
@@ -1458,14 +1508,6 @@ clarify:hasDiagnosisDate	rdf:type	owl:DatatypeProperty;
 								dcterms:modified "2021-11-05"^^xsd:date;							
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:oralContraceptiveEndingDate	rdf:type	owl:DatatypeProperty;
-								rdfs:label	"oralContraceptiveEndingDate";
-								rdfs:domain	clarify:CancerPatient;
-								rdfs:range	rdfs:Literal;
-								rdfs:comment "Represents the date on which the patient consumed contraceptive pills for the last time.";
-								dcterms:modified "2021-11-17"^^xsd:date;							
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:primaryTumorSize	rdf:type	owl:DatatypeProperty;
 							rdfs:label	"primaryTumorSize";
 							rdfs:domain	clarify:TumorType;
@@ -1917,22 +1959,6 @@ clarify:hasOncologicalTreatmentLine       rdf:type     owl:ObjectProperty;
 										dcterms:modified "2020-10-20"^^xsd:date;
 										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasRadiotherapyTreatmentLine    rdf:type     owl:ObjectProperty;
-										rdfs:label	"hasRadiotherapyTreatmentLine";
-										rdfs:domain	clarify:LCPatient;
-										rdfs:range	clarify:RadiotherapyTreatmentLine;
-										rdfs:comment "Relation between the patient and the radiotherapy treatment line that is received by the patient.";
-										dcterms:modified "2020-10-20"^^xsd:date;
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:hasOncologicalSurgery	rdf:type        owl:ObjectProperty;	
-											rdfs:label	"hasOncologicalSurgery";
-											rdfs:domain	clarify:LCPatient;
-											rdfs:range	clarify:OncologicalSurgery;
-											rdfs:comment "A relation between each oncological surgery observation and related data.";
-											dcterms:modified "2020-10-20"^^xsd:date;
-											dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
-
 clarify:hasFamilyHistory	rdf:type        owl:ObjectProperty;	
 							rdfs:label	"hasFamilyHistory";
 							rdfs:domain	clarify:CPatient;
@@ -1980,22 +2006,6 @@ clarify:hasMontoring	rdf:type        owl:ObjectProperty;
 						rdfs:comment	"Connection between patient and srvival observation.";
 						dcterms:modified "2020-10-21"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.		
-
-clarify:hasTumorHistology	rdf:type        owl:ObjectProperty;	
-						rdfs:label	"hasTumorHistology";
-						rdfs:domain	clarify:CPatient;
-						rdfs:range	clarify:TumorType;
-						rdfs:comment	"Connection between patient and the tumor histology (type).";
-						dcterms:modified "2020-10-21"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.										
-
-clarify:hasTreatmentLineMaintenance	rdf:type	owl:ObjectProperty;
-									rdfs:label	"hasTreatmentLineMaintenance";
-									rdfs:domain	clarify:OncologicalTreatmentLine;
-									rdfs:range	clarify:Drug;
-									rdfs:comment "Represents the type of drugs that are prescribed for the maintenance.";
-									dcterms:modified "2021-02-18"^^xsd:date;														
-									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:treatmentLineCycle	rdf:type	owl:ObjectProperty;
 							rdfs:label	"treatmentLineCycle";
@@ -2381,14 +2391,6 @@ clarify:hasIntention	rdf:type	owl:ObjectProperty;
 						dcterms:modified "2021-02-25"^^xsd:date;							
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasProgressionRelapse	rdf:type	owl:ObjectProperty;
-								rdfs:label	"hasProgressionRelapse";
-								rdfs:domain	clarify:CPatient;
-								rdfs:range	clarify:ProgressionRelapse;
-								rdfs:comment	"Specifies which of progression or relapse occured.";
-								dcterms:modified "2021-05-11"^^xsd:date;							
-								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:hasProgressionOrRelapse	rdf:type	owl:ObjectProperty;
 								rdfs:label	"hasProgressionOrRelapse";
 								rdfs:domain	clarify:CPatient;
@@ -2733,22 +2735,6 @@ clarify:has_parentWithCancer_OrNot	rdf:type 	owl:ObjectProperty;
 									dcterms:modified "2021-11-17"^^xsd:date;
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:hasGravidity	rdf:type 	owl:ObjectProperty;	
-						rdfs:label	"hasGravidity";
-						rdfs:domain	clarify:CancerPatient;
-						rdfs:range	clarify:Gravidity;
-						rdfs:comment "The association between the patient and the gravidity ( the totall number of all pregnancies that she has had).";
-						dcterms:modified "2021-11-17"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:hasParity	rdf:type 	owl:ObjectProperty;	
-						rdfs:label	"hasParity";
-						rdfs:domain	clarify:CancerPatient;
-						rdfs:range	clarify:Parity;
-						rdfs:comment "The association between the patient and the parity ( the number of times that the patient had given birth to a fetus with a gestational age of 24 weeks or more).";
-						dcterms:modified "2021-11-17"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:hasMenopauseAge	rdf:type 	owl:ObjectProperty;	
 						rdfs:label	"hasMenopauseAge";
 						rdfs:domain	clarify:CancerPatient;
@@ -2764,23 +2750,6 @@ clarify:hasMenarcheAge	rdf:type 	owl:ObjectProperty;
 						rdfs:comment "The association between the patient and the menarche age.";
 						dcterms:modified "2021-11-17"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:hasMenopauseStage	rdf:type 	owl:ObjectProperty;	
-							rdfs:label	"hasMenopauseStage";
-							rdfs:domain	clarify:CancerPatient;
-							rdfs:range	clarify:MenopauseStage;
-							rdfs:comment "The association between the patient and the menopause stage.";
-							dcterms:modified "2021-11-17"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:usesContraceptive	rdf:type 	owl:ObjectProperty;	
-							rdfs:label	"usesContraceptive";
-							rdfs:domain	clarify:CancerPatient;
-							rdfs:range	clarify:Contraceptive;
-							rdfs:comment "The association between the patient and the contraceptive.";
-							dcterms:modified "2021-11-17"^^xsd:date;
-							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 
 ######################################################################################################################################
 #####################################################    annotation    ##############################################################
@@ -2829,14 +2798,6 @@ clarify:annotates	rdf:type	owl:ObjectProperty;
 					rdfs:comment	"Connection between mentionedIn or HasTopic relation with CUI.";
 					dcterms:modified "2020-12-15"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
-clarify:relation_isRelatedTo_annotation	rdf:type        owl:ObjectProperty;	
-										rdfs:label	"relation_isRelatedTo_annotation";
-										rdfs:domain	clarify:Relation;
-										rdfs:range	clarify:Annotation;
-										rdfs:comment "The relationship between the relation and the annotation.";
-										dcterms:modified "2020-12-15"^^xsd:date;
-										dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
 clarify:relation_isRelatedTo_publication	rdf:type        owl:ObjectProperty;	
 											rdfs:label	"relation_isRelatedTo_publication";
