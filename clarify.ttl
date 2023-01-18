@@ -762,6 +762,13 @@ clarify:OncologicalTreatmentLine	rdf:type	owl:Class;
 									dcterms:modified "2023-01-11"^^xsd:date;
 									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
 
+clarify:SemanticRelation	rdf:type	owl:Class;
+							rdfs:label	"SemanticRelation";
+							rdfs:comment "Represents the semantics of the relations provided in the gold dataset.";
+							dcterms:modified "2023-01-18"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.	
+
+
 ######################################################################################################################################
 #####################################################    Publication    ##############################################################
 ######################################################################################################################################
@@ -3315,13 +3322,13 @@ clarify:relation_isRelatedTo_object_annotation	rdf:type        owl:ObjectPropert
 												dcterms:modified "2023-01-11"^^xsd:date;
 												dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.				
 
-clarify:relation_isRelatedTo_id		rdf:type        owl:ObjectProperty;	
-									rdfs:label	"relation_isRelatedTo_id";
-									rdfs:domain	clarify:Relation;
-									rdfs:range	clarify:RelationIdentifier;
-									rdfs:comment "The relationship between the relation and its identifier.";
-									dcterms:modified "2023-01-11"^^xsd:date;
-									dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.				
+clarify:hasRelationID		rdf:type        owl:ObjectProperty;	
+							rdfs:label	"hasRelationID";
+							rdfs:domain	clarify:Relation;
+							rdfs:range	clarify:SemanticRelation;
+							rdfs:comment "The relationship between the relation and its identifier.";
+							dcterms:modified "2023-01-18"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.				
 
 clarify:relation_isRelatedTo_source		rdf:type        owl:ObjectProperty;	
 										rdfs:label	"relation_isRelatedTo_source";
