@@ -3213,7 +3213,7 @@ clarify:hasNeoadjuvantTherapy	rdf:type 	owl:ObjectProperty;
 clarify:hasObservation	rdf:type 	owl:ObjectProperty;	
 						rdfs:label	"hasObservation";
 						rdfs:domain	clarify:CPatient;
-						rdfs:range	sosa:Observation;
+						rdfs:range	clarify:Observation;
 						rdfs:comment "The association between the cancer patient and the performed observations.";
 						dcterms:modified "2023-01-11"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
