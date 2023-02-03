@@ -1724,14 +1724,6 @@ clarify:diagnosisDate	rdf:type 	owl:DatatypeProperty;
 						dcterms:modified "2023-01-11"^^xsd:date;
 						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:diagnosisAge	rdf:type 	owl:DatatypeProperty;	
-						rdfs:label	"diagnosisAge";
-						rdfs:domain	clarify:CPatient;
-						rdfs:range	rdfs:Literal;
-						rdfs:comment "Represents the age at which the cancer patient is diagnosed.";
-						dcterms:modified "2023-01-11"^^xsd:date;
-						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
-
 clarify:deathAge	rdf:type 	owl:DatatypeProperty;	
 					rdfs:label	"deathAge";
 					rdfs:domain	clarify:CPatient;
