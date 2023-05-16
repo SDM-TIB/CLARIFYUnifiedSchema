@@ -59,8 +59,8 @@ clarify:AnnotationDefinition	rdf:type	owl:Class;
 								dcterms:modified "2021-12-16"^^xsd:date;
 								dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
-clarify:AnnotationType	rdf:type	owl:Class;
-						rdfs:label	"AnnotationType";
+clarify:Annotation	rdf:type	owl:Class;
+						rdfs:label	"Annotation";
 						rdfs:subClassOf	clarify:Concept;
 						rdfs:comment "Represents the type of the UMLS CUI.";
 						dcterms:modified "2021-12-16"^^xsd:date;
@@ -224,6 +224,13 @@ clarify:Disorder	rdf:type	owl:Class;
 					rdfs:comment "A particular abnormal condition that negatively affects the structure or function of all or part of an organism, and that is not due to any immediate external injury.";
 					dcterms:modified "2020-10-21"^^xsd:date;
 					dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
+
+clarify:Comorbidity	rdf:type	owl:Class;
+							rdfs:label	"Comorbidity";
+							rdfs:subClassOf	clarify:Concept;
+							rdfs:comment "Represents the comorbidity in patients.";
+							dcterms:modified "2021-04-07"^^xsd:date;
+							dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
 
 clarify:ComorbidityStatus	rdf:type	owl:Class;
 							rdfs:label	"ComorbidityStatus";
