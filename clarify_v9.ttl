@@ -38,6 +38,13 @@ clarify:Source	rdf:type	owl:Class;
 				dcterms:modified "2021-12-29"^^xsd:date;
 				dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/samaneh-jozashoori/>.
 
+clarify:SemanticRelation	rdf:type	owl:Class;
+						rdfs:label	"SemanticRelation";
+						rdfs:subClassOf	clarify:Concept;
+						rdfs:comment "Represents the Semantic relation provided by UMLS.";
+						dcterms:modified "2021-07-21"^^xsd:date;
+						dcterms:creator <https://www.tib.eu/en/research-development/scientific-data-management/staff/emetis-niazmand/>.
+
 clarify:SemanticType	rdf:type	owl:Class;
 						rdfs:label	"SemanticType";
 						rdfs:subClassOf	clarify:Concept;
